@@ -1,0 +1,41 @@
+\hypertarget{class_bone_orientations_constraint}{}\section{Bone\+Orientations\+Constraint Class Reference}
+\label{class_bone_orientations_constraint}\index{Bone\+Orientations\+Constraint@{Bone\+Orientations\+Constraint}}
+
+
+Filter to correct the joint locations and joint orientations to constraint to range of viable human motion.  
+
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_bone_orientations_constraint_a1f4aa21ffa8dbc27a16143698d71e63d}\label{class_bone_orientations_constraint_a1f4aa21ffa8dbc27a16143698d71e63d}} 
+enum {\bfseries Constraint\+Axis} \{ {\bfseries X} = 0, 
+{\bfseries Y} = 1, 
+{\bfseries Z} = 2
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_bone_orientations_constraint_a8f9232ef89117f7a5ea6977acf5ce622}\label{class_bone_orientations_constraint_a8f9232ef89117f7a5ea6977acf5ce622}} 
+\mbox{\hyperlink{class_bone_orientations_constraint_a8f9232ef89117f7a5ea6977acf5ce622}{Bone\+Orientations\+Constraint}} ()
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the Bone\+Orientation\+Constraints class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_bone_orientations_constraint_ab9dcd6608443e194a4c3a098baec5138}\label{class_bone_orientations_constraint_ab9dcd6608443e194a4c3a098baec5138}} 
+void {\bfseries Add\+Bone\+Orientation\+Constraint} (int joint, Constraint\+Axis axis, float angle\+Min, float angle\+Max)
+\item 
+\mbox{\Hypertarget{class_bone_orientations_constraint_a9c6fb36deaa012c5ca393200ed273986}\label{class_bone_orientations_constraint_a9c6fb36deaa012c5ca393200ed273986}} 
+void {\bfseries Add\+Default\+Constraints} ()
+\item 
+\mbox{\Hypertarget{class_bone_orientations_constraint_a8387f8886926069be888c2aca2ddb1e8}\label{class_bone_orientations_constraint_a8387f8886926069be888c2aca2ddb1e8}} 
+void {\bfseries Constrain} (ref Matrix4x4\mbox{[}$\,$\mbox{]} joint\+Orientations, ref bool\mbox{[}$\,$\mbox{]} joint\+Tracked)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Filter to correct the joint locations and joint orientations to constraint to range of viable human motion. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Kinect\+Scripts/\+Filters/Bone\+Orientations\+Constraint.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,66 @@
+\hypertarget{class_bone_orientations_filter}{}\section{Bone\+Orientations\+Filter Class Reference}
+\label{class_bone_orientations_filter}\index{Bone\+Orientations\+Filter@{Bone\+Orientations\+Filter}}
+
+
+Implementation of a Holt Double Exponential Smoothing filter for orientation. The double exponential smooths the curve and predicts. There is also noise jitter removal. And maximum prediction bounds. The parameters are commented in the Init function.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_bone_orientations_filter_a3be769b3d49e677fa475b6d7d3de5f52}\label{class_bone_orientations_filter_a3be769b3d49e677fa475b6d7d3de5f52}} 
+void {\bfseries Init} ()
+\item 
+void \mbox{\hyperlink{class_bone_orientations_filter_a0cfdcfa52dc01bac029c04084dca64f2}{Init}} (float smoothing\+Value, float correction\+Value, float prediction\+Value, float jitter\+Radius\+Value, float max\+Deviation\+Radius\+Value)
+\begin{DoxyCompactList}\small\item\em Initialize the filter with a set of manually specified Transform\+Smooth\+Parameters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_bone_orientations_filter_ae7531e45a6afef3e56cfe6a857cfccf4}\label{class_bone_orientations_filter_ae7531e45a6afef3e56cfe6a857cfccf4}} 
+void {\bfseries Init} (\mbox{\hyperlink{struct_kinect_wrapper_1_1_nui_transform_smooth_parameters}{Kinect\+Wrapper.\+Nui\+Transform\+Smooth\+Parameters}} smoothing\+Parameters)
+\item 
+\mbox{\Hypertarget{class_bone_orientations_filter_a7460b686bf3641385a9e09725ae146df}\label{class_bone_orientations_filter_a7460b686bf3641385a9e09725ae146df}} 
+void \mbox{\hyperlink{class_bone_orientations_filter_a7460b686bf3641385a9e09725ae146df}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em Resets the filter to default values. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_bone_orientations_filter_a0f170cd9ad67f29a62688afa09916560}\label{class_bone_orientations_filter_a0f170cd9ad67f29a62688afa09916560}} 
+void {\bfseries Update\+Filter} (ref \mbox{\hyperlink{struct_kinect_wrapper_1_1_nui_skeleton_data}{Kinect\+Wrapper.\+Nui\+Skeleton\+Data}} skeleton, ref Matrix4x4\mbox{[}$\,$\mbox{]} joint\+Orientations)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_bone_orientations_filter_a9a5af74c297bb1815b24932aa6895786}\label{class_bone_orientations_filter_a9a5af74c297bb1815b24932aa6895786}} 
+void {\bfseries Filter\+Joint} (ref \mbox{\hyperlink{struct_kinect_wrapper_1_1_nui_skeleton_data}{Kinect\+Wrapper.\+Nui\+Skeleton\+Data}} skeleton, int joint\+Index, ref \mbox{\hyperlink{struct_kinect_wrapper_1_1_nui_transform_smooth_parameters}{Kinect\+Wrapper.\+Nui\+Transform\+Smooth\+Parameters}} smoothing\+Parameters, ref Matrix4x4\mbox{[}$\,$\mbox{]} joint\+Orientations)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of a Holt Double Exponential Smoothing filter for orientation. The double exponential smooths the curve and predicts. There is also noise jitter removal. And maximum prediction bounds. The parameters are commented in the Init function. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_bone_orientations_filter_a0cfdcfa52dc01bac029c04084dca64f2}\label{class_bone_orientations_filter_a0cfdcfa52dc01bac029c04084dca64f2}} 
+\index{Bone\+Orientations\+Filter@{Bone\+Orientations\+Filter}!Init@{Init}}
+\index{Init@{Init}!Bone\+Orientations\+Filter@{Bone\+Orientations\+Filter}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Bone\+Orientations\+Filter.\+Init (\begin{DoxyParamCaption}\item[{float}]{smoothing\+Value,  }\item[{float}]{correction\+Value,  }\item[{float}]{prediction\+Value,  }\item[{float}]{jitter\+Radius\+Value,  }\item[{float}]{max\+Deviation\+Radius\+Value }\end{DoxyParamCaption})}
+
+
+
+Initialize the filter with a set of manually specified Transform\+Smooth\+Parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em smoothing\+Value} & Smoothing = \mbox{[}0..1\mbox{]}, lower values is closer to the raw data and more noisy.\\
+\hline
+{\em correction\+Value} & Correction = \mbox{[}0..1\mbox{]}, higher values correct faster and feel more responsive.\\
+\hline
+{\em prediction\+Value} & Prediction = \mbox{[}0..n\mbox{]}, how many frames into the future we want to predict.\\
+\hline
+{\em jitter\+Radius\+Value} & Jitter\+Radius = The deviation angle in radians that defines jitter.\\
+\hline
+{\em max\+Deviation\+Radius\+Value} & Max\+Deviation = The maximum angle in radians that filtered positions are allowed to deviate from raw data.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Kinect\+Scripts/\+Filters/Bone\+Orientations\+Filter.\+cs\end{DoxyCompactItemize}

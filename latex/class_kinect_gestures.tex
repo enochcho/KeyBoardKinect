@@ -1,0 +1,53 @@
+\hypertarget{class_kinect_gestures}{}\section{Kinect\+Gestures Class Reference}
+\label{class_kinect_gestures}\index{Kinect\+Gestures@{Kinect\+Gestures}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_kinect_gestures_1_1_gesture_data}{Gesture\+Data}}
+\item 
+interface \mbox{\hyperlink{interface_kinect_gestures_1_1_gesture_listener_interface}{Gesture\+Listener\+Interface}}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_kinect_gestures_ae979f8f37dd7730c916cd84d7894a652}\label{class_kinect_gestures_ae979f8f37dd7730c916cd84d7894a652}} 
+enum {\bfseries Gestures} \{ \newline
+{\bfseries None} = 0, 
+{\bfseries Raise\+Right\+Hand}, 
+{\bfseries Raise\+Left\+Hand}, 
+{\bfseries Psi}, 
+\newline
+{\bfseries Tpose}, 
+{\bfseries Stop}, 
+{\bfseries Wave}, 
+{\bfseries Click}, 
+\newline
+{\bfseries Swipe\+Left}, 
+{\bfseries Swipe\+Right}, 
+{\bfseries Swipe\+Up}, 
+{\bfseries Swipe\+Down}, 
+\newline
+{\bfseries Right\+Hand\+Cursor}, 
+{\bfseries Left\+Hand\+Cursor}, 
+{\bfseries Zoom\+Out}, 
+{\bfseries Zoom\+In}, 
+\newline
+{\bfseries Wheel}, 
+{\bfseries Jump}, 
+{\bfseries Squat}, 
+{\bfseries Push}, 
+\newline
+{\bfseries Pull}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_kinect_gestures_a4e572c3f5b759588e2af549ff90e63c4}\label{class_kinect_gestures_a4e572c3f5b759588e2af549ff90e63c4}} 
+static void {\bfseries Check\+For\+Gesture} (uint user\+Id, ref \mbox{\hyperlink{struct_kinect_gestures_1_1_gesture_data}{Gesture\+Data}} gesture\+Data, float timestamp, ref Vector3\mbox{[}$\,$\mbox{]} joints\+Pos, ref bool\mbox{[}$\,$\mbox{]} joints\+Tracked)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Kinect\+Scripts/Kinect\+Gestures.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,228 @@
+\hypertarget{class_avatar_controller}{}\section{Avatar\+Controller Class Reference}
+\label{class_avatar_controller}\index{Avatar\+Controller@{Avatar\+Controller}}
+Inheritance diagram for Avatar\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_avatar_controller}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_avatar_controller_a6fca9255887e52a99fe05978c26e909f}\label{class_avatar_controller_a6fca9255887e52a99fe05978c26e909f}} 
+void {\bfseries Awake} ()
+\item 
+\mbox{\Hypertarget{class_avatar_controller_ac941da41d7d6f5cf78d8473b660c508a}\label{class_avatar_controller_ac941da41d7d6f5cf78d8473b660c508a}} 
+void {\bfseries Update\+Avatar} (uint User\+ID)
+\item 
+\mbox{\Hypertarget{class_avatar_controller_a4b66eff1306b6dd78a9bc1961c21ff05}\label{class_avatar_controller_a4b66eff1306b6dd78a9bc1961c21ff05}} 
+void {\bfseries Reset\+To\+Initial\+Position} ()
+\item 
+\mbox{\Hypertarget{class_avatar_controller_af22254a125eb1a2e1362e0cde161a3a9}\label{class_avatar_controller_af22254a125eb1a2e1362e0cde161a3a9}} 
+void {\bfseries Successful\+Calibration} (uint user\+Id)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_avatar_controller_ae4b12583a22d820211b93b27c0f4019c}\label{class_avatar_controller_ae4b12583a22d820211b93b27c0f4019c}} 
+bool {\bfseries mirrored\+Movement} = false
+\item 
+\mbox{\Hypertarget{class_avatar_controller_ad879ee9629b94cb1c4feaacda6469ba5}\label{class_avatar_controller_ad879ee9629b94cb1c4feaacda6469ba5}} 
+bool {\bfseries vertical\+Movement} = false
+\item 
+\mbox{\Hypertarget{class_avatar_controller_a7a321f1989438d0a77848636a04c4bb5}\label{class_avatar_controller_a7a321f1989438d0a77848636a04c4bb5}} 
+float {\bfseries smooth\+Factor} = 5f
+\item 
+\mbox{\Hypertarget{class_avatar_controller_aa379013fbfd748dc0ccd9ffedfb759d2}\label{class_avatar_controller_aa379013fbfd748dc0ccd9ffedfb759d2}} 
+bool {\bfseries offset\+Relative\+To\+Sensor} = false
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_avatar_controller_affff56fcbd62ebea1efea35ea4a72cb8}\label{class_avatar_controller_affff56fcbd62ebea1efea35ea4a72cb8}} 
+void {\bfseries Transform\+Bone} (uint user\+Id, Kinect\+Wrapper.\+Nui\+Skeleton\+Position\+Index joint, int bone\+Index, bool flip)
+\item 
+\mbox{\Hypertarget{class_avatar_controller_a130066065bf8fc071c24a0d0f0972b95}\label{class_avatar_controller_a130066065bf8fc071c24a0d0f0972b95}} 
+void {\bfseries Transform\+Special\+Bone} (uint user\+Id, Kinect\+Wrapper.\+Nui\+Skeleton\+Position\+Index joint, Kinect\+Wrapper.\+Nui\+Skeleton\+Position\+Index joint\+Parent, int bone\+Index, Vector3 base\+Dir, bool flip)
+\item 
+\mbox{\Hypertarget{class_avatar_controller_a639ea57d58fd646c134b6a39525f39c6}\label{class_avatar_controller_a639ea57d58fd646c134b6a39525f39c6}} 
+void {\bfseries Move\+Avatar} (uint User\+ID)
+\item 
+\mbox{\Hypertarget{class_avatar_controller_a8f8cd1cae328cc38cf52f0e6a74e6c10}\label{class_avatar_controller_a8f8cd1cae328cc38cf52f0e6a74e6c10}} 
+virtual void {\bfseries Map\+Bones} ()
+\item 
+\mbox{\Hypertarget{class_avatar_controller_a6fdb6363fd5dc2dea534889d03df26a7}\label{class_avatar_controller_a6fdb6363fd5dc2dea534889d03df26a7}} 
+void {\bfseries Get\+Initial\+Rotations} ()
+\item 
+\mbox{\Hypertarget{class_avatar_controller_a0946ebc70d224589da85b0e629675fb6}\label{class_avatar_controller_a0946ebc70d224589da85b0e629675fb6}} 
+Quaternion {\bfseries Kinect2\+Avatar\+Rot} (Quaternion joint\+Rotation, int bone\+Index)
+\item 
+\mbox{\Hypertarget{class_avatar_controller_a8e275933bb7c53eb46449bd2aa9680f3}\label{class_avatar_controller_a8e275933bb7c53eb46449bd2aa9680f3}} 
+Vector3 {\bfseries Kinect2\+Avatar\+Pos} (Vector3 joint\+Position, bool b\+Move\+Vertically)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_avatar_controller_aad78a134ad1590839d095803694d91b9}\label{class_avatar_controller_aad78a134ad1590839d095803694d91b9}} 
+int {\bfseries move\+Rate} = 1
+\item 
+\mbox{\Hypertarget{class_avatar_controller_a65abf523bc35b4a09ae3eb3fa4004c96}\label{class_avatar_controller_a65abf523bc35b4a09ae3eb3fa4004c96}} 
+Transform {\bfseries body\+Root}
+\item 
+\mbox{\Hypertarget{class_avatar_controller_abc60dd82fc853ab0749a6d7478dc955e}\label{class_avatar_controller_abc60dd82fc853ab0749a6d7478dc955e}} 
+Game\+Object {\bfseries offset\+Node}
+\item 
+\mbox{\Hypertarget{class_avatar_controller_ae55f16667eb32862ec5fd697e6113439}\label{class_avatar_controller_ae55f16667eb32862ec5fd697e6113439}} 
+Transform \mbox{[}$\,$\mbox{]} {\bfseries bones}
+\item 
+\mbox{\Hypertarget{class_avatar_controller_ae8ec8b3517c912e1945f3c92cc5830c1}\label{class_avatar_controller_ae8ec8b3517c912e1945f3c92cc5830c1}} 
+Quaternion \mbox{[}$\,$\mbox{]} {\bfseries initial\+Rotations}
+\item 
+\mbox{\Hypertarget{class_avatar_controller_a385dc0e8a1b0ab54d97a67fd66741b53}\label{class_avatar_controller_a385dc0e8a1b0ab54d97a67fd66741b53}} 
+Quaternion \mbox{[}$\,$\mbox{]} {\bfseries initial\+Local\+Rotations}
+\item 
+\mbox{\Hypertarget{class_avatar_controller_ac86ce814dd2d6e590ea7f900dc95419f}\label{class_avatar_controller_ac86ce814dd2d6e590ea7f900dc95419f}} 
+Vector3 {\bfseries initial\+Position}
+\item 
+\mbox{\Hypertarget{class_avatar_controller_a3a82b63267763f54d80b16c7caff87b3}\label{class_avatar_controller_a3a82b63267763f54d80b16c7caff87b3}} 
+Quaternion {\bfseries initial\+Rotation}
+\item 
+\mbox{\Hypertarget{class_avatar_controller_a2edd2f991e0dd088a200c9824b6b38b1}\label{class_avatar_controller_a2edd2f991e0dd088a200c9824b6b38b1}} 
+bool {\bfseries offset\+Calibrated} = false
+\item 
+\mbox{\Hypertarget{class_avatar_controller_abba3a50e1e85bebe02f1e9f9861dab6b}\label{class_avatar_controller_abba3a50e1e85bebe02f1e9f9861dab6b}} 
+float {\bfseries x\+Offset}
+\item 
+\mbox{\Hypertarget{class_avatar_controller_a184d57b6eb71497ed7a12ed30eb52bae}\label{class_avatar_controller_a184d57b6eb71497ed7a12ed30eb52bae}} 
+\mbox{\hyperlink{class_kinect_manager}{Kinect\+Manager}} {\bfseries kinect\+Manager}
+\item 
+readonly Dictionary$<$ int, Kinect\+Wrapper.\+Nui\+Skeleton\+Position\+Index $>$ {\bfseries bone\+Index2\+Joint\+Map}
+\item 
+readonly Dictionary$<$ int, List$<$ Kinect\+Wrapper.\+Nui\+Skeleton\+Position\+Index $>$ $>$ {\bfseries spec\+Index2\+Joint\+Map}
+\item 
+readonly Dictionary$<$ int, Kinect\+Wrapper.\+Nui\+Skeleton\+Position\+Index $>$ {\bfseries bone\+Index2\+Mirror\+Joint\+Map}
+\item 
+readonly Dictionary$<$ int, List$<$ Kinect\+Wrapper.\+Nui\+Skeleton\+Position\+Index $>$ $>$ {\bfseries spec\+Index2\+Mirror\+Joint\+Map}
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_avatar_controller_a38a4ef1c0030484ba18dd905f850aa7a}\label{class_avatar_controller_a38a4ef1c0030484ba18dd905f850aa7a}} 
+new Transform {\bfseries transform}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_avatar_controller_af44970b84262aacd3c76c192095fedd7}\label{class_avatar_controller_af44970b84262aacd3c76c192095fedd7}} 
+\index{Avatar\+Controller@{Avatar\+Controller}!bone\+Index2\+Joint\+Map@{bone\+Index2\+Joint\+Map}}
+\index{bone\+Index2\+Joint\+Map@{bone\+Index2\+Joint\+Map}!Avatar\+Controller@{Avatar\+Controller}}
+\subsubsection{\texorpdfstring{bone\+Index2\+Joint\+Map}{boneIndex2JointMap}}
+{\footnotesize\ttfamily readonly Dictionary$<$int, Kinect\+Wrapper.\+Nui\+Skeleton\+Position\+Index$>$ Avatar\+Controller.\+bone\+Index2\+Joint\+Map\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \textcolor{keyword}{new} Dictionary<int, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex>
+    \{
+        \{0, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.HipCenter\},
+        \{1, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.Spine\},
+        \{2, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.ShoulderCenter\},
+        \{3, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.Head\},
+        
+        \{5, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.ShoulderLeft\},
+        \{6, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.ElbowLeft\},
+        \{7, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.WristLeft\},
+        \{8, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.HandLeft\},
+        
+        \{10, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.ShoulderRight\},
+        \{11, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.ElbowRight\},
+        \{12, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.WristRight\},
+        \{13, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.HandRight\},
+        
+        \{14, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.HipLeft\},
+        \{15, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.KneeLeft\},
+        \{16, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.AnkleLeft\},
+        \{17, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.FootLeft\},
+        
+        \{18, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.HipRight\},
+        \{19, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.KneeRight\},
+        \{20, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.AnkleRight\},
+        \{21, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.FootRight\},
+    \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_avatar_controller_acf75b54900c0f65fcd27d9a998582ef8}\label{class_avatar_controller_acf75b54900c0f65fcd27d9a998582ef8}} 
+\index{Avatar\+Controller@{Avatar\+Controller}!bone\+Index2\+Mirror\+Joint\+Map@{bone\+Index2\+Mirror\+Joint\+Map}}
+\index{bone\+Index2\+Mirror\+Joint\+Map@{bone\+Index2\+Mirror\+Joint\+Map}!Avatar\+Controller@{Avatar\+Controller}}
+\subsubsection{\texorpdfstring{bone\+Index2\+Mirror\+Joint\+Map}{boneIndex2MirrorJointMap}}
+{\footnotesize\ttfamily readonly Dictionary$<$int, Kinect\+Wrapper.\+Nui\+Skeleton\+Position\+Index$>$ Avatar\+Controller.\+bone\+Index2\+Mirror\+Joint\+Map\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \textcolor{keyword}{new} Dictionary<int, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex>
+    \{
+        \{0, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.HipCenter\},
+        \{1, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.Spine\},
+        \{2, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.ShoulderCenter\},
+        \{3, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.Head\},
+        
+        \{5, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.ShoulderRight\},
+        \{6, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.ElbowRight\},
+        \{7, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.WristRight\},
+        \{8, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.HandRight\},
+        
+        \{10, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.ShoulderLeft\},
+        \{11, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.ElbowLeft\},
+        \{12, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.WristLeft\},
+        \{13, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.HandLeft\},
+        
+        \{14, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.HipRight\},
+        \{15, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.KneeRight\},
+        \{16, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.AnkleRight\},
+        \{17, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.FootRight\},
+        
+        \{18, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.HipLeft\},
+        \{19, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.KneeLeft\},
+        \{20, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.AnkleLeft\},
+        \{21, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.FootLeft\},
+    \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_avatar_controller_a8143c80aaad868c53ca674b41759d82b}\label{class_avatar_controller_a8143c80aaad868c53ca674b41759d82b}} 
+\index{Avatar\+Controller@{Avatar\+Controller}!spec\+Index2\+Joint\+Map@{spec\+Index2\+Joint\+Map}}
+\index{spec\+Index2\+Joint\+Map@{spec\+Index2\+Joint\+Map}!Avatar\+Controller@{Avatar\+Controller}}
+\subsubsection{\texorpdfstring{spec\+Index2\+Joint\+Map}{specIndex2JointMap}}
+{\footnotesize\ttfamily readonly Dictionary$<$int, List$<$Kinect\+Wrapper.\+Nui\+Skeleton\+Position\+Index$>$ $>$ Avatar\+Controller.\+spec\+Index2\+Joint\+Map\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \textcolor{keyword}{new} Dictionary<int, List<\mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex>>
+    \{
+        \{4, \textcolor{keyword}{new} List<\mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex> \{
+      \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.ShoulderLeft, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.
+      NuiSkeletonPositionIndex.ShoulderCenter\} \},
+        \{9, \textcolor{keyword}{new} List<\mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex> \{
+      \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.ShoulderRight, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.
+      NuiSkeletonPositionIndex.ShoulderCenter\} \},
+    \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_avatar_controller_ad954ba1369590ca3534bd206eb8bd72a}\label{class_avatar_controller_ad954ba1369590ca3534bd206eb8bd72a}} 
+\index{Avatar\+Controller@{Avatar\+Controller}!spec\+Index2\+Mirror\+Joint\+Map@{spec\+Index2\+Mirror\+Joint\+Map}}
+\index{spec\+Index2\+Mirror\+Joint\+Map@{spec\+Index2\+Mirror\+Joint\+Map}!Avatar\+Controller@{Avatar\+Controller}}
+\subsubsection{\texorpdfstring{spec\+Index2\+Mirror\+Joint\+Map}{specIndex2MirrorJointMap}}
+{\footnotesize\ttfamily readonly Dictionary$<$int, List$<$Kinect\+Wrapper.\+Nui\+Skeleton\+Position\+Index$>$ $>$ Avatar\+Controller.\+spec\+Index2\+Mirror\+Joint\+Map\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \textcolor{keyword}{new} Dictionary<int, List<\mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex>>
+    \{
+        \{4, \textcolor{keyword}{new} List<\mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex> \{
+      \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.ShoulderRight, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.
+      NuiSkeletonPositionIndex.ShoulderCenter\} \},
+        \{9, \textcolor{keyword}{new} List<\mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex> \{
+      \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.NuiSkeletonPositionIndex.ShoulderLeft, \mbox{\hyperlink{class_kinect_wrapper}{KinectWrapper}}.
+      NuiSkeletonPositionIndex.ShoulderCenter\} \},
+    \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Kinect\+Scripts/Avatar\+Controller.\+cs\end{DoxyCompactItemize}

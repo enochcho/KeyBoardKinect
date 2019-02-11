@@ -1,0 +1,68 @@
+\hypertarget{class_timed_lerp}{}\section{Timed\+Lerp Class Reference}
+\label{class_timed_lerp}\index{Timed\+Lerp@{Timed\+Lerp}}
+
+
+\mbox{\hyperlink{class_timed_lerp}{Timed\+Lerp}} -\/ Maintains a time-\/based lerp between 0 and a upper limit between 0 and 1. The lerp speed parameter is in units of inverse time -\/ therefore, a speed of 2.\+0 means that the lerp completes a full transition (0 to 1) in 0.\+5 seconds.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_timed_lerp_afd112ddd79c1dca6b8eed43fe8e8bf17}\label{class_timed_lerp_afd112ddd79c1dca6b8eed43fe8e8bf17}} 
+void {\bfseries Set\+Speed} ()
+\item 
+\mbox{\Hypertarget{class_timed_lerp_a6a196647bd9dc81dedb9171b7a77ad75}\label{class_timed_lerp_a6a196647bd9dc81dedb9171b7a77ad75}} 
+void \mbox{\hyperlink{class_timed_lerp_a6a196647bd9dc81dedb9171b7a77ad75}{Set\+Speed}} (float ease\+In\+Speed, float ease\+Out\+Speed)
+\begin{DoxyCompactList}\small\item\em Set in/out speeds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_timed_lerp_aa3ea68ee9fc2e65a1b023b82f8104fd4}\label{class_timed_lerp_aa3ea68ee9fc2e65a1b023b82f8104fd4}} 
+void {\bfseries Set\+Enabled} (bool is\+Enabled)
+\item 
+\mbox{\Hypertarget{class_timed_lerp_a6b0d6401a371c4596da83f3ba3379bdd}\label{class_timed_lerp_a6b0d6401a371c4596da83f3ba3379bdd}} 
+void {\bfseries Set\+Enabled} (float enabled)
+\item 
+\mbox{\Hypertarget{class_timed_lerp_a6771a3babe6ccdc179962799b38a764f}\label{class_timed_lerp_a6771a3babe6ccdc179962799b38a764f}} 
+void {\bfseries Reset} ()
+\item 
+\mbox{\Hypertarget{class_timed_lerp_a588b7b9530791c1b8b62a680423507ec}\label{class_timed_lerp_a588b7b9530791c1b8b62a680423507ec}} 
+bool {\bfseries Is\+Enabled} ()
+\item 
+\mbox{\Hypertarget{class_timed_lerp_abfe1bf353d18a0fed4c9c83a665aa2fd}\label{class_timed_lerp_abfe1bf353d18a0fed4c9c83a665aa2fd}} 
+bool \mbox{\hyperlink{class_timed_lerp_abfe1bf353d18a0fed4c9c83a665aa2fd}{Is\+Lerp\+Enabled}} ()
+\begin{DoxyCompactList}\small\item\em Is\+Lerp\+Enabled reflects whether the current value is 0 or not. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_timed_lerp_a16a1d4a28fb9a621808f94e877e4e518}\label{class_timed_lerp_a16a1d4a28fb9a621808f94e877e4e518}} 
+void \mbox{\hyperlink{class_timed_lerp_a16a1d4a28fb9a621808f94e877e4e518}{Tick}} (float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Tick needs to be called once per frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_timed_lerp_a38bd18cd8de9a62364e47bee6eb4771b}\label{class_timed_lerp_a38bd18cd8de9a62364e47bee6eb4771b}} 
+float {\bfseries Enabled}
+\item 
+\mbox{\Hypertarget{class_timed_lerp_a3986137427e1e7bd66bb783fb2d86b10}\label{class_timed_lerp_a3986137427e1e7bd66bb783fb2d86b10}} 
+float {\bfseries Value}
+\item 
+\mbox{\Hypertarget{class_timed_lerp_aeed2ea010b62bd529013dc9b9bcac0a7}\label{class_timed_lerp_aeed2ea010b62bd529013dc9b9bcac0a7}} 
+float {\bfseries Ease\+In\+Speed}
+\item 
+\mbox{\Hypertarget{class_timed_lerp_a2a08436125e40b0c670c5fd90c7f6db9}\label{class_timed_lerp_a2a08436125e40b0c670c5fd90c7f6db9}} 
+float {\bfseries Ease\+Out\+Speed}
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_timed_lerp_a299ba73016b0b467b4e05f663da50c6e}\label{class_timed_lerp_a299ba73016b0b467b4e05f663da50c6e}} 
+float {\bfseries Linear\+Value}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_timed_lerp_aca0279f3da2195aa1c275a42e4694301}\label{class_timed_lerp_aca0279f3da2195aa1c275a42e4694301}} 
+float {\bfseries Smooth\+Value}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{class_timed_lerp}{Timed\+Lerp}} -\/ Maintains a time-\/based lerp between 0 and a upper limit between 0 and 1. The lerp speed parameter is in units of inverse time -\/ therefore, a speed of 2.\+0 means that the lerp completes a full transition (0 to 1) in 0.\+5 seconds. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Kinect\+Scripts/\+Filters/Timed\+Lerp.\+cs\end{DoxyCompactItemize}

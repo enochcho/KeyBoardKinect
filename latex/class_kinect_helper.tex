@@ -1,0 +1,46 @@
+\hypertarget{class_kinect_helper}{}\section{Kinect\+Helper Class Reference}
+\label{class_kinect_helper}\index{Kinect\+Helper@{Kinect\+Helper}}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_kinect_helper_a9363f32b91490038a17f0d976c179cab}\label{class_kinect_helper_a9363f32b91490038a17f0d976c179cab}} 
+static bool {\bfseries Joint\+Position\+Is\+Valid} (Vector3 joint\+Position)
+\item 
+\mbox{\Hypertarget{class_kinect_helper_ad32dda60dab4b3ca51dab2ff87c23ca4}\label{class_kinect_helper_ad32dda60dab4b3ca51dab2ff87c23ca4}} 
+static bool {\bfseries Bone\+Orientation\+Is\+Valid} (Quaternion bone\+Orientation)
+\item 
+\mbox{\Hypertarget{class_kinect_helper_a329affc063588a2df0f41c31f8b0435a}\label{class_kinect_helper_a329affc063588a2df0f41c31f8b0435a}} 
+static bool {\bfseries Is\+Tracked} (\mbox{\hyperlink{struct_kinect_wrapper_1_1_nui_skeleton_data}{Kinect\+Wrapper.\+Nui\+Skeleton\+Data}} skeleton, int joint\+Index)
+\item 
+\mbox{\Hypertarget{class_kinect_helper_abcce6f17357f234fd21fdb167aed3f2b}\label{class_kinect_helper_abcce6f17357f234fd21fdb167aed3f2b}} 
+static bool {\bfseries Is\+Tracked\+Or\+Inferred} (\mbox{\hyperlink{struct_kinect_wrapper_1_1_nui_skeleton_data}{Kinect\+Wrapper.\+Nui\+Skeleton\+Data}} skeleton, int joint\+Index)
+\item 
+\mbox{\Hypertarget{class_kinect_helper_a7cf4d92f0f65a88d27aa2a821b647d83}\label{class_kinect_helper_a7cf4d92f0f65a88d27aa2a821b647d83}} 
+static Quaternion {\bfseries Rotation\+Between\+Quaternions} (Quaternion quaternionA, Quaternion quaternionB)
+\item 
+\mbox{\Hypertarget{class_kinect_helper_a3b96bc4fca262eff905577cee615280e}\label{class_kinect_helper_a3b96bc4fca262eff905577cee615280e}} 
+static Quaternion {\bfseries Enhanced\+Quaternion\+Slerp} (Quaternion quaternionA, Quaternion quaternionB, float amount)
+\item 
+\mbox{\Hypertarget{class_kinect_helper_a82e8bb56dfa8c75fa5d2e77fe1930fd9}\label{class_kinect_helper_a82e8bb56dfa8c75fa5d2e77fe1930fd9}} 
+static Quaternion {\bfseries Ensure\+Quaternion\+Neighborhood} (Quaternion quaternionA, Quaternion quaternionB)
+\item 
+\mbox{\Hypertarget{class_kinect_helper_a3a634ac394a018cc8207634bf74e751e}\label{class_kinect_helper_a3a634ac394a018cc8207634bf74e751e}} 
+static float {\bfseries Quaternion\+Angle} (Quaternion rotation)
+\item 
+\mbox{\Hypertarget{class_kinect_helper_aa5094dc4f70d1f067e23aaefa2280d5e}\label{class_kinect_helper_aa5094dc4f70d1f067e23aaefa2280d5e}} 
+static void {\bfseries Lerp\+And\+Apply} (ref \mbox{\hyperlink{struct_kinect_wrapper_1_1_nui_skeleton_data}{Kinect\+Wrapper.\+Nui\+Skeleton\+Data}} skeleton, int joint\+Index, Vector3 new\+Joint\+Pos, float lerp\+Value, Kinect\+Wrapper.\+Nui\+Skeleton\+Position\+Tracking\+State final\+Tracking\+State)
+\item 
+\mbox{\Hypertarget{class_kinect_helper_a7c8b3dbeef069ec1f12f15d939598f59}\label{class_kinect_helper_a7c8b3dbeef069ec1f12f15d939598f59}} 
+static void {\bfseries Copy\+Skeleton} (ref \mbox{\hyperlink{struct_kinect_wrapper_1_1_nui_skeleton_data}{Kinect\+Wrapper.\+Nui\+Skeleton\+Data}} source, ref \mbox{\hyperlink{struct_kinect_wrapper_1_1_nui_skeleton_data}{Kinect\+Wrapper.\+Nui\+Skeleton\+Data}} destination)
+\item 
+\mbox{\Hypertarget{class_kinect_helper_adbd205f1683d864d65067ab28e6f33b9}\label{class_kinect_helper_adbd205f1683d864d65067ab28e6f33b9}} 
+static Vector3 \mbox{\hyperlink{class_kinect_helper_adbd205f1683d864d65067ab28e6f33b9}{Vector\+Between}} (ref \mbox{\hyperlink{struct_kinect_wrapper_1_1_nui_skeleton_data}{Kinect\+Wrapper.\+Nui\+Skeleton\+Data}} skeleton, int start\+Joint, int end\+Joint)
+\begin{DoxyCompactList}\small\item\em Vector\+Between calculates the Vector3 from start to end == subtract start from end. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_kinect_helper_a188d510eee3dd71b003ccdc95b308182}\label{class_kinect_helper_a188d510eee3dd71b003ccdc95b308182}} 
+static Vector4 {\bfseries Distance\+To\+Line\+Segment} (Vector3 line\+Point0, Vector3 line\+Point1, Vector3 point)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Kinect\+Scripts/\+Filters/Kinect\+Helper.\+cs\end{DoxyCompactItemize}

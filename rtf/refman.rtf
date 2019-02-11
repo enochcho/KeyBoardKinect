@@ -1,0 +1,3824 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\paperw11900\paperh16840\margl1800\margr1800\margt1440\margb1440\gutter0\ltrsect}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 5;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 9;}
+{\s50\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext51 List Continue 0;}
+{\s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext52 List Continue 1;}
+{\s52\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext53 List Continue 2;}
+{\s53\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext54 List Continue 3;}
+{\s54\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext55 List Continue 4;}
+{\s55\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext56 List Continue 5;}
+{\s56\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext57 List Continue 6;}
+{\s57\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext58 List Continue 7;}
+{\s58\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext59 List Continue 8;}
+{\s59\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext59 List Continue 9;}
+{\s60\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext61 DescContinue 0;}
+{\s61\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext62 DescContinue 1;}
+{\s62\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext63 DescContinue 2;}
+{\s63\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext64 DescContinue 3;}
+{\s64\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext65 DescContinue 4;}
+{\s65\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext66 DescContinue 5;}
+{\s66\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext67 DescContinue 6;}
+{\s67\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext68 DescContinue 7;}
+{\s68\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext69 DescContinue 8;}
+{\s69\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext69 DescContinue 9;}
+{\s70\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext81 LatexTOC 0;}
+{\s71\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext82 LatexTOC 1;}
+{\s72\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext83 LatexTOC 2;}
+{\s73\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext84 LatexTOC 3;}
+{\s74\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext85 LatexTOC 4;}
+{\s75\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext86 LatexTOC 5;}
+{\s76\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext87 LatexTOC 6;}
+{\s77\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext88 LatexTOC 7;}
+{\s78\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext89 LatexTOC 8;}
+{\s79\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext89 LatexTOC 9;}
+{\s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext81 \sautoupd List Bullet 0;}
+{\s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid \sbasedon0 \snext82 \sautoupd List Bullet 1;}
+{\s82\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls3\adjustright \fs20\cgrid \sbasedon0 \snext83 \sautoupd List Bullet 2;}
+{\s83\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls4\adjustright \fs20\cgrid \sbasedon0 \snext84 \sautoupd List Bullet 3;}
+{\s84\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls5\adjustright \fs20\cgrid \sbasedon0 \snext85 \sautoupd List Bullet 4;}
+{\s85\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls6\adjustright \fs20\cgrid \sbasedon0 \snext86 \sautoupd List Bullet 5;}
+{\s86\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls7\adjustright \fs20\cgrid \sbasedon0 \snext87 \sautoupd List Bullet 6;}
+{\s87\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls8\adjustright \fs20\cgrid \sbasedon0 \snext88 \sautoupd List Bullet 7;}
+{\s88\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls9\adjustright \fs20\cgrid \sbasedon0 \snext89 \sautoupd List Bullet 8;}
+{\s89\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls10\adjustright \fs20\cgrid \sbasedon0 \snext89 \sautoupd List Bullet 9;}
+{\s90\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext91 \sautoupd List Enum 0;}
+{\s91\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext92 \sautoupd List Enum 1;}
+{\s92\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext93 \sautoupd List Enum 2;}
+{\s93\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext94 \sautoupd List Enum 3;}
+{\s94\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext95 \sautoupd List Enum 4;}
+{\s95\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext96 \sautoupd List Enum 5;}
+{\s96\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext96 \sautoupd List Enum 5;}
+{\s97\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext98 \sautoupd List Enum 7;}
+{\s98\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext99 \sautoupd List Enum 8;}
+{\s99\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext99 \sautoupd List Enum 9;}
+}
+{\info 
+{\title {\comment BurnCenter }BurnCenter}
+{\comment Generated byDoxgyen. }
+{\creatim \yr2018\mo12\dy10\hr17\min47\sec50}
+}\pard\plain 
+\sectd\pgnlcrm
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+\vertalc\qc\par\par\par\par\par\par\par
+\pard\plain \s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid 
+{\field\fldedit {\*\fldinst TITLE \\*MERGEFORMAT}{\fldrslt BurnCenter}}\par
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+\par
+\par\par\par\par\par\par\par\par\par\par\par\par
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+{\field\fldedit {\*\fldinst AUTHOR \\*MERGEFORMAT}{\fldrslt AUTHOR}}\par
+Version \par{\field\fldedit {\*\fldinst CREATEDATE \\*MERGEFORMAT}{\fldrslt Mon Dec 10 2018 }}\par
+\page\page\vertalt
+\pard\plain 
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Table of Contents\par
+\pard\plain \par
+{\field\fldedit {\*\fldinst TOC \\f \\*MERGEFORMAT}{\fldrslt Table of contents}}\par
+\pard\plain 
+\sect \sbkpage \pgndec \pgnrestart
+\sect \sectd \sbknone
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Hierarchical Index\par \pard\plain 
+{\tc \v Hierarchical Index}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Class Hierarchy\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid This inheritance list is sorted roughly, but not completely, alphabetically:}
+{
+\par
+\pard\plain \s71\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+BoneOrientationsConstraint\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACC \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+BoneOrientationsFilter\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACI \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+ClippedLegsFilter\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACP \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+KinectWrapper.ColorBuffer\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAKS \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+KinectWrapper.ColorCust\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAKU \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+KinectWrapper.DepthBuffer\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAKZ \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+KinectGestures.GestureData\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEV \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+KinectGestures.GestureListenerInterface\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFL \\*MERGEFORMAT}{\fldrslt pagenum}}
+{
+\par
+\pard\plain \s72\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+GestureListener\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADV \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+SimpleGestureListener\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAOL \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+}\par
+KinectWrapper.INuiFrameTexture\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAALB \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+JointPositionsFilter\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEK \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+KinectGestures\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAES \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+KinectHelper\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFR \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+KinectWrapper\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAJH \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+MonoBehaviour
+{
+\par
+\pard\plain \s72\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+AvatarController\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAA \\*MERGEFORMAT}{\fldrslt pagenum}}
+{
+\par
+\pard\plain \s73\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+AvatarControllerClassic\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABG \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+}\par
+CubemanController\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACS \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+DepthImageViewer\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADQ \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+EggMover\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADR \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+EggSpawner\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADS \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+FollowUserRotation\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADU \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+GestureListener\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADV \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+GetJointPositionDemo\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEE \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+KinectManager\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAGE \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+KinectOverlayer\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAJB \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+LoadMainLevel\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAANJ \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+ObjectRandomLocation\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAANU \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+PresentationScript\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAANV \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+SetSceneAvatars\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAOK \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+SimpleGestureListener\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAOL \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+}\par
+MouseControl\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAANK \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+KinectWrapper.NuiImageBuffer\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAALH \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+KinectWrapper.NuiImageFrame\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAALM \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+KinectWrapper.NuiImageViewArea\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAALU \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+KinectWrapper.NuiLockedRect\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAALY \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+KinectWrapper.NuiSkeletonBoneOrientation\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAMC \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+KinectWrapper.NuiSkeletonBoneRotation\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAMH \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+KinectWrapper.NuiSkeletonData\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAMK \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+KinectWrapper.NuiSkeletonFrame\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAMT \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+KinectWrapper.NuiSurfaceDesc\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAANA \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+KinectWrapper.NuiTransformSmoothParameters\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAND \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+MouseControl.RECT\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAANP \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+SelfIntersectionConstraint\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAOE \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+TimedLerp\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAPC \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+TrackingStateFilter\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAPR \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Class Index\par \pard\plain 
+{\tc \v Class Index}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Class List\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Here are the classes, structs, unions and interfaces with brief descriptions:}
+{
+\par
+\pard\plain \s71\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\b {\b AvatarController} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAA \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b AvatarControllerClassic} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABG \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b BoneOrientationsConstraint} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Filter to correct the joint locations and joint orientations to constraint to range of viable human motion. })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACC \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b BoneOrientationsFilter} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Implementation of a Holt Double Exponential Smoothing filter for orientation. The double exponential smooths the curve and predicts. There is also noise jitter removal. And maximum prediction bounds. The parameters are commented in the Init function. })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACI \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b ClippedLegsFilter} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+FilterClippedLegs smooths out leg joint positions when the skeleton is clipped by the bottom of the camera FOV. Inferred joint positions from the skeletal tracker can occasionally be noisy or erroneous, based on limited depth image pixels from the parts of the legs in view. This filter applies a lot of smoothing using a double exponential filter, letting through just enough leg movement to show a kick or high step. Based on the amount of leg that is clipped/inferred, the smoothed data is feathered into the skeleton output data. })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACP \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b KinectWrapper.ColorBuffer} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAKS \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b KinectWrapper.ColorCust} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAKU \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b CubemanController} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACS \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b KinectWrapper.DepthBuffer} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAKZ \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b DepthImageViewer} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADQ \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b EggMover} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADR \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b EggSpawner} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADS \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b FollowUserRotation} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADU \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b KinectGestures.GestureData} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEV \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b GestureListener} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADV \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b KinectGestures.GestureListenerInterface} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFL \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b GetJointPositionDemo} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEE \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b KinectWrapper.INuiFrameTexture} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAALB \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b JointPositionsFilter} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Implementation of a Holt Double Exponential Smoothing filter. The double exponential smooths the curve and predicts. There is also noise jitter removal. And maximum prediction bounds. The parameters are commented in the Init function. })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEK \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b KinectGestures} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAES \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b KinectHelper} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFR \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b KinectManager} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAGE \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b KinectOverlayer} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAJB \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b KinectWrapper} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAJH \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b LoadMainLevel} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAANJ \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b MouseControl} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAANK \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b KinectWrapper.NuiImageBuffer} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAALH \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b KinectWrapper.NuiImageFrame} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAALM \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b KinectWrapper.NuiImageViewArea} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAALU \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b KinectWrapper.NuiLockedRect} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAALY \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b KinectWrapper.NuiSkeletonBoneOrientation} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAMC \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b KinectWrapper.NuiSkeletonBoneRotation} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAMH \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b KinectWrapper.NuiSkeletonData} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAMK \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b KinectWrapper.NuiSkeletonFrame} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAMT \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b KinectWrapper.NuiSurfaceDesc} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAANA \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b KinectWrapper.NuiTransformSmoothParameters} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAND \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b ObjectRandomLocation} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAANU \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b PresentationScript} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAANV \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b MouseControl.RECT} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAANP \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b SelfIntersectionConstraint} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Filter to prevent skeleton arm joints from intersecting the "body". })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAOE \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b SetSceneAvatars} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAOK \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b SimpleGestureListener} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAOL \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b TimedLerp} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{\b TimedLerp} - Maintains a time-based lerp between 0 and a upper limit between 0 and 1. The lerp speed parameter is in units of inverse time - therefore, a speed of 2.0 means that the lerp completes a full transition (0 to 1) in 0.5 seconds. })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAPC \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b TrackingStateFilter} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Implementation of a Holt Double Exponential Smoothing filter. The double exponential smooths the curve and predicts. There is also noise jitter removal. })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAPR \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+\par}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Class Documentation{\tc \v Class Documentation}
+\par \pard\plain 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+AvatarController Class Reference\par \pard\plain 
+{\tc\tcl2 \v AvatarController}
+{\xe \v AvatarController}
+{\bkmkstart AAAAAAAAAA}
+{\bkmkend AAAAAAAAAA}
+Inheritance diagram for AvatarController:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_avatar_controller.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b Awake} (){\bkmkstart AAAAAAAAAB}
+{\bkmkend AAAAAAAAAB}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b UpdateAvatar} (uint UserID){\bkmkstart AAAAAAAAAC}
+{\bkmkend AAAAAAAAAC}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b ResetToInitialPosition} (){\bkmkstart AAAAAAAAAD}
+{\bkmkend AAAAAAAAAD}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b SuccessfulCalibration} (uint userId){\bkmkstart AAAAAAAAAE}
+{\bkmkend AAAAAAAAAE}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b mirroredMovement} = false{\bkmkstart AAAAAAAAAF}
+{\bkmkend AAAAAAAAAF}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b verticalMovement} = false{\bkmkstart AAAAAAAAAG}
+{\bkmkend AAAAAAAAAG}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+float {\b smoothFactor} = 5f{\bkmkstart AAAAAAAAAH}
+{\bkmkend AAAAAAAAAH}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b offsetRelativeToSensor} = false{\bkmkstart AAAAAAAAAI}
+{\bkmkend AAAAAAAAAI}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Protected Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b TransformBone} (uint userId, KinectWrapper.NuiSkeletonPositionIndex joint, int boneIndex, bool flip){\bkmkstart AAAAAAAAAJ}
+{\bkmkend AAAAAAAAAJ}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b TransformSpecialBone} (uint userId, KinectWrapper.NuiSkeletonPositionIndex joint, KinectWrapper.NuiSkeletonPositionIndex jointParent, int boneIndex, Vector3 baseDir, bool flip){\bkmkstart AAAAAAAAAK}
+{\bkmkend AAAAAAAAAK}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b MoveAvatar} (uint UserID){\bkmkstart AAAAAAAAAL}
+{\bkmkend AAAAAAAAAL}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+virtual void {\b MapBones} (){\bkmkstart AAAAAAAAAM}
+{\bkmkend AAAAAAAAAM}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b GetInitialRotations} (){\bkmkstart AAAAAAAAAN}
+{\bkmkend AAAAAAAAAN}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Quaternion {\b Kinect2AvatarRot} (Quaternion jointRotation, int boneIndex){\bkmkstart AAAAAAAAAO}
+{\bkmkend AAAAAAAAAO}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Vector3 {\b Kinect2AvatarPos} (Vector3 jointPosition, bool bMoveVertically){\bkmkstart AAAAAAAAAP}
+{\bkmkend AAAAAAAAAP}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Protected Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+int {\b moveRate} = 1{\bkmkstart AAAAAAAAAQ}
+{\bkmkend AAAAAAAAAQ}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Transform {\b bodyRoot}{\bkmkstart AAAAAAAAAR}
+{\bkmkend AAAAAAAAAR}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GameObject {\b offsetNode}{\bkmkstart AAAAAAAAAS}
+{\bkmkend AAAAAAAAAS}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Transform [] {\b bones}{\bkmkstart AAAAAAAAAT}
+{\bkmkend AAAAAAAAAT}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Quaternion [] {\b initialRotations}{\bkmkstart AAAAAAAAAU}
+{\bkmkend AAAAAAAAAU}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Quaternion [] {\b initialLocalRotations}{\bkmkstart AAAAAAAAAV}
+{\bkmkend AAAAAAAAAV}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Vector3 {\b initialPosition}{\bkmkstart AAAAAAAAAW}
+{\bkmkend AAAAAAAAAW}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Quaternion {\b initialRotation}{\bkmkstart AAAAAAAAAX}
+{\bkmkend AAAAAAAAAX}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b offsetCalibrated} = false{\bkmkstart AAAAAAAAAY}
+{\bkmkend AAAAAAAAAY}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+float {\b xOffset}{\bkmkstart AAAAAAAAAZ}
+{\bkmkend AAAAAAAAAZ}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b KinectManager} {\b kinectManager}{\bkmkstart AAAAAAAABA}
+{\bkmkend AAAAAAAABA}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+readonly Dictionary< int, KinectWrapper.NuiSkeletonPositionIndex > {\b boneIndex2JointMap}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+readonly Dictionary< int, List< KinectWrapper.NuiSkeletonPositionIndex > > {\b specIndex2JointMap}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+readonly Dictionary< int, KinectWrapper.NuiSkeletonPositionIndex > {\b boneIndex2MirrorJointMap}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+readonly Dictionary< int, List< KinectWrapper.NuiSkeletonPositionIndex > > {\b specIndex2MirrorJointMap}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Properties\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+new Transform {\b transform}{\f2  [get]}{\bkmkstart AAAAAAAABB}
+{\bkmkend AAAAAAAABB}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Data Documentation\par
+\pard\plain 
+{\xe \v boneIndex2JointMap\:AvatarController}
+{\xe \v AvatarController\:boneIndex2JointMap}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+readonly Dictionary<int, KinectWrapper.NuiSkeletonPositionIndex> AvatarController.boneIndex2JointMap{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAABC}
+{\bkmkend AAAAAAAABC}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\b Initial value:}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid = new Dictionary<int, KinectWrapper.NuiSkeletonPositionIndex>\par
+    \{\par
+        \{0, KinectWrapper.NuiSkeletonPositionIndex.HipCenter\},\par
+        \{1, KinectWrapper.NuiSkeletonPositionIndex.Spine\},\par
+        \{2, KinectWrapper.NuiSkeletonPositionIndex.ShoulderCenter\},\par
+        \{3, KinectWrapper.NuiSkeletonPositionIndex.Head\},\par
+        \par
+        \{5, KinectWrapper.NuiSkeletonPositionIndex.ShoulderLeft\},\par
+        \{6, KinectWrapper.NuiSkeletonPositionIndex.ElbowLeft\},\par
+        \{7, KinectWrapper.NuiSkeletonPositionIndex.WristLeft\},\par
+        \{8, KinectWrapper.NuiSkeletonPositionIndex.HandLeft\},\par
+        \par
+        \{10, KinectWrapper.NuiSkeletonPositionIndex.ShoulderRight\},\par
+        \{11, KinectWrapper.NuiSkeletonPositionIndex.ElbowRight\},\par
+        \{12, KinectWrapper.NuiSkeletonPositionIndex.WristRight\},\par
+        \{13, KinectWrapper.NuiSkeletonPositionIndex.HandRight\},\par
+        \par
+        \{14, KinectWrapper.NuiSkeletonPositionIndex.HipLeft\},\par
+        \{15, KinectWrapper.NuiSkeletonPositionIndex.KneeLeft\},\par
+        \{16, KinectWrapper.NuiSkeletonPositionIndex.AnkleLeft\},\par
+        \{17, KinectWrapper.NuiSkeletonPositionIndex.FootLeft\},\par
+        \par
+        \{18, KinectWrapper.NuiSkeletonPositionIndex.HipRight\},\par
+        \{19, KinectWrapper.NuiSkeletonPositionIndex.KneeRight\},\par
+        \{20, KinectWrapper.NuiSkeletonPositionIndex.AnkleRight\},\par
+        \{21, KinectWrapper.NuiSkeletonPositionIndex.FootRight\},\par
+    \}\par
+}
+}
+{\xe \v boneIndex2MirrorJointMap\:AvatarController}
+{\xe \v AvatarController\:boneIndex2MirrorJointMap}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+readonly Dictionary<int, KinectWrapper.NuiSkeletonPositionIndex> AvatarController.boneIndex2MirrorJointMap{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAABD}
+{\bkmkend AAAAAAAABD}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\b Initial value:}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid = new Dictionary<int, KinectWrapper.NuiSkeletonPositionIndex>\par
+    \{\par
+        \{0, KinectWrapper.NuiSkeletonPositionIndex.HipCenter\},\par
+        \{1, KinectWrapper.NuiSkeletonPositionIndex.Spine\},\par
+        \{2, KinectWrapper.NuiSkeletonPositionIndex.ShoulderCenter\},\par
+        \{3, KinectWrapper.NuiSkeletonPositionIndex.Head\},\par
+        \par
+        \{5, KinectWrapper.NuiSkeletonPositionIndex.ShoulderRight\},\par
+        \{6, KinectWrapper.NuiSkeletonPositionIndex.ElbowRight\},\par
+        \{7, KinectWrapper.NuiSkeletonPositionIndex.WristRight\},\par
+        \{8, KinectWrapper.NuiSkeletonPositionIndex.HandRight\},\par
+        \par
+        \{10, KinectWrapper.NuiSkeletonPositionIndex.ShoulderLeft\},\par
+        \{11, KinectWrapper.NuiSkeletonPositionIndex.ElbowLeft\},\par
+        \{12, KinectWrapper.NuiSkeletonPositionIndex.WristLeft\},\par
+        \{13, KinectWrapper.NuiSkeletonPositionIndex.HandLeft\},\par
+        \par
+        \{14, KinectWrapper.NuiSkeletonPositionIndex.HipRight\},\par
+        \{15, KinectWrapper.NuiSkeletonPositionIndex.KneeRight\},\par
+        \{16, KinectWrapper.NuiSkeletonPositionIndex.AnkleRight\},\par
+        \{17, KinectWrapper.NuiSkeletonPositionIndex.FootRight\},\par
+        \par
+        \{18, KinectWrapper.NuiSkeletonPositionIndex.HipLeft\},\par
+        \{19, KinectWrapper.NuiSkeletonPositionIndex.KneeLeft\},\par
+        \{20, KinectWrapper.NuiSkeletonPositionIndex.AnkleLeft\},\par
+        \{21, KinectWrapper.NuiSkeletonPositionIndex.FootLeft\},\par
+    \}\par
+}
+}
+{\xe \v specIndex2JointMap\:AvatarController}
+{\xe \v AvatarController\:specIndex2JointMap}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+readonly Dictionary<int, List<KinectWrapper.NuiSkeletonPositionIndex> > AvatarController.specIndex2JointMap{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAABE}
+{\bkmkend AAAAAAAABE}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\b Initial value:}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid = new Dictionary<int, List<KinectWrapper.NuiSkeletonPositionIndex>>\par
+    \{\par
+        \{4, new List<KinectWrapper.NuiSkeletonPositionIndex> \{KinectWrapper.NuiSkeletonPositionIndex.ShoulderLeft, KinectWrapper.NuiSkeletonPositionIndex.ShoulderCenter\} \},\par
+        \{9, new List<KinectWrapper.NuiSkeletonPositionIndex> \{KinectWrapper.NuiSkeletonPositionIndex.ShoulderRight, KinectWrapper.NuiSkeletonPositionIndex.ShoulderCenter\} \},\par
+    \}\par
+}
+}
+{\xe \v specIndex2MirrorJointMap\:AvatarController}
+{\xe \v AvatarController\:specIndex2MirrorJointMap}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+readonly Dictionary<int, List<KinectWrapper.NuiSkeletonPositionIndex> > AvatarController.specIndex2MirrorJointMap{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAABF}
+{\bkmkend AAAAAAAABF}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\b Initial value:}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid = new Dictionary<int, List<KinectWrapper.NuiSkeletonPositionIndex>>\par
+    \{\par
+        \{4, new List<KinectWrapper.NuiSkeletonPositionIndex> \{KinectWrapper.NuiSkeletonPositionIndex.ShoulderRight, KinectWrapper.NuiSkeletonPositionIndex.ShoulderCenter\} \},\par
+        \{9, new List<KinectWrapper.NuiSkeletonPositionIndex> \{KinectWrapper.NuiSkeletonPositionIndex.ShoulderLeft, KinectWrapper.NuiSkeletonPositionIndex.ShoulderCenter\} \},\par
+    \}\par
+}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/AvatarController.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+AvatarControllerClassic Class Reference\par \pard\plain 
+{\tc\tcl2 \v AvatarControllerClassic}
+{\xe \v AvatarControllerClassic}
+{\bkmkstart AAAAAAAABG}
+{\bkmkend AAAAAAAABG}
+Inheritance diagram for AvatarControllerClassic:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_avatar_controller_classic.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Transform {\b HipCenter}{\bkmkstart AAAAAAAABH}
+{\bkmkend AAAAAAAABH}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Transform {\b Spine}{\bkmkstart AAAAAAAABI}
+{\bkmkend AAAAAAAABI}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Transform {\b Neck}{\bkmkstart AAAAAAAABJ}
+{\bkmkend AAAAAAAABJ}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Transform {\b Head}{\bkmkstart AAAAAAAABK}
+{\bkmkend AAAAAAAABK}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Transform {\b LeftClavicle}{\bkmkstart AAAAAAAABL}
+{\bkmkend AAAAAAAABL}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Transform {\b LeftUpperArm}{\bkmkstart AAAAAAAABM}
+{\bkmkend AAAAAAAABM}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Transform {\b LeftElbow}{\bkmkstart AAAAAAAABN}
+{\bkmkend AAAAAAAABN}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Transform {\b LeftHand}{\bkmkstart AAAAAAAABO}
+{\bkmkend AAAAAAAABO}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Transform {\b RightClavicle}{\bkmkstart AAAAAAAABP}
+{\bkmkend AAAAAAAABP}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Transform {\b RightUpperArm}{\bkmkstart AAAAAAAABQ}
+{\bkmkend AAAAAAAABQ}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Transform {\b RightElbow}{\bkmkstart AAAAAAAABR}
+{\bkmkend AAAAAAAABR}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Transform {\b RightHand}{\bkmkstart AAAAAAAABS}
+{\bkmkend AAAAAAAABS}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Transform {\b LeftThigh}{\bkmkstart AAAAAAAABT}
+{\bkmkend AAAAAAAABT}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Transform {\b LeftKnee}{\bkmkstart AAAAAAAABU}
+{\bkmkend AAAAAAAABU}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Transform {\b LeftFoot}{\bkmkstart AAAAAAAABV}
+{\bkmkend AAAAAAAABV}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Transform {\b RightThigh}{\bkmkstart AAAAAAAABW}
+{\bkmkend AAAAAAAABW}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Transform {\b RightKnee}{\bkmkstart AAAAAAAABX}
+{\bkmkend AAAAAAAABX}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Transform {\b RightFoot}{\bkmkstart AAAAAAAABY}
+{\bkmkend AAAAAAAABY}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Transform {\b BodyRoot}{\bkmkstart AAAAAAAABZ}
+{\bkmkend AAAAAAAABZ}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GameObject {\b OffsetNode}{\bkmkstart AAAAAAAACA}
+{\bkmkend AAAAAAAACA}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Protected Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+override void {\b MapBones} (){\bkmkstart AAAAAAAACB}
+{\bkmkend AAAAAAAACB}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Additional Inherited Members\par
+\pard\plain 
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/AvatarControllerClassic.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+BoneOrientationsConstraint Class Reference\par \pard\plain 
+{\tc\tcl2 \v BoneOrientationsConstraint}
+{\xe \v BoneOrientationsConstraint}
+{\bkmkstart AAAAAAAACC}
+{\bkmkend AAAAAAAACC}
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Filter to correct the joint locations and joint orientations to constraint to range of viable human motion. }}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Types\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+enum {\b ConstraintAxis} \{ {\b X} = 0, 
+{\b Y} = 1, 
+{\b Z} = 2
+ \}{\bkmkstart AAAAAAAACD}
+{\bkmkend AAAAAAAACD}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b BoneOrientationsConstraint} (){\bkmkstart AAAAAAAACE}
+{\bkmkend AAAAAAAACE}
+\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Initializes a new instance of the BoneOrientationConstraints class. }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b AddBoneOrientationConstraint} (int joint, ConstraintAxis axis, float angleMin, float angleMax){\bkmkstart AAAAAAAACF}
+{\bkmkend AAAAAAAACF}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b AddDefaultConstraints} (){\bkmkstart AAAAAAAACG}
+{\bkmkend AAAAAAAACG}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b Constrain} (ref Matrix4x4[] jointOrientations, ref bool[] jointTracked){\bkmkstart AAAAAAAACH}
+{\bkmkend AAAAAAAACH}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Filter to correct the joint locations and joint orientations to constraint to range of viable human motion. \par
+}
+
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/Filters/BoneOrientationsConstraint.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+BoneOrientationsFilter Class Reference\par \pard\plain 
+{\tc\tcl2 \v BoneOrientationsFilter}
+{\xe \v BoneOrientationsFilter}
+{\bkmkstart AAAAAAAACI}
+{\bkmkend AAAAAAAACI}
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Implementation of a Holt Double Exponential Smoothing filter for orientation. The double exponential smooths the curve and predicts. There is also noise jitter removal. And maximum prediction bounds. The parameters are commented in the Init function. }}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b Init} (){\bkmkstart AAAAAAAACJ}
+{\bkmkend AAAAAAAACJ}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b Init} (float smoothingValue, float correctionValue, float predictionValue, float jitterRadiusValue, float maxDeviationRadiusValue)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Initialize the filter with a set of manually specified TransformSmoothParameters. }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b Init} ({\b KinectWrapper.NuiTransformSmoothParameters} smoothingParameters){\bkmkstart AAAAAAAACK}
+{\bkmkend AAAAAAAACK}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b Reset} (){\bkmkstart AAAAAAAACL}
+{\bkmkend AAAAAAAACL}
+\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Resets the filter to default values. }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b UpdateFilter} (ref {\b KinectWrapper.NuiSkeletonData} skeleton, ref Matrix4x4[] jointOrientations){\bkmkstart AAAAAAAACM}
+{\bkmkend AAAAAAAACM}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Protected Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b FilterJoint} (ref {\b KinectWrapper.NuiSkeletonData} skeleton, int jointIndex, ref {\b KinectWrapper.NuiTransformSmoothParameters} smoothingParameters, ref Matrix4x4[] jointOrientations){\bkmkstart AAAAAAAACN}
+{\bkmkend AAAAAAAACN}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Implementation of a Holt Double Exponential Smoothing filter for orientation. The double exponential smooths the curve and predicts. There is also noise jitter removal. And maximum prediction bounds. The parameters are commented in the Init function. \par
+}
+
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Function Documentation\par
+\pard\plain 
+{\xe \v Init\:BoneOrientationsFilter}
+{\xe \v BoneOrientationsFilter\:Init}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void BoneOrientationsFilter.Init (float  {\i smoothingValue}, float  {\i correctionValue}, float  {\i predictionValue}, float  {\i jitterRadiusValue}, float  {\i maxDeviationRadiusValue})}}
+\par
+{\bkmkstart AAAAAAAACO}
+{\bkmkend AAAAAAAACO}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Initialize the filter with a set of manually specified TransformSmoothParameters. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Parameters:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i smoothingValue} \cell }{Smoothing = [0..1], lower values is closer to the raw data and more noisy.\cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i correctionValue} \cell }{Correction = [0..1], higher values correct faster and feel more responsive.\cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i predictionValue} \cell }{Prediction = [0..n], how many frames into the future we want to predict.\cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i jitterRadiusValue} \cell }{JitterRadius = The deviation angle in radians that defines jitter.\cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i maxDeviationRadiusValue} \cell }{MaxDeviation = The maximum angle in radians that filtered positions are allowed to deviate from raw data.\cell }
+{\row }
+}
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/Filters/BoneOrientationsFilter.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+ClippedLegsFilter Class Reference\par \pard\plain 
+{\tc\tcl2 \v ClippedLegsFilter}
+{\xe \v ClippedLegsFilter}
+{\bkmkstart AAAAAAAACP}
+{\bkmkend AAAAAAAACP}
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+FilterClippedLegs smooths out leg joint positions when the skeleton is clipped by the bottom of the camera FOV. Inferred joint positions from the skeletal tracker can occasionally be noisy or erroneous, based on limited depth image pixels from the parts of the legs in view. This filter applies a lot of smoothing using a double exponential filter, letting through just enough leg movement to show a kick or high step. Based on the amount of leg that is clipped/inferred, the smoothed data is feathered into the skeleton output data. }}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b Reset} (){\bkmkstart AAAAAAAACQ}
+{\bkmkend AAAAAAAACQ}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b FilterSkeleton} (ref {\b KinectWrapper.NuiSkeletonData} skeleton, float deltaNuiTime){\bkmkstart AAAAAAAACR}
+{\bkmkend AAAAAAAACR}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+FilterClippedLegs smooths out leg joint positions when the skeleton is clipped by the bottom of the camera FOV. Inferred joint positions from the skeletal tracker can occasionally be noisy or erroneous, based on limited depth image pixels from the parts of the legs in view. This filter applies a lot of smoothing using a double exponential filter, letting through just enough leg movement to show a kick or high step. Based on the amount of leg that is clipped/inferred, the smoothed data is feathered into the skeleton output data. \par
+}
+
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/Filters/ClippedLegsFilter.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+KinectWrapper.ColorBuffer Struct Reference\par \pard\plain 
+{\tc\tcl2 \v KinectWrapper.ColorBuffer}
+{\xe \v KinectWrapper.ColorBuffer}
+{\bkmkstart AAAAAAAAKS}
+{\bkmkend AAAAAAAAKS}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b ColorCust} [] {\b pixels}{\bkmkstart AAAAAAAAKT}
+{\bkmkend AAAAAAAAKT}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/KinectWrapper.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+KinectWrapper.ColorCust Struct Reference\par \pard\plain 
+{\tc\tcl2 \v KinectWrapper.ColorCust}
+{\xe \v KinectWrapper.ColorCust}
+{\bkmkstart AAAAAAAAKU}
+{\bkmkend AAAAAAAAKU}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+byte {\b b}{\bkmkstart AAAAAAAAKV}
+{\bkmkend AAAAAAAAKV}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+byte {\b g}{\bkmkstart AAAAAAAAKW}
+{\bkmkend AAAAAAAAKW}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+byte {\b r}{\bkmkstart AAAAAAAAKX}
+{\bkmkend AAAAAAAAKX}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+byte {\b a}{\bkmkstart AAAAAAAAKY}
+{\bkmkend AAAAAAAAKY}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/KinectWrapper.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+CubemanController Class Reference\par \pard\plain 
+{\tc\tcl2 \v CubemanController}
+{\xe \v CubemanController}
+{\bkmkstart AAAAAAAACS}
+{\bkmkend AAAAAAAACS}
+Inheritance diagram for CubemanController:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_cubeman_controller.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b MoveVertically} = false{\bkmkstart AAAAAAAACT}
+{\bkmkend AAAAAAAACT}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b MirroredMovement} = false{\bkmkstart AAAAAAAACU}
+{\bkmkend AAAAAAAACU}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GameObject {\b Hip_Center}{\bkmkstart AAAAAAAACV}
+{\bkmkend AAAAAAAACV}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GameObject {\b Spine}{\bkmkstart AAAAAAAACW}
+{\bkmkend AAAAAAAACW}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GameObject {\b Shoulder_Center}{\bkmkstart AAAAAAAACX}
+{\bkmkend AAAAAAAACX}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GameObject {\b Head}{\bkmkstart AAAAAAAACY}
+{\bkmkend AAAAAAAACY}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GameObject {\b Shoulder_Left}{\bkmkstart AAAAAAAACZ}
+{\bkmkend AAAAAAAACZ}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GameObject {\b Elbow_Left}{\bkmkstart AAAAAAAADA}
+{\bkmkend AAAAAAAADA}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GameObject {\b Wrist_Left}{\bkmkstart AAAAAAAADB}
+{\bkmkend AAAAAAAADB}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GameObject {\b Hand_Left}{\bkmkstart AAAAAAAADC}
+{\bkmkend AAAAAAAADC}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GameObject {\b Shoulder_Right}{\bkmkstart AAAAAAAADD}
+{\bkmkend AAAAAAAADD}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GameObject {\b Elbow_Right}{\bkmkstart AAAAAAAADE}
+{\bkmkend AAAAAAAADE}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GameObject {\b Wrist_Right}{\bkmkstart AAAAAAAADF}
+{\bkmkend AAAAAAAADF}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GameObject {\b Hand_Right}{\bkmkstart AAAAAAAADG}
+{\bkmkend AAAAAAAADG}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GameObject {\b Hip_Left}{\bkmkstart AAAAAAAADH}
+{\bkmkend AAAAAAAADH}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GameObject {\b Knee_Left}{\bkmkstart AAAAAAAADI}
+{\bkmkend AAAAAAAADI}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GameObject {\b Ankle_Left}{\bkmkstart AAAAAAAADJ}
+{\bkmkend AAAAAAAADJ}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GameObject {\b Foot_Left}{\bkmkstart AAAAAAAADK}
+{\bkmkend AAAAAAAADK}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GameObject {\b Hip_Right}{\bkmkstart AAAAAAAADL}
+{\bkmkend AAAAAAAADL}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GameObject {\b Knee_Right}{\bkmkstart AAAAAAAADM}
+{\bkmkend AAAAAAAADM}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GameObject {\b Ankle_Right}{\bkmkstart AAAAAAAADN}
+{\bkmkend AAAAAAAADN}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GameObject {\b Foot_Right}{\bkmkstart AAAAAAAADO}
+{\bkmkend AAAAAAAADO}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+LineRenderer {\b SkeletonLine}{\bkmkstart AAAAAAAADP}
+{\bkmkend AAAAAAAADP}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/Cubeman/CubemanController.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+KinectWrapper.DepthBuffer Struct Reference\par \pard\plain 
+{\tc\tcl2 \v KinectWrapper.DepthBuffer}
+{\xe \v KinectWrapper.DepthBuffer}
+{\bkmkstart AAAAAAAAKZ}
+{\bkmkend AAAAAAAAKZ}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+ushort [] {\b pixels}{\bkmkstart AAAAAAAALA}
+{\bkmkend AAAAAAAALA}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/KinectWrapper.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+DepthImageViewer Class Reference\par \pard\plain 
+{\tc\tcl2 \v DepthImageViewer}
+{\xe \v DepthImageViewer}
+{\bkmkstart AAAAAAAADQ}
+{\bkmkend AAAAAAAADQ}
+Inheritance diagram for DepthImageViewer:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_depth_image_viewer.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/DepthColliderDemo/Scripts/DepthImageViewer.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+EggMover Class Reference\par \pard\plain 
+{\tc\tcl2 \v EggMover}
+{\xe \v EggMover}
+{\bkmkstart AAAAAAAADR}
+{\bkmkend AAAAAAAADR}
+Inheritance diagram for EggMover:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_egg_mover.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/DepthColliderDemo/Scripts/EggMover.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+EggSpawner Class Reference\par \pard\plain 
+{\tc\tcl2 \v EggSpawner}
+{\xe \v EggSpawner}
+{\bkmkstart AAAAAAAADS}
+{\bkmkend AAAAAAAADS}
+Inheritance diagram for EggSpawner:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_egg_spawner.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Transform {\b eggPrefab}{\bkmkstart AAAAAAAADT}
+{\bkmkend AAAAAAAADT}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/DepthColliderDemo/Scripts/EggSpawner.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+FollowUserRotation Class Reference\par \pard\plain 
+{\tc\tcl2 \v FollowUserRotation}
+{\xe \v FollowUserRotation}
+{\bkmkstart AAAAAAAADU}
+{\bkmkend AAAAAAAADU}
+Inheritance diagram for FollowUserRotation:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_follow_user_rotation.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/Samples/FollowUserRotation.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+KinectGestures.GestureData Struct Reference\par \pard\plain 
+{\tc\tcl2 \v KinectGestures.GestureData}
+{\xe \v KinectGestures.GestureData}
+{\bkmkstart AAAAAAAAEV}
+{\bkmkend AAAAAAAAEV}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+uint {\b userId}{\bkmkstart AAAAAAAAEW}
+{\bkmkend AAAAAAAAEW}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Gestures {\b gesture}{\bkmkstart AAAAAAAAEX}
+{\bkmkend AAAAAAAAEX}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+int {\b state}{\bkmkstart AAAAAAAAEY}
+{\bkmkend AAAAAAAAEY}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+float {\b timestamp}{\bkmkstart AAAAAAAAEZ}
+{\bkmkend AAAAAAAAEZ}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+int {\b joint}{\bkmkstart AAAAAAAAFA}
+{\bkmkend AAAAAAAAFA}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Vector3 {\b jointPos}{\bkmkstart AAAAAAAAFB}
+{\bkmkend AAAAAAAAFB}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Vector3 {\b screenPos}{\bkmkstart AAAAAAAAFC}
+{\bkmkend AAAAAAAAFC}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+float {\b tagFloat}{\bkmkstart AAAAAAAAFD}
+{\bkmkend AAAAAAAAFD}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Vector3 {\b tagVector}{\bkmkstart AAAAAAAAFE}
+{\bkmkend AAAAAAAAFE}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Vector3 {\b tagVector2}{\bkmkstart AAAAAAAAFF}
+{\bkmkend AAAAAAAAFF}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+float {\b progress}{\bkmkstart AAAAAAAAFG}
+{\bkmkend AAAAAAAAFG}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b complete}{\bkmkstart AAAAAAAAFH}
+{\bkmkend AAAAAAAAFH}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b cancelled}{\bkmkstart AAAAAAAAFI}
+{\bkmkend AAAAAAAAFI}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+List< Gestures > {\b checkForGestures}{\bkmkstart AAAAAAAAFJ}
+{\bkmkend AAAAAAAAFJ}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+float {\b startTrackingAtTime}{\bkmkstart AAAAAAAAFK}
+{\bkmkend AAAAAAAAFK}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/KinectGestures.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+GestureListener Class Reference\par \pard\plain 
+{\tc\tcl2 \v GestureListener}
+{\xe \v GestureListener}
+{\bkmkstart AAAAAAAADV}
+{\bkmkend AAAAAAAADV}
+Inheritance diagram for GestureListener:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_gesture_listener.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b IsSwipeLeft} (){\bkmkstart AAAAAAAADW}
+{\bkmkend AAAAAAAADW}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b IsSwipeRight} (){\bkmkstart AAAAAAAADX}
+{\bkmkend AAAAAAAADX}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b UserDetected} (uint userId, int userIndex){\bkmkstart AAAAAAAADY}
+{\bkmkend AAAAAAAADY}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b UserLost} (uint userId, int userIndex){\bkmkstart AAAAAAAADZ}
+{\bkmkend AAAAAAAADZ}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b GestureInProgress} (uint userId, int userIndex, KinectGestures.Gestures gesture, float progress, KinectWrapper.NuiSkeletonPositionIndex joint, Vector3 screenPos){\bkmkstart AAAAAAAAEA}
+{\bkmkend AAAAAAAAEA}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b GestureCompleted} (uint userId, int userIndex, KinectGestures.Gestures gesture, KinectWrapper.NuiSkeletonPositionIndex joint, Vector3 screenPos){\bkmkstart AAAAAAAAEB}
+{\bkmkend AAAAAAAAEB}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b GestureCancelled} (uint userId, int userIndex, KinectGestures.Gestures gesture, KinectWrapper.NuiSkeletonPositionIndex joint){\bkmkstart AAAAAAAAEC}
+{\bkmkend AAAAAAAAEC}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GUIText {\b GestureInfo}{\bkmkstart AAAAAAAAED}
+{\bkmkend AAAAAAAAED}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/GesturesDemo/Scripts/GestureListener.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+KinectGestures.GestureListenerInterface Interface Reference\par \pard\plain 
+{\tc\tcl2 \v KinectGestures.GestureListenerInterface}
+{\xe \v KinectGestures.GestureListenerInterface}
+{\bkmkstart AAAAAAAAFL}
+{\bkmkend AAAAAAAAFL}
+Inheritance diagram for KinectGestures.GestureListenerInterface:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "interface_kinect_gestures_1_1_gesture_listener_interface.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b UserDetected} (uint userId, int userIndex){\bkmkstart AAAAAAAAFM}
+{\bkmkend AAAAAAAAFM}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b UserLost} (uint userId, int userIndex){\bkmkstart AAAAAAAAFN}
+{\bkmkend AAAAAAAAFN}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b GestureInProgress} (uint userId, int userIndex, Gestures gesture, float progress, KinectWrapper.NuiSkeletonPositionIndex joint, Vector3 screenPos){\bkmkstart AAAAAAAAFO}
+{\bkmkend AAAAAAAAFO}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b GestureCompleted} (uint userId, int userIndex, Gestures gesture, KinectWrapper.NuiSkeletonPositionIndex joint, Vector3 screenPos){\bkmkstart AAAAAAAAFP}
+{\bkmkend AAAAAAAAFP}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b GestureCancelled} (uint userId, int userIndex, Gestures gesture, KinectWrapper.NuiSkeletonPositionIndex joint){\bkmkstart AAAAAAAAFQ}
+{\bkmkend AAAAAAAAFQ}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this interface was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/KinectGestures.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+GetJointPositionDemo Class Reference\par \pard\plain 
+{\tc\tcl2 \v GetJointPositionDemo}
+{\xe \v GetJointPositionDemo}
+{\bkmkstart AAAAAAAAEE}
+{\bkmkend AAAAAAAAEE}
+Inheritance diagram for GetJointPositionDemo:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_get_joint_position_demo.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+KinectWrapper.NuiSkeletonPositionIndex {\b joint} = KinectWrapper.NuiSkeletonPositionIndex.HandRight{\bkmkstart AAAAAAAAEF}
+{\bkmkend AAAAAAAAEF}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Vector3 {\b outputPosition}{\bkmkstart AAAAAAAAEG}
+{\bkmkend AAAAAAAAEG}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b isSaving} = false{\bkmkstart AAAAAAAAEH}
+{\bkmkend AAAAAAAAEH}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+float {\b secondsToSave} = 0f{\bkmkstart AAAAAAAAEI}
+{\bkmkend AAAAAAAAEI}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+string {\b saveFilePath} = "joint_pos.csv"{\bkmkstart AAAAAAAAEJ}
+{\bkmkend AAAAAAAAEJ}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/Samples/GetJointPositionDemo.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+KinectWrapper.INuiFrameTexture Interface Reference\par \pard\plain 
+{\tc\tcl2 \v KinectWrapper.INuiFrameTexture}
+{\xe \v KinectWrapper.INuiFrameTexture}
+{\bkmkstart AAAAAAAALB}
+{\bkmkend AAAAAAAALB}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+int {\b BufferLen} (){\bkmkstart AAAAAAAALC}
+{\bkmkend AAAAAAAALC}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+int {\b Pitch} (){\bkmkstart AAAAAAAALD}
+{\bkmkend AAAAAAAALD}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+int {\b LockRect} (uint Level, ref {\b NuiLockedRect} pLockedRect, IntPtr pRect, uint Flags){\bkmkstart AAAAAAAALE}
+{\bkmkend AAAAAAAALE}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+int {\b GetLevelDesc} (uint Level, ref {\b NuiSurfaceDesc} pDesc){\bkmkstart AAAAAAAALF}
+{\bkmkend AAAAAAAALF}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+int {\b UnlockRect} (uint Level){\bkmkstart AAAAAAAALG}
+{\bkmkend AAAAAAAALG}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this interface was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/KinectWrapper.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+JointPositionsFilter Class Reference\par \pard\plain 
+{\tc\tcl2 \v JointPositionsFilter}
+{\xe \v JointPositionsFilter}
+{\bkmkstart AAAAAAAAEK}
+{\bkmkend AAAAAAAAEK}
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Implementation of a Holt Double Exponential Smoothing filter. The double exponential smooths the curve and predicts. There is also noise jitter removal. And maximum prediction bounds. The parameters are commented in the Init function. }}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b JointPositionsFilter} (){\bkmkstart AAAAAAAAEL}
+{\bkmkend AAAAAAAAEL}
+\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Initializes a new instance of the class. }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b Init} (){\bkmkstart AAAAAAAAEM}
+{\bkmkend AAAAAAAAEM}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b Init} (float smoothingValue, float correctionValue, float predictionValue, float jitterRadiusValue, float maxDeviationRadiusValue)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Initialize the filter with a set of manually specified TransformSmoothParameters. }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b Init} ({\b KinectWrapper.NuiTransformSmoothParameters} smoothingParameters){\bkmkstart AAAAAAAAEN}
+{\bkmkend AAAAAAAAEN}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b Reset} (){\bkmkstart AAAAAAAAEO}
+{\bkmkend AAAAAAAAEO}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b UpdateFilter} (ref {\b KinectWrapper.NuiSkeletonData} skeleton){\bkmkstart AAAAAAAAEP}
+{\bkmkend AAAAAAAAEP}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Protected Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b FilterJoint} (ref {\b KinectWrapper.NuiSkeletonData} skeleton, int jointIndex, ref {\b KinectWrapper.NuiTransformSmoothParameters} smoothingParameters){\bkmkstart AAAAAAAAEQ}
+{\bkmkend AAAAAAAAEQ}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Implementation of a Holt Double Exponential Smoothing filter. The double exponential smooths the curve and predicts. There is also noise jitter removal. And maximum prediction bounds. The parameters are commented in the Init function. \par
+}
+
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Function Documentation\par
+\pard\plain 
+{\xe \v Init\:JointPositionsFilter}
+{\xe \v JointPositionsFilter\:Init}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void JointPositionsFilter.Init (float  {\i smoothingValue}, float  {\i correctionValue}, float  {\i predictionValue}, float  {\i jitterRadiusValue}, float  {\i maxDeviationRadiusValue})}}
+\par
+{\bkmkstart AAAAAAAAER}
+{\bkmkend AAAAAAAAER}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Initialize the filter with a set of manually specified TransformSmoothParameters. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Parameters:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i smoothingValue} \cell }{Smoothing = [0..1], lower values is closer to the raw data and more noisy.\cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i correctionValue} \cell }{Correction = [0..1], higher values correct faster and feel more responsive.\cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i predictionValue} \cell }{Prediction = [0..n], how many frames into the future we want to predict.\cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i jitterRadiusValue} \cell }{JitterRadius = The deviation distance in m that defines jitter.\cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i maxDeviationRadiusValue} \cell }{MaxDeviation = The maximum distance in m that filtered positions are allowed to deviate from raw data.\cell }
+{\row }
+}
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/Filters/JointPositionsFilter.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+KinectGestures Class Reference\par \pard\plain 
+{\tc\tcl2 \v KinectGestures}
+{\xe \v KinectGestures}
+{\bkmkstart AAAAAAAAES}
+{\bkmkend AAAAAAAAES}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Classes\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b GestureData}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+interface {\b GestureListenerInterface}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Types\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+enum {\b Gestures} \{ {\b None} = 0, 
+{\b RaiseRightHand}, 
+{\b RaiseLeftHand}, 
+{\b Psi}, 
+{\b Tpose}, 
+{\b Stop}, 
+{\b Wave}, 
+{\b Click}, 
+{\b SwipeLeft}, 
+{\b SwipeRight}, 
+{\b SwipeUp}, 
+{\b SwipeDown}, 
+{\b RightHandCursor}, 
+{\b LeftHandCursor}, 
+{\b ZoomOut}, 
+{\b ZoomIn}, 
+{\b Wheel}, 
+{\b Jump}, 
+{\b Squat}, 
+{\b Push}, 
+{\b Pull}
+ \}{\bkmkstart AAAAAAAAET}
+{\bkmkend AAAAAAAAET}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Static Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static void {\b CheckForGesture} (uint userId, ref {\b GestureData} gestureData, float timestamp, ref Vector3[] jointsPos, ref bool[] jointsTracked){\bkmkstart AAAAAAAAEU}
+{\bkmkend AAAAAAAAEU}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/KinectGestures.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+KinectHelper Class Reference\par \pard\plain 
+{\tc\tcl2 \v KinectHelper}
+{\xe \v KinectHelper}
+{\bkmkstart AAAAAAAAFR}
+{\bkmkend AAAAAAAAFR}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Static Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static bool {\b JointPositionIsValid} (Vector3 jointPosition){\bkmkstart AAAAAAAAFS}
+{\bkmkend AAAAAAAAFS}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static bool {\b BoneOrientationIsValid} (Quaternion boneOrientation){\bkmkstart AAAAAAAAFT}
+{\bkmkend AAAAAAAAFT}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static bool {\b IsTracked} ({\b KinectWrapper.NuiSkeletonData} skeleton, int jointIndex){\bkmkstart AAAAAAAAFU}
+{\bkmkend AAAAAAAAFU}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static bool {\b IsTrackedOrInferred} ({\b KinectWrapper.NuiSkeletonData} skeleton, int jointIndex){\bkmkstart AAAAAAAAFV}
+{\bkmkend AAAAAAAAFV}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static Quaternion {\b RotationBetweenQuaternions} (Quaternion quaternionA, Quaternion quaternionB){\bkmkstart AAAAAAAAFW}
+{\bkmkend AAAAAAAAFW}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static Quaternion {\b EnhancedQuaternionSlerp} (Quaternion quaternionA, Quaternion quaternionB, float amount){\bkmkstart AAAAAAAAFX}
+{\bkmkend AAAAAAAAFX}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static Quaternion {\b EnsureQuaternionNeighborhood} (Quaternion quaternionA, Quaternion quaternionB){\bkmkstart AAAAAAAAFY}
+{\bkmkend AAAAAAAAFY}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static float {\b QuaternionAngle} (Quaternion rotation){\bkmkstart AAAAAAAAFZ}
+{\bkmkend AAAAAAAAFZ}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static void {\b LerpAndApply} (ref {\b KinectWrapper.NuiSkeletonData} skeleton, int jointIndex, Vector3 newJointPos, float lerpValue, KinectWrapper.NuiSkeletonPositionTrackingState finalTrackingState){\bkmkstart AAAAAAAAGA}
+{\bkmkend AAAAAAAAGA}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static void {\b CopySkeleton} (ref {\b KinectWrapper.NuiSkeletonData} source, ref {\b KinectWrapper.NuiSkeletonData} destination){\bkmkstart AAAAAAAAGB}
+{\bkmkend AAAAAAAAGB}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static Vector3 {\b VectorBetween} (ref {\b KinectWrapper.NuiSkeletonData} skeleton, int startJoint, int endJoint){\bkmkstart AAAAAAAAGC}
+{\bkmkend AAAAAAAAGC}
+\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+VectorBetween calculates the Vector3 from start to end == subtract start from end. }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static Vector4 {\b DistanceToLineSegment} (Vector3 linePoint0, Vector3 linePoint1, Vector3 point){\bkmkstart AAAAAAAAGD}
+{\bkmkend AAAAAAAAGD}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/Filters/KinectHelper.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+KinectManager Class Reference\par \pard\plain 
+{\tc\tcl2 \v KinectManager}
+{\xe \v KinectManager}
+{\bkmkstart AAAAAAAAGE}
+{\bkmkend AAAAAAAAGE}
+Inheritance diagram for KinectManager:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_kinect_manager.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Types\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+enum {\b Smoothing} : int \{ {\b None}, 
+{\b Default}, 
+{\b Medium}, 
+{\b Aggressive}
+ \}{\bkmkstart AAAAAAAAGF}
+{\bkmkend AAAAAAAAGF}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b IsInitialized} (){\bkmkstart AAAAAAAAGG}
+{\bkmkend AAAAAAAAGG}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+ushort [] {\b GetRawDepthMap} (){\bkmkstart AAAAAAAAGH}
+{\bkmkend AAAAAAAAGH}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+ushort {\b GetDepthForPixel} (int x, int y){\bkmkstart AAAAAAAAGI}
+{\bkmkend AAAAAAAAGI}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Vector2 {\b GetDepthMapPosForJointPos} (Vector3 posJoint){\bkmkstart AAAAAAAAGJ}
+{\bkmkend AAAAAAAAGJ}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Vector2 {\b GetColorMapPosForDepthPos} (Vector2 posDepth){\bkmkstart AAAAAAAAGK}
+{\bkmkend AAAAAAAAGK}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Texture2D {\b GetUsersLblTex} (){\bkmkstart AAAAAAAAGL}
+{\bkmkend AAAAAAAAGL}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Texture2D {\b GetUsersClrTex} (){\bkmkstart AAAAAAAAGM}
+{\bkmkend AAAAAAAAGM}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b IsUserDetected} (){\bkmkstart AAAAAAAAGN}
+{\bkmkend AAAAAAAAGN}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+uint {\b GetPlayer1ID} (){\bkmkstart AAAAAAAAGO}
+{\bkmkend AAAAAAAAGO}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+uint {\b GetPlayer2ID} (){\bkmkstart AAAAAAAAGP}
+{\bkmkend AAAAAAAAGP}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+int {\b GetPlayer1Index} (){\bkmkstart AAAAAAAAGQ}
+{\bkmkend AAAAAAAAGQ}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+int {\b GetPlayer2Index} (){\bkmkstart AAAAAAAAGR}
+{\bkmkend AAAAAAAAGR}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b IsPlayerCalibrated} (uint UserId){\bkmkstart AAAAAAAAGS}
+{\bkmkend AAAAAAAAGS}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Vector3 {\b GetRawSkeletonJointPos} (uint UserId, int joint){\bkmkstart AAAAAAAAGT}
+{\bkmkend AAAAAAAAGT}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Vector3 {\b GetUserPosition} (uint UserId){\bkmkstart AAAAAAAAGU}
+{\bkmkend AAAAAAAAGU}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Quaternion {\b GetUserOrientation} (uint UserId, bool flip){\bkmkstart AAAAAAAAGV}
+{\bkmkend AAAAAAAAGV}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b IsJointTracked} (uint UserId, int joint){\bkmkstart AAAAAAAAGW}
+{\bkmkend AAAAAAAAGW}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Vector3 {\b GetJointPosition} (uint UserId, int joint){\bkmkstart AAAAAAAAGX}
+{\bkmkend AAAAAAAAGX}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Vector3 {\b GetJointLocalPosition} (uint UserId, int joint){\bkmkstart AAAAAAAAGY}
+{\bkmkend AAAAAAAAGY}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Quaternion {\b GetJointOrientation} (uint UserId, int joint, bool flip){\bkmkstart AAAAAAAAGZ}
+{\bkmkend AAAAAAAAGZ}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Quaternion {\b GetJointLocalOrientation} (uint UserId, int joint, bool flip){\bkmkstart AAAAAAAAHA}
+{\bkmkend AAAAAAAAHA}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Vector3 {\b GetDirectionBetweenJoints} (uint UserId, int baseJoint, int nextJoint, bool flipX, bool flipZ){\bkmkstart AAAAAAAAHB}
+{\bkmkend AAAAAAAAHB}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b DetectGesture} (uint UserId, KinectGestures.Gestures gesture){\bkmkstart AAAAAAAAHC}
+{\bkmkend AAAAAAAAHC}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b ResetGesture} (uint UserId, KinectGestures.Gestures gesture){\bkmkstart AAAAAAAAHD}
+{\bkmkend AAAAAAAAHD}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b ResetPlayerGestures} (uint UserId){\bkmkstart AAAAAAAAHE}
+{\bkmkend AAAAAAAAHE}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b DeleteGesture} (uint UserId, KinectGestures.Gestures gesture){\bkmkstart AAAAAAAAHF}
+{\bkmkend AAAAAAAAHF}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b ClearGestures} (uint UserId){\bkmkstart AAAAAAAAHG}
+{\bkmkend AAAAAAAAHG}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+int {\b GetGesturesCount} (uint UserId){\bkmkstart AAAAAAAAHH}
+{\bkmkend AAAAAAAAHH}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+List< KinectGestures.Gestures > {\b GetGesturesList} (uint UserId){\bkmkstart AAAAAAAAHI}
+{\bkmkend AAAAAAAAHI}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b IsGestureDetected} (uint UserId, KinectGestures.Gestures gesture){\bkmkstart AAAAAAAAHJ}
+{\bkmkend AAAAAAAAHJ}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b IsGestureComplete} (uint UserId, KinectGestures.Gestures gesture, bool bResetOnComplete){\bkmkstart AAAAAAAAHK}
+{\bkmkend AAAAAAAAHK}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b IsGestureCancelled} (uint UserId, KinectGestures.Gestures gesture){\bkmkstart AAAAAAAAHL}
+{\bkmkend AAAAAAAAHL}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+float {\b GetGestureProgress} (uint UserId, KinectGestures.Gestures gesture){\bkmkstart AAAAAAAAHM}
+{\bkmkend AAAAAAAAHM}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Vector3 {\b GetGestureScreenPos} (uint UserId, KinectGestures.Gestures gesture){\bkmkstart AAAAAAAAHN}
+{\bkmkend AAAAAAAAHN}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b ResetGestureListeners} (){\bkmkstart AAAAAAAAHO}
+{\bkmkend AAAAAAAAHO}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b ResetAvatarControllers} (){\bkmkstart AAAAAAAAHP}
+{\bkmkend AAAAAAAAHP}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b ClearKinectUsers} (){\bkmkstart AAAAAAAAHQ}
+{\bkmkend AAAAAAAAHQ}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b ResetFilters} (){\bkmkstart AAAAAAAAHR}
+{\bkmkend AAAAAAAAHR}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Static Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static bool {\b IsKinectInitialized} (){\bkmkstart AAAAAAAAHS}
+{\bkmkend AAAAAAAAHS}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static bool {\b IsCalibrationNeeded} (){\bkmkstart AAAAAAAAHT}
+{\bkmkend AAAAAAAAHT}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b TwoUsers} = false{\bkmkstart AAAAAAAAHU}
+{\bkmkend AAAAAAAAHU}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b ComputeUserMap} = false{\bkmkstart AAAAAAAAHV}
+{\bkmkend AAAAAAAAHV}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b ComputeColorMap} = false{\bkmkstart AAAAAAAAHW}
+{\bkmkend AAAAAAAAHW}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b DisplayUserMap} = false{\bkmkstart AAAAAAAAHX}
+{\bkmkend AAAAAAAAHX}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b DisplayColorMap} = false{\bkmkstart AAAAAAAAHY}
+{\bkmkend AAAAAAAAHY}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b DisplaySkeletonLines} = false{\bkmkstart AAAAAAAAHZ}
+{\bkmkend AAAAAAAAHZ}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+float {\b DisplayMapsWidthPercent} = 20f{\bkmkstart AAAAAAAAIA}
+{\bkmkend AAAAAAAAIA}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+float {\b SensorHeight} = 1.0f{\bkmkstart AAAAAAAAIB}
+{\bkmkend AAAAAAAAIB}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+int {\b SensorAngle} = 0{\bkmkstart AAAAAAAAIC}
+{\bkmkend AAAAAAAAIC}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+float {\b MinUserDistance} = 1.0f{\bkmkstart AAAAAAAAID}
+{\bkmkend AAAAAAAAID}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+float {\b MaxUserDistance} = 0f{\bkmkstart AAAAAAAAIE}
+{\bkmkend AAAAAAAAIE}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b DetectClosestUser} = true{\bkmkstart AAAAAAAAIF}
+{\bkmkend AAAAAAAAIF}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b IgnoreInferredJoints} = true{\bkmkstart AAAAAAAAIG}
+{\bkmkend AAAAAAAAIG}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Smoothing {\b smoothing} = Smoothing.Default{\bkmkstart AAAAAAAAIH}
+{\bkmkend AAAAAAAAIH}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b UseBoneOrientationsFilter} = false{\bkmkstart AAAAAAAAII}
+{\bkmkend AAAAAAAAII}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b UseClippedLegsFilter} = false{\bkmkstart AAAAAAAAIJ}
+{\bkmkend AAAAAAAAIJ}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b UseBoneOrientationsConstraint} = true{\bkmkstart AAAAAAAAIK}
+{\bkmkend AAAAAAAAIK}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b UseSelfIntersectionConstraint} = false{\bkmkstart AAAAAAAAIL}
+{\bkmkend AAAAAAAAIL}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+List< GameObject > {\b Player1Avatars}{\bkmkstart AAAAAAAAIM}
+{\bkmkend AAAAAAAAIM}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+List< GameObject > {\b Player2Avatars}{\bkmkstart AAAAAAAAIN}
+{\bkmkend AAAAAAAAIN}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+KinectGestures.Gestures {\b Player1CalibrationPose}{\bkmkstart AAAAAAAAIO}
+{\bkmkend AAAAAAAAIO}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+KinectGestures.Gestures {\b Player2CalibrationPose}{\bkmkstart AAAAAAAAIP}
+{\bkmkend AAAAAAAAIP}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+List< KinectGestures.Gestures > {\b Player1Gestures}{\bkmkstart AAAAAAAAIQ}
+{\bkmkend AAAAAAAAIQ}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+List< KinectGestures.Gestures > {\b Player2Gestures}{\bkmkstart AAAAAAAAIR}
+{\bkmkend AAAAAAAAIR}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+float {\b MinTimeBetweenGestures} = 0.7f{\bkmkstart AAAAAAAAIS}
+{\bkmkend AAAAAAAAIS}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+List< MonoBehaviour > {\b GestureListeners}{\bkmkstart AAAAAAAAIT}
+{\bkmkend AAAAAAAAIT}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GUIText {\b CalibrationText}{\bkmkstart AAAAAAAAIU}
+{\bkmkend AAAAAAAAIU}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GameObject {\b HandCursor1}{\bkmkstart AAAAAAAAIV}
+{\bkmkend AAAAAAAAIV}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GameObject {\b HandCursor2}{\bkmkstart AAAAAAAAIW}
+{\bkmkend AAAAAAAAIW}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b ControlMouseCursor} = false{\bkmkstart AAAAAAAAIX}
+{\bkmkend AAAAAAAAIX}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GUIText {\b GesturesDebugText}{\bkmkstart AAAAAAAAIY}
+{\bkmkend AAAAAAAAIY}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+List< {\b KinectGestures.GestureListenerInterface} > {\b gestureListeners}{\bkmkstart AAAAAAAAIZ}
+{\bkmkend AAAAAAAAIZ}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Properties\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static {\b KinectManager} {\b Instance}{\f2  [get]}{\bkmkstart AAAAAAAAJA}
+{\bkmkend AAAAAAAAJA}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/KinectManager.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+KinectOverlayer Class Reference\par \pard\plain 
+{\tc\tcl2 \v KinectOverlayer}
+{\xe \v KinectOverlayer}
+{\bkmkstart AAAAAAAAJB}
+{\bkmkend AAAAAAAAJB}
+Inheritance diagram for KinectOverlayer:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_kinect_overlayer.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GUITexture {\b backgroundImage}{\bkmkstart AAAAAAAAJC}
+{\bkmkend AAAAAAAAJC}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+KinectWrapper.NuiSkeletonPositionIndex {\b TrackedJoint} = KinectWrapper.NuiSkeletonPositionIndex.HandRight{\bkmkstart AAAAAAAAJD}
+{\bkmkend AAAAAAAAJD}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GameObject {\b OverlayObject}{\bkmkstart AAAAAAAAJE}
+{\bkmkend AAAAAAAAJE}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+float {\b smoothFactor} = 5f{\bkmkstart AAAAAAAAJF}
+{\bkmkend AAAAAAAAJF}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GUIText {\b debugText}{\bkmkstart AAAAAAAAJG}
+{\bkmkend AAAAAAAAJG}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/OverlayDemo/Scripts/KinectOverlayer.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+KinectWrapper Class Reference\par \pard\plain 
+{\tc\tcl2 \v KinectWrapper}
+{\xe \v KinectWrapper}
+{\bkmkstart AAAAAAAAJH}
+{\bkmkend AAAAAAAAJH}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Classes\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b ColorBuffer}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b ColorCust}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b Constants}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b DepthBuffer}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+interface {\b INuiFrameTexture}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b NuiImageBuffer}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b NuiImageFrame}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b NuiImageViewArea}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b NuiLockedRect}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b NuiSkeletonBoneOrientation}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b NuiSkeletonBoneRotation}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b NuiSkeletonData}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b NuiSkeletonFrame}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b NuiSurfaceDesc}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b NuiTransformSmoothParameters}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Types\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+enum {\b NuiInitializeFlags} : uint \{ {\b UsesAudio} = 0x10000000, 
+{\b UsesDepthAndPlayerIndex} = 0x00000001, 
+{\b UsesColor} = 0x00000002, 
+{\b UsesSkeleton} = 0x00000008, 
+{\b UsesDepth} = 0x00000020, 
+{\b UsesHighQualityColor} = 0x00000040
+ \}\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Structs and constants for interfacing C# with the Kinect.dll }}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+enum {\b NuiErrorCodes} : uint \{ {\b FrameNoData} = 0x83010001, 
+{\b StreamNotEnabled} = 0x83010002, 
+{\b ImageStreamInUse} = 0x83010003, 
+{\b FrameLimitExceeded} = 0x83010004, 
+{\b FeatureNotInitialized} = 0x83010005, 
+{\b DeviceNotGenuine} = 0x83010006, 
+{\b InsufficientBandwidth} = 0x83010007, 
+{\b DeviceNotSupported} = 0x83010008, 
+{\b DeviceInUse} = 0x83010009, 
+{\b DatabaseNotFound} = 0x8301000D, 
+{\b DatabaseVersionMismatch} = 0x8301000E, 
+{\b HardwareFeatureUnavailable} = 0x8301000F, 
+{\b DeviceNotConnected} = 0x83010014, 
+{\b DeviceNotReady} = 0x83010015, 
+{\b SkeletalEngineBusy} = 0x830100AA, 
+{\b DeviceNotPowered} = 0x8301027F
+ \}{\bkmkstart AAAAAAAAJI}
+{\bkmkend AAAAAAAAJI}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+enum {\b NuiSkeletonPositionIndex} : int \{ {\b HipCenter} = 0, 
+{\b Spine} = 1, 
+{\b ShoulderCenter} = 2, 
+{\b Head} = 3, 
+{\b ShoulderLeft} = 4, 
+{\b ElbowLeft} = 5, 
+{\b WristLeft} = 6, 
+{\b HandLeft} = 7, 
+{\b ShoulderRight} = 8, 
+{\b ElbowRight} = 9, 
+{\b WristRight} = 10, 
+{\b HandRight} = 11, 
+{\b HipLeft} = 12, 
+{\b KneeLeft} = 13, 
+{\b AnkleLeft} = 14, 
+{\b FootLeft} = 15, 
+{\b HipRight} = 16, 
+{\b KneeRight} = 17, 
+{\b AnkleRight} = 18, 
+{\b FootRight} = 19, 
+{\b Count} = 20
+ \}{\bkmkstart AAAAAAAAJJ}
+{\bkmkend AAAAAAAAJJ}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+enum {\b NuiSkeletonPositionTrackingState} \{ {\b NotTracked} = 0, 
+{\b Inferred}, 
+{\b Tracked}
+ \}{\bkmkstart AAAAAAAAJK}
+{\bkmkend AAAAAAAAJK}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+enum {\b NuiSkeletonTrackingState} \{ {\b NotTracked} = 0, 
+{\b PositionOnly}, 
+{\b SkeletonTracked}
+ \}{\bkmkstart AAAAAAAAJL}
+{\bkmkend AAAAAAAAJL}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+enum {\b NuiImageType} \{ {\b DepthAndPlayerIndex} = 0, 
+{\b Color}, 
+{\b ColorYUV}, 
+{\b ColorRawYUV}, 
+{\b Depth}
+ \}{\bkmkstart AAAAAAAAJM}
+{\bkmkend AAAAAAAAJM}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+enum {\b NuiImageResolution} \{ {\b resolutionInvalid} = -1, 
+{\b resolution80x60} = 0, 
+{\b resolution320x240} = 1, 
+{\b resolution640x480} = 2, 
+{\b resolution1280x960} = 3
+ \}{\bkmkstart AAAAAAAAJN}
+{\bkmkend AAAAAAAAJN}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+enum {\b NuiImageStreamFlags} \{ {\b None} = 0x00000000, 
+{\b SupressNoFrameData} = 0x0001000, 
+{\b EnableNearMode} = 0x00020000, 
+{\b TooFarIsNonZero} = 0x0004000
+ \}{\bkmkstart AAAAAAAAJO}
+{\bkmkend AAAAAAAAJO}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+enum {\b FrameEdges} \{ {\b None} = 0, 
+{\b Right} = 1, 
+{\b Left} = 2, 
+{\b Top} = 4, 
+{\b Bottom} = 8
+ \}{\bkmkstart AAAAAAAAJP}
+{\bkmkend AAAAAAAAJP}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static int {\b NuiInitialize} ({\b NuiInitializeFlags} dwFlags){\bkmkstart AAAAAAAAJQ}
+{\bkmkend AAAAAAAAJQ}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static void {\b NuiShutdown} (){\bkmkstart AAAAAAAAJR}
+{\bkmkend AAAAAAAAJR}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static int {\b NuiCameraElevationSetAngle} (int angle){\bkmkstart AAAAAAAAJS}
+{\bkmkend AAAAAAAAJS}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static int {\b NuiCameraElevationGetAngle} (out int plAngleDegrees){\bkmkstart AAAAAAAAJT}
+{\bkmkend AAAAAAAAJT}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static int {\b NuiImageGetColorPixelCoordinatesFromDepthPixelAtResolution} (NuiImageResolution eColorResolution, NuiImageResolution eDepthResolution, ref {\b NuiImageViewArea} pcViewArea, int lDepthX, int lDepthY, ushort sDepthValue, out int plColorX, out int plColorY){\bkmkstart AAAAAAAAJU}
+{\bkmkend AAAAAAAAJU}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static int {\b NuiGetSensorCount} (out int pCount){\bkmkstart AAAAAAAAJV}
+{\bkmkend AAAAAAAAJV}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static int {\b NuiSkeletonTrackingEnable} (IntPtr hNextFrameEvent, uint dwFlags){\bkmkstart AAAAAAAAJW}
+{\bkmkend AAAAAAAAJW}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static int {\b NuiSkeletonGetNextFrame} (uint dwMillisecondsToWait, ref {\b NuiSkeletonFrame} pSkeletonFrame){\bkmkstart AAAAAAAAJX}
+{\bkmkend AAAAAAAAJX}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static int {\b NuiTransformSmooth} (ref {\b NuiSkeletonFrame} pSkeletonFrame, ref {\b NuiTransformSmoothParameters} pSmoothingParams){\bkmkstart AAAAAAAAJY}
+{\bkmkend AAAAAAAAJY}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static int {\b NuiSkeletonCalculateBoneOrientations} (ref {\b NuiSkeletonData} pSkeletonData, {\b NuiSkeletonBoneOrientation}[] pBoneOrientations){\bkmkstart AAAAAAAAJZ}
+{\bkmkend AAAAAAAAJZ}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static int {\b NuiImageStreamOpen} (NuiImageType eImageType, NuiImageResolution eResolution, uint dwImageFrameFlags_NotUsed, uint dwFrameLimit, IntPtr hNextFrameEvent, ref IntPtr phStreamHandle){\bkmkstart AAAAAAAAKA}
+{\bkmkend AAAAAAAAKA}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static int {\b NuiImageStreamGetNextFrame} (IntPtr phStreamHandle, uint dwMillisecondsToWait, ref IntPtr ppcImageFrame){\bkmkstart AAAAAAAAKB}
+{\bkmkend AAAAAAAAKB}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static int {\b NuiImageStreamReleaseFrame} (IntPtr phStreamHandle, IntPtr ppcImageFrame){\bkmkstart AAAAAAAAKC}
+{\bkmkend AAAAAAAAKC}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static int {\b NuiImageStreamSetImageFrameFlags} (IntPtr phStreamHandle, NuiImageStreamFlags dvImageFrameFlags){\bkmkstart AAAAAAAAKD}
+{\bkmkend AAAAAAAAKD}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static int {\b NuiImageResolutionToSize} (NuiImageResolution eResolution, out uint frameWidth, out uint frameHeight){\bkmkstart AAAAAAAAKE}
+{\bkmkend AAAAAAAAKE}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Static Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static string {\b GetNuiErrorString} (int hr){\bkmkstart AAAAAAAAKF}
+{\bkmkend AAAAAAAAKF}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static int {\b GetDepthWidth} (){\bkmkstart AAAAAAAAKG}
+{\bkmkend AAAAAAAAKG}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static int {\b GetDepthHeight} (){\bkmkstart AAAAAAAAKH}
+{\bkmkend AAAAAAAAKH}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static int {\b GetColorWidth} (){\bkmkstart AAAAAAAAKI}
+{\bkmkend AAAAAAAAKI}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static int {\b GetColorHeight} (){\bkmkstart AAAAAAAAKJ}
+{\bkmkend AAAAAAAAKJ}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static Vector3 {\b MapSkeletonPointToDepthPoint} (Vector3 skeletonPoint){\bkmkstart AAAAAAAAKK}
+{\bkmkend AAAAAAAAKK}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static int {\b GetSkeletonJointParent} (int jointIndex){\bkmkstart AAAAAAAAKL}
+{\bkmkend AAAAAAAAKL}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static int {\b GetSkeletonMirroredJoint} (int jointIndex){\bkmkstart AAAAAAAAKM}
+{\bkmkend AAAAAAAAKM}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static bool {\b PollSkeleton} (ref {\b NuiTransformSmoothParameters} smoothParameters, ref {\b NuiSkeletonFrame} skeletonFrame){\bkmkstart AAAAAAAAKN}
+{\bkmkend AAAAAAAAKN}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static bool {\b PollColor} (IntPtr colorStreamHandle, ref byte[] videoBuffer, ref Color32[] colorImage){\bkmkstart AAAAAAAAKO}
+{\bkmkend AAAAAAAAKO}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static bool {\b PollDepth} (IntPtr depthStreamHandle, bool isNearMode, ref ushort[] depthPlayerData){\bkmkstart AAAAAAAAKP}
+{\bkmkend AAAAAAAAKP}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static void {\b GetSkeletonJointOrientation} (ref Vector3[] jointsPos, ref bool[] jointsTracked, ref Matrix4x4 [] jointOrients){\bkmkstart AAAAAAAAKQ}
+{\bkmkend AAAAAAAAKQ}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Enumeration Documentation\par
+\pard\plain 
+{\xe \v NuiInitializeFlags\:KinectWrapper}
+{\xe \v KinectWrapper\:NuiInitializeFlags}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+enum {\b KinectWrapper.NuiInitializeFlags} : uint{\f2 [strong]}}}
+\par
+{\bkmkstart AAAAAAAAKR}
+{\bkmkend AAAAAAAAKR}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Structs and constants for interfacing C# with the Kinect.dll }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/KinectWrapper.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+LoadMainLevel Class Reference\par \pard\plain 
+{\tc\tcl2 \v LoadMainLevel}
+{\xe \v LoadMainLevel}
+{\bkmkstart AAAAAAAANJ}
+{\bkmkend AAAAAAAANJ}
+Inheritance diagram for LoadMainLevel:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_load_main_level.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/Samples/LoadMainLevel.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+MouseControl Class Reference\par \pard\plain 
+{\tc\tcl2 \v MouseControl}
+{\xe \v MouseControl}
+{\bkmkstart AAAAAAAANK}
+{\bkmkend AAAAAAAANK}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Classes\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b RECT}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Static Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static void {\b MouseMove} (Vector3 screenCoordinates, GUIText debugText){\bkmkstart AAAAAAAANL}
+{\bkmkend AAAAAAAANL}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static void {\b MouseClick} (){\bkmkstart AAAAAAAANM}
+{\bkmkend AAAAAAAANM}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static void {\b MouseDrag} (){\bkmkstart AAAAAAAANN}
+{\bkmkend AAAAAAAANN}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static void {\b MouseRelease} (){\bkmkstart AAAAAAAANO}
+{\bkmkend AAAAAAAANO}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/Samples/MouseControl.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+KinectWrapper.NuiImageBuffer Class Reference\par \pard\plain 
+{\tc\tcl2 \v KinectWrapper.NuiImageBuffer}
+{\xe \v KinectWrapper.NuiImageBuffer}
+{\bkmkstart AAAAAAAALH}
+{\bkmkend AAAAAAAALH}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+int {\b m_Width}{\bkmkstart AAAAAAAALI}
+{\bkmkend AAAAAAAALI}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+int {\b m_Height}{\bkmkstart AAAAAAAALJ}
+{\bkmkend AAAAAAAALJ}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+int {\b m_BytesPerPixel}{\bkmkstart AAAAAAAALK}
+{\bkmkend AAAAAAAALK}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+IntPtr {\b m_pBuffer}{\bkmkstart AAAAAAAALL}
+{\bkmkend AAAAAAAALL}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/KinectWrapper.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+KinectWrapper.NuiImageFrame Struct Reference\par \pard\plain 
+{\tc\tcl2 \v KinectWrapper.NuiImageFrame}
+{\xe \v KinectWrapper.NuiImageFrame}
+{\bkmkstart AAAAAAAALM}
+{\bkmkend AAAAAAAALM}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Int64 {\b liTimeStamp}{\bkmkstart AAAAAAAALN}
+{\bkmkend AAAAAAAALN}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+uint {\b dwFrameNumber}{\bkmkstart AAAAAAAALO}
+{\bkmkend AAAAAAAALO}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+NuiImageType {\b eImageType}{\bkmkstart AAAAAAAALP}
+{\bkmkend AAAAAAAALP}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+NuiImageResolution {\b eResolution}{\bkmkstart AAAAAAAALQ}
+{\bkmkend AAAAAAAALQ}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+IntPtr {\b pFrameTexture}{\bkmkstart AAAAAAAALR}
+{\bkmkend AAAAAAAALR}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+uint {\b dwFrameFlags_NotUsed}{\bkmkstart AAAAAAAALS}
+{\bkmkend AAAAAAAALS}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b NuiImageViewArea} {\b ViewArea_NotUsed}{\bkmkstart AAAAAAAALT}
+{\bkmkend AAAAAAAALT}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/KinectWrapper.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+KinectWrapper.NuiImageViewArea Struct Reference\par \pard\plain 
+{\tc\tcl2 \v KinectWrapper.NuiImageViewArea}
+{\xe \v KinectWrapper.NuiImageViewArea}
+{\bkmkstart AAAAAAAALU}
+{\bkmkend AAAAAAAALU}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+int {\b eDigitalZoom}{\bkmkstart AAAAAAAALV}
+{\bkmkend AAAAAAAALV}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+int {\b lCenterX}{\bkmkstart AAAAAAAALW}
+{\bkmkend AAAAAAAALW}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+int {\b lCenterY}{\bkmkstart AAAAAAAALX}
+{\bkmkend AAAAAAAALX}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/KinectWrapper.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+KinectWrapper.NuiLockedRect Struct Reference\par \pard\plain 
+{\tc\tcl2 \v KinectWrapper.NuiLockedRect}
+{\xe \v KinectWrapper.NuiLockedRect}
+{\bkmkstart AAAAAAAALY}
+{\bkmkend AAAAAAAALY}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+int {\b pitch}{\bkmkstart AAAAAAAALZ}
+{\bkmkend AAAAAAAALZ}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+int {\b size}{\bkmkstart AAAAAAAAMA}
+{\bkmkend AAAAAAAAMA}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+IntPtr {\b pBits}{\bkmkstart AAAAAAAAMB}
+{\bkmkend AAAAAAAAMB}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/KinectWrapper.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+KinectWrapper.NuiSkeletonBoneOrientation Struct Reference\par \pard\plain 
+{\tc\tcl2 \v KinectWrapper.NuiSkeletonBoneOrientation}
+{\xe \v KinectWrapper.NuiSkeletonBoneOrientation}
+{\bkmkstart AAAAAAAAMC}
+{\bkmkend AAAAAAAAMC}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+NuiSkeletonPositionIndex {\b endJoint}{\bkmkstart AAAAAAAAMD}
+{\bkmkend AAAAAAAAMD}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+NuiSkeletonPositionIndex {\b startJoint}{\bkmkstart AAAAAAAAME}
+{\bkmkend AAAAAAAAME}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b NuiSkeletonBoneRotation} {\b hierarchicalRotation}{\bkmkstart AAAAAAAAMF}
+{\bkmkend AAAAAAAAMF}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b NuiSkeletonBoneRotation} {\b absoluteRotation}{\bkmkstart AAAAAAAAMG}
+{\bkmkend AAAAAAAAMG}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/KinectWrapper.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+KinectWrapper.NuiSkeletonBoneRotation Struct Reference\par \pard\plain 
+{\tc\tcl2 \v KinectWrapper.NuiSkeletonBoneRotation}
+{\xe \v KinectWrapper.NuiSkeletonBoneRotation}
+{\bkmkstart AAAAAAAAMH}
+{\bkmkend AAAAAAAAMH}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Matrix4x4 {\b rotationMatrix}{\bkmkstart AAAAAAAAMI}
+{\bkmkend AAAAAAAAMI}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Quaternion {\b rotationQuaternion}{\bkmkstart AAAAAAAAMJ}
+{\bkmkend AAAAAAAAMJ}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/KinectWrapper.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+KinectWrapper.NuiSkeletonData Struct Reference\par \pard\plain 
+{\tc\tcl2 \v KinectWrapper.NuiSkeletonData}
+{\xe \v KinectWrapper.NuiSkeletonData}
+{\bkmkstart AAAAAAAAMK}
+{\bkmkend AAAAAAAAMK}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+NuiSkeletonTrackingState {\b eTrackingState}{\bkmkstart AAAAAAAAML}
+{\bkmkend AAAAAAAAML}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+uint {\b dwTrackingID}{\bkmkstart AAAAAAAAMM}
+{\bkmkend AAAAAAAAMM}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+uint {\b dwEnrollmentIndex_NotUsed}{\bkmkstart AAAAAAAAMN}
+{\bkmkend AAAAAAAAMN}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+uint {\b dwUserIndex}{\bkmkstart AAAAAAAAMO}
+{\bkmkend AAAAAAAAMO}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Vector4 {\b Position}{\bkmkstart AAAAAAAAMP}
+{\bkmkend AAAAAAAAMP}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Vector4 [] {\b SkeletonPositions}{\bkmkstart AAAAAAAAMQ}
+{\bkmkend AAAAAAAAMQ}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+NuiSkeletonPositionTrackingState [] {\b eSkeletonPositionTrackingState}{\bkmkstart AAAAAAAAMR}
+{\bkmkend AAAAAAAAMR}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+uint {\b dwQualityFlags}{\bkmkstart AAAAAAAAMS}
+{\bkmkend AAAAAAAAMS}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/KinectWrapper.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+KinectWrapper.NuiSkeletonFrame Struct Reference\par \pard\plain 
+{\tc\tcl2 \v KinectWrapper.NuiSkeletonFrame}
+{\xe \v KinectWrapper.NuiSkeletonFrame}
+{\bkmkstart AAAAAAAAMT}
+{\bkmkend AAAAAAAAMT}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Int64 {\b liTimeStamp}{\bkmkstart AAAAAAAAMU}
+{\bkmkend AAAAAAAAMU}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+uint {\b dwFrameNumber}{\bkmkstart AAAAAAAAMV}
+{\bkmkend AAAAAAAAMV}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+uint {\b dwFlags}{\bkmkstart AAAAAAAAMW}
+{\bkmkend AAAAAAAAMW}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Vector4 {\b vFloorClipPlane}{\bkmkstart AAAAAAAAMX}
+{\bkmkend AAAAAAAAMX}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Vector4 {\b vNormalToGravity}{\bkmkstart AAAAAAAAMY}
+{\bkmkend AAAAAAAAMY}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b NuiSkeletonData} [] {\b SkeletonData}{\bkmkstart AAAAAAAAMZ}
+{\bkmkend AAAAAAAAMZ}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/KinectWrapper.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+KinectWrapper.NuiSurfaceDesc Struct Reference\par \pard\plain 
+{\tc\tcl2 \v KinectWrapper.NuiSurfaceDesc}
+{\xe \v KinectWrapper.NuiSurfaceDesc}
+{\bkmkstart AAAAAAAANA}
+{\bkmkend AAAAAAAANA}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+uint {\b width}{\bkmkstart AAAAAAAANB}
+{\bkmkend AAAAAAAANB}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+uint {\b height}{\bkmkstart AAAAAAAANC}
+{\bkmkend AAAAAAAANC}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/KinectWrapper.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+KinectWrapper.NuiTransformSmoothParameters Struct Reference\par \pard\plain 
+{\tc\tcl2 \v KinectWrapper.NuiTransformSmoothParameters}
+{\xe \v KinectWrapper.NuiTransformSmoothParameters}
+{\bkmkstart AAAAAAAAND}
+{\bkmkend AAAAAAAAND}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+float {\b fSmoothing}{\bkmkstart AAAAAAAANE}
+{\bkmkend AAAAAAAANE}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+float {\b fCorrection}{\bkmkstart AAAAAAAANF}
+{\bkmkend AAAAAAAANF}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+float {\b fPrediction}{\bkmkstart AAAAAAAANG}
+{\bkmkend AAAAAAAANG}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+float {\b fJitterRadius}{\bkmkstart AAAAAAAANH}
+{\bkmkend AAAAAAAANH}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+float {\b fMaxDeviationRadius}{\bkmkstart AAAAAAAANI}
+{\bkmkend AAAAAAAANI}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/KinectWrapper.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+ObjectRandomLocation Class Reference\par \pard\plain 
+{\tc\tcl2 \v ObjectRandomLocation}
+{\xe \v ObjectRandomLocation}
+{\bkmkstart AAAAAAAANU}
+{\bkmkend AAAAAAAANU}
+Inheritance diagram for ObjectRandomLocation:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_object_random_location.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/ObjectRandomLocation.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+PresentationScript Class Reference\par \pard\plain 
+{\tc\tcl2 \v PresentationScript}
+{\xe \v PresentationScript}
+{\bkmkstart AAAAAAAANV}
+{\bkmkend AAAAAAAANV}
+Inheritance diagram for PresentationScript:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_presentation_script.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b slideChangeWithGestures} = true{\bkmkstart AAAAAAAANW}
+{\bkmkend AAAAAAAANW}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b slideChangeWithKeys} = true{\bkmkstart AAAAAAAANX}
+{\bkmkend AAAAAAAANX}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+float {\b spinSpeed} = 5{\bkmkstart AAAAAAAANY}
+{\bkmkend AAAAAAAANY}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b autoChangeAlfterDelay} = false{\bkmkstart AAAAAAAANZ}
+{\bkmkend AAAAAAAANZ}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+float {\b slideChangeAfterDelay} = 10{\bkmkstart AAAAAAAAOA}
+{\bkmkend AAAAAAAAOA}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+List< Texture > {\b slideTextures}{\bkmkstart AAAAAAAAOB}
+{\bkmkend AAAAAAAAOB}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+List< GameObject > {\b horizontalSides}{\bkmkstart AAAAAAAAOC}
+{\bkmkend AAAAAAAAOC}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b isBehindUser} = false{\bkmkstart AAAAAAAAOD}
+{\bkmkend AAAAAAAAOD}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/GesturesDemo/Scripts/PresentationScript.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+MouseControl.RECT Struct Reference\par \pard\plain 
+{\tc\tcl2 \v MouseControl.RECT}
+{\xe \v MouseControl.RECT}
+{\bkmkstart AAAAAAAANP}
+{\bkmkend AAAAAAAANP}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+int {\b Left}{\bkmkstart AAAAAAAANQ}
+{\bkmkend AAAAAAAANQ}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+int {\b Top}{\bkmkstart AAAAAAAANR}
+{\bkmkend AAAAAAAANR}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+int {\b Right}{\bkmkstart AAAAAAAANS}
+{\bkmkend AAAAAAAANS}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+int {\b Bottom}{\bkmkstart AAAAAAAANT}
+{\bkmkend AAAAAAAANT}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/Samples/MouseControl.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+SelfIntersectionConstraint Class Reference\par \pard\plain 
+{\tc\tcl2 \v SelfIntersectionConstraint}
+{\xe \v SelfIntersectionConstraint}
+{\bkmkstart AAAAAAAAOE}
+{\bkmkend AAAAAAAAOE}
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Filter to prevent skeleton arm joints from intersecting the "body". }}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b Constrain} (ref {\b KinectWrapper.NuiSkeletonData} skeleton){\bkmkstart AAAAAAAAOF}
+{\bkmkend AAAAAAAAOF}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+float {\b ShoulderExtend} = 0.5f{\bkmkstart AAAAAAAAOG}
+{\bkmkend AAAAAAAAOG}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+float {\b HipExtend} = 6.0f{\bkmkstart AAAAAAAAOH}
+{\bkmkend AAAAAAAAOH}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+float {\b CollisionTolerance} = 1.01f{\bkmkstart AAAAAAAAOI}
+{\bkmkend AAAAAAAAOI}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+float {\b RadiusMultiplier} = 1.3f{\bkmkstart AAAAAAAAOJ}
+{\bkmkend AAAAAAAAOJ}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Filter to prevent skeleton arm joints from intersecting the "body". \par
+}
+
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/Filters/SelfIntersectionConstraint.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+SetSceneAvatars Class Reference\par \pard\plain 
+{\tc\tcl2 \v SetSceneAvatars}
+{\xe \v SetSceneAvatars}
+{\bkmkstart AAAAAAAAOK}
+{\bkmkend AAAAAAAAOK}
+Inheritance diagram for SetSceneAvatars:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_set_scene_avatars.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/Samples/SetSceneAvatars.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+SimpleGestureListener Class Reference\par \pard\plain 
+{\tc\tcl2 \v SimpleGestureListener}
+{\xe \v SimpleGestureListener}
+{\bkmkstart AAAAAAAAOL}
+{\bkmkend AAAAAAAAOL}
+Inheritance diagram for SimpleGestureListener:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_simple_gesture_listener.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b UserDetected} (uint userId, int userIndex){\bkmkstart AAAAAAAAOM}
+{\bkmkend AAAAAAAAOM}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b UserLost} (uint userId, int userIndex){\bkmkstart AAAAAAAAON}
+{\bkmkend AAAAAAAAON}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b GestureInProgress} (uint userId, int userIndex, KinectGestures.Gestures gesture, float progress, KinectWrapper.NuiSkeletonPositionIndex joint, Vector3 screenPos){\bkmkstart AAAAAAAAOO}
+{\bkmkend AAAAAAAAOO}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b GestureCompleted} (uint userId, int userIndex, KinectGestures.Gestures gesture, KinectWrapper.NuiSkeletonPositionIndex joint, Vector3 screenPos){\bkmkstart AAAAAAAAOP}
+{\bkmkend AAAAAAAAOP}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b GestureCancelled} (uint userId, int userIndex, KinectGestures.Gestures gesture, KinectWrapper.NuiSkeletonPositionIndex joint){\bkmkstart AAAAAAAAOQ}
+{\bkmkend AAAAAAAAOQ}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Text {\b gestureInfo}{\bkmkstart AAAAAAAAOR}
+{\bkmkend AAAAAAAAOR}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GameObject {\b mercury}{\bkmkstart AAAAAAAAOS}
+{\bkmkend AAAAAAAAOS}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GameObject {\b mars}{\bkmkstart AAAAAAAAOT}
+{\bkmkend AAAAAAAAOT}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GameObject {\b venus}{\bkmkstart AAAAAAAAOU}
+{\bkmkend AAAAAAAAOU}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GameObject {\b earth}{\bkmkstart AAAAAAAAOV}
+{\bkmkend AAAAAAAAOV}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GameObject {\b jupiter}{\bkmkstart AAAAAAAAOW}
+{\bkmkend AAAAAAAAOW}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GameObject {\b saturn}{\bkmkstart AAAAAAAAOX}
+{\bkmkend AAAAAAAAOX}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GameObject {\b neptune}{\bkmkstart AAAAAAAAOY}
+{\bkmkend AAAAAAAAOY}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GameObject {\b uranus}{\bkmkstart AAAAAAAAOZ}
+{\bkmkend AAAAAAAAOZ}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GameObject {\b pluto}{\bkmkstart AAAAAAAAPA}
+{\bkmkend AAAAAAAAPA}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+GameObject {\b spaceship}{\bkmkstart AAAAAAAAPB}
+{\bkmkend AAAAAAAAPB}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/Samples/SimpleGestureListener.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+TimedLerp Class Reference\par \pard\plain 
+{\tc\tcl2 \v TimedLerp}
+{\xe \v TimedLerp}
+{\bkmkstart AAAAAAAAPC}
+{\bkmkend AAAAAAAAPC}
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{\b TimedLerp} - Maintains a time-based lerp between 0 and a upper limit between 0 and 1. The lerp speed parameter is in units of inverse time - therefore, a speed of 2.0 means that the lerp completes a full transition (0 to 1) in 0.5 seconds. }}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b SetSpeed} (){\bkmkstart AAAAAAAAPD}
+{\bkmkend AAAAAAAAPD}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b SetSpeed} (float easeInSpeed, float easeOutSpeed){\bkmkstart AAAAAAAAPE}
+{\bkmkend AAAAAAAAPE}
+\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Set in/out speeds. }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b SetEnabled} (bool isEnabled){\bkmkstart AAAAAAAAPF}
+{\bkmkend AAAAAAAAPF}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b SetEnabled} (float enabled){\bkmkstart AAAAAAAAPG}
+{\bkmkend AAAAAAAAPG}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b Reset} (){\bkmkstart AAAAAAAAPH}
+{\bkmkend AAAAAAAAPH}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b IsEnabled} (){\bkmkstart AAAAAAAAPI}
+{\bkmkend AAAAAAAAPI}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b IsLerpEnabled} (){\bkmkstart AAAAAAAAPJ}
+{\bkmkend AAAAAAAAPJ}
+\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+IsLerpEnabled reflects whether the current value is 0 or not. }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b Tick} (float deltaTime){\bkmkstart AAAAAAAAPK}
+{\bkmkend AAAAAAAAPK}
+\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Tick needs to be called once per frame. }{
+}\par
+}}
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Protected Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+float {\b Enabled}{\bkmkstart AAAAAAAAPL}
+{\bkmkend AAAAAAAAPL}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+float {\b Value}{\bkmkstart AAAAAAAAPM}
+{\bkmkend AAAAAAAAPM}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+float {\b EaseInSpeed}{\bkmkstart AAAAAAAAPN}
+{\bkmkend AAAAAAAAPN}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+float {\b EaseOutSpeed}{\bkmkstart AAAAAAAAPO}
+{\bkmkend AAAAAAAAPO}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Properties\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+float {\b LinearValue}{\f2  [get]}{\bkmkstart AAAAAAAAPP}
+{\bkmkend AAAAAAAAPP}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+float {\b SmoothValue}{\f2  [get]}{\bkmkstart AAAAAAAAPQ}
+{\bkmkend AAAAAAAAPQ}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{\b TimedLerp} - Maintains a time-based lerp between 0 and a upper limit between 0 and 1. The lerp speed parameter is in units of inverse time - therefore, a speed of 2.0 means that the lerp completes a full transition (0 to 1) in 0.5 seconds. \par
+}
+
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/Filters/TimedLerp.cs\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+TrackingStateFilter Class Reference\par \pard\plain 
+{\tc\tcl2 \v TrackingStateFilter}
+{\xe \v TrackingStateFilter}
+{\bkmkstart AAAAAAAAPR}
+{\bkmkend AAAAAAAAPR}
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Implementation of a Holt Double Exponential Smoothing filter. The double exponential smooths the curve and predicts. There is also noise jitter removal. }}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b TrackingStateFilter} (){\bkmkstart AAAAAAAAPS}
+{\bkmkend AAAAAAAAPS}
+\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Initializes a new instance of the class. }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b Init} (){\bkmkstart AAAAAAAAPT}
+{\bkmkend AAAAAAAAPT}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b Init} (float smoothingValue, float correctionValue, float predictionValue, float jitterRadiusValue, float maxDeviationRadiusValue)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Initialize the filter with a set of manually specified TransformSmoothParameters. }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b Init} ({\b KinectWrapper.NuiTransformSmoothParameters} smoothingParameters){\bkmkstart AAAAAAAAPU}
+{\bkmkend AAAAAAAAPU}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b Reset} (){\bkmkstart AAAAAAAAPV}
+{\bkmkend AAAAAAAAPV}
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b UpdateFilter} (ref {\b KinectWrapper.NuiSkeletonData} skeleton){\bkmkstart AAAAAAAAPW}
+{\bkmkend AAAAAAAAPW}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Protected Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b FilterJoint} (ref {\b KinectWrapper.NuiSkeletonData} skeleton, int jointIndex, ref {\b KinectWrapper.NuiTransformSmoothParameters} smoothingParameters){\bkmkstart AAAAAAAAPX}
+{\bkmkend AAAAAAAAPX}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Implementation of a Holt Double Exponential Smoothing filter. The double exponential smooths the curve and predicts. There is also noise jitter removal. \par
+}
+
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Function Documentation\par
+\pard\plain 
+{\xe \v Init\:TrackingStateFilter}
+{\xe \v TrackingStateFilter\:Init}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void TrackingStateFilter.Init (float  {\i smoothingValue}, float  {\i correctionValue}, float  {\i predictionValue}, float  {\i jitterRadiusValue}, float  {\i maxDeviationRadiusValue})}}
+\par
+{\bkmkstart AAAAAAAAPY}
+{\bkmkend AAAAAAAAPY}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Initialize the filter with a set of manually specified TransformSmoothParameters. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Parameters:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i smoothingValue} \cell }{Smoothing = [0..1], lower values is closer to the raw data and more noisy.\cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i correctionValue} \cell }{Correction = [0..1], higher values correct faster and feel more responsive.\cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i predictionValue} \cell }{Prediction = [0..n], how many frames into the future we want to predict.\cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i jitterRadiusValue} \cell }{JitterRadius = The deviation distance in m that defines jitter.\cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i maxDeviationRadiusValue} \cell }{MaxDeviation = The maximum distance in m that filtered positions are allowed to deviate from raw data.\cell }
+{\row }
+}
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+Assets/KinectScripts/Filters/TrackingStateFilter.cs\par
+}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Index\par 
+\pard\plain 
+{\tc \v Index}
+{\field\fldedit {\*\fldinst INDEX \\c2 \\*MERGEFORMAT}{\fldrslt INDEX}}
+}

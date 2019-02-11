@@ -1,0 +1,255 @@
+\hypertarget{class_kinect_wrapper}{}\section{Kinect\+Wrapper Class Reference}
+\label{class_kinect_wrapper}\index{Kinect\+Wrapper@{Kinect\+Wrapper}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_kinect_wrapper_1_1_color_buffer}{Color\+Buffer}}
+\item 
+struct \mbox{\hyperlink{struct_kinect_wrapper_1_1_color_cust}{Color\+Cust}}
+\item 
+class {\bfseries Constants}
+\item 
+struct \mbox{\hyperlink{struct_kinect_wrapper_1_1_depth_buffer}{Depth\+Buffer}}
+\item 
+interface \mbox{\hyperlink{interface_kinect_wrapper_1_1_i_nui_frame_texture}{I\+Nui\+Frame\+Texture}}
+\item 
+class \mbox{\hyperlink{class_kinect_wrapper_1_1_nui_image_buffer}{Nui\+Image\+Buffer}}
+\item 
+struct \mbox{\hyperlink{struct_kinect_wrapper_1_1_nui_image_frame}{Nui\+Image\+Frame}}
+\item 
+struct \mbox{\hyperlink{struct_kinect_wrapper_1_1_nui_image_view_area}{Nui\+Image\+View\+Area}}
+\item 
+struct \mbox{\hyperlink{struct_kinect_wrapper_1_1_nui_locked_rect}{Nui\+Locked\+Rect}}
+\item 
+struct \mbox{\hyperlink{struct_kinect_wrapper_1_1_nui_skeleton_bone_orientation}{Nui\+Skeleton\+Bone\+Orientation}}
+\item 
+struct \mbox{\hyperlink{struct_kinect_wrapper_1_1_nui_skeleton_bone_rotation}{Nui\+Skeleton\+Bone\+Rotation}}
+\item 
+struct \mbox{\hyperlink{struct_kinect_wrapper_1_1_nui_skeleton_data}{Nui\+Skeleton\+Data}}
+\item 
+struct \mbox{\hyperlink{struct_kinect_wrapper_1_1_nui_skeleton_frame}{Nui\+Skeleton\+Frame}}
+\item 
+struct \mbox{\hyperlink{struct_kinect_wrapper_1_1_nui_surface_desc}{Nui\+Surface\+Desc}}
+\item 
+struct \mbox{\hyperlink{struct_kinect_wrapper_1_1_nui_transform_smooth_parameters}{Nui\+Transform\+Smooth\+Parameters}}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_kinect_wrapper_aa14891c91bfa8c6fe4761146055656da}{Nui\+Initialize\+Flags}} \+: uint \{ \newline
+{\bfseries Uses\+Audio} = 0x10000000, 
+{\bfseries Uses\+Depth\+And\+Player\+Index} = 0x00000001, 
+{\bfseries Uses\+Color} = 0x00000002, 
+{\bfseries Uses\+Skeleton} = 0x00000008, 
+\newline
+{\bfseries Uses\+Depth} = 0x00000020, 
+{\bfseries Uses\+High\+Quality\+Color} = 0x00000040
+ \}
+\begin{DoxyCompactList}\small\item\em Structs and constants for interfacing C\# with the Kinect.\+dll \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_kinect_wrapper_a556dfab4f288c786036c4a48c5a57799}\label{class_kinect_wrapper_a556dfab4f288c786036c4a48c5a57799}} 
+enum {\bfseries Nui\+Error\+Codes} \+: uint \{ \newline
+{\bfseries Frame\+No\+Data} = 0x83010001, 
+{\bfseries Stream\+Not\+Enabled} = 0x83010002, 
+{\bfseries Image\+Stream\+In\+Use} = 0x83010003, 
+{\bfseries Frame\+Limit\+Exceeded} = 0x83010004, 
+\newline
+{\bfseries Feature\+Not\+Initialized} = 0x83010005, 
+{\bfseries Device\+Not\+Genuine} = 0x83010006, 
+{\bfseries Insufficient\+Bandwidth} = 0x83010007, 
+{\bfseries Device\+Not\+Supported} = 0x83010008, 
+\newline
+{\bfseries Device\+In\+Use} = 0x83010009, 
+{\bfseries Database\+Not\+Found} = 0x8301000D, 
+{\bfseries Database\+Version\+Mismatch} = 0x8301000E, 
+{\bfseries Hardware\+Feature\+Unavailable} = 0x8301000F, 
+\newline
+{\bfseries Device\+Not\+Connected} = 0x83010014, 
+{\bfseries Device\+Not\+Ready} = 0x83010015, 
+{\bfseries Skeletal\+Engine\+Busy} = 0x830100\+AA, 
+{\bfseries Device\+Not\+Powered} = 0x8301027F
+ \}
+\item 
+\mbox{\Hypertarget{class_kinect_wrapper_ad73682163ab4e6f554501574ab835f1c}\label{class_kinect_wrapper_ad73682163ab4e6f554501574ab835f1c}} 
+enum {\bfseries Nui\+Skeleton\+Position\+Index} \+: int \{ \newline
+{\bfseries Hip\+Center} = 0, 
+{\bfseries Spine} = 1, 
+{\bfseries Shoulder\+Center} = 2, 
+{\bfseries Head} = 3, 
+\newline
+{\bfseries Shoulder\+Left} = 4, 
+{\bfseries Elbow\+Left} = 5, 
+{\bfseries Wrist\+Left} = 6, 
+{\bfseries Hand\+Left} = 7, 
+\newline
+{\bfseries Shoulder\+Right} = 8, 
+{\bfseries Elbow\+Right} = 9, 
+{\bfseries Wrist\+Right} = 10, 
+{\bfseries Hand\+Right} = 11, 
+\newline
+{\bfseries Hip\+Left} = 12, 
+{\bfseries Knee\+Left} = 13, 
+{\bfseries Ankle\+Left} = 14, 
+{\bfseries Foot\+Left} = 15, 
+\newline
+{\bfseries Hip\+Right} = 16, 
+{\bfseries Knee\+Right} = 17, 
+{\bfseries Ankle\+Right} = 18, 
+{\bfseries Foot\+Right} = 19, 
+\newline
+{\bfseries Count} = 20
+ \}
+\item 
+\mbox{\Hypertarget{class_kinect_wrapper_a2aa1ef02e1edc9d3bcb5dc78cc41e173}\label{class_kinect_wrapper_a2aa1ef02e1edc9d3bcb5dc78cc41e173}} 
+enum {\bfseries Nui\+Skeleton\+Position\+Tracking\+State} \{ {\bfseries Not\+Tracked} = 0, 
+{\bfseries Inferred}, 
+{\bfseries Tracked}
+ \}
+\item 
+\mbox{\Hypertarget{class_kinect_wrapper_a9d527d2064187b8e50453a8fa4158e49}\label{class_kinect_wrapper_a9d527d2064187b8e50453a8fa4158e49}} 
+enum {\bfseries Nui\+Skeleton\+Tracking\+State} \{ {\bfseries Not\+Tracked} = 0, 
+{\bfseries Position\+Only}, 
+{\bfseries Skeleton\+Tracked}
+ \}
+\item 
+\mbox{\Hypertarget{class_kinect_wrapper_a0126bd0303d23d562566d2ae99927335}\label{class_kinect_wrapper_a0126bd0303d23d562566d2ae99927335}} 
+enum {\bfseries Nui\+Image\+Type} \{ \newline
+{\bfseries Depth\+And\+Player\+Index} = 0, 
+{\bfseries Color}, 
+{\bfseries Color\+Y\+UV}, 
+{\bfseries Color\+Raw\+Y\+UV}, 
+\newline
+{\bfseries Depth}
+ \}
+\item 
+\mbox{\Hypertarget{class_kinect_wrapper_acef333d357f10c9b9b2e623ac4238470}\label{class_kinect_wrapper_acef333d357f10c9b9b2e623ac4238470}} 
+enum {\bfseries Nui\+Image\+Resolution} \{ \newline
+{\bfseries resolution\+Invalid} = -\/1, 
+{\bfseries resolution80x60} = 0, 
+{\bfseries resolution320x240} = 1, 
+{\bfseries resolution640x480} = 2, 
+\newline
+{\bfseries resolution1280x960} = 3
+ \}
+\item 
+\mbox{\Hypertarget{class_kinect_wrapper_ac51a99482e85bf5ea85af0e7e3bb25bd}\label{class_kinect_wrapper_ac51a99482e85bf5ea85af0e7e3bb25bd}} 
+enum {\bfseries Nui\+Image\+Stream\+Flags} \{ {\bfseries None} = 0x00000000, 
+{\bfseries Supress\+No\+Frame\+Data} = 0x0001000, 
+{\bfseries Enable\+Near\+Mode} = 0x00020000, 
+{\bfseries Too\+Far\+Is\+Non\+Zero} = 0x0004000
+ \}
+\item 
+\mbox{\Hypertarget{class_kinect_wrapper_a70fa40d94bc2a6e7bdfe7a07d26ee535}\label{class_kinect_wrapper_a70fa40d94bc2a6e7bdfe7a07d26ee535}} 
+enum {\bfseries Frame\+Edges} \{ \newline
+{\bfseries None} = 0, 
+{\bfseries Right} = 1, 
+{\bfseries Left} = 2, 
+{\bfseries Top} = 4, 
+\newline
+{\bfseries Bottom} = 8
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_kinect_wrapper_a2fdd21af7c89b1d15bb20c412577ac29}\label{class_kinect_wrapper_a2fdd21af7c89b1d15bb20c412577ac29}} 
+static int {\bfseries Nui\+Initialize} (\mbox{\hyperlink{class_kinect_wrapper_aa14891c91bfa8c6fe4761146055656da}{Nui\+Initialize\+Flags}} dw\+Flags)
+\item 
+\mbox{\Hypertarget{class_kinect_wrapper_ab80346c061343035f00f42dc89bb6e2e}\label{class_kinect_wrapper_ab80346c061343035f00f42dc89bb6e2e}} 
+static void {\bfseries Nui\+Shutdown} ()
+\item 
+\mbox{\Hypertarget{class_kinect_wrapper_ae6798571cfc956305dc31020c72bf7ce}\label{class_kinect_wrapper_ae6798571cfc956305dc31020c72bf7ce}} 
+static int {\bfseries Nui\+Camera\+Elevation\+Set\+Angle} (int angle)
+\item 
+\mbox{\Hypertarget{class_kinect_wrapper_aaaf8d63c9fabe873fe171f3a3e5f7ec7}\label{class_kinect_wrapper_aaaf8d63c9fabe873fe171f3a3e5f7ec7}} 
+static int {\bfseries Nui\+Camera\+Elevation\+Get\+Angle} (out int pl\+Angle\+Degrees)
+\item 
+\mbox{\Hypertarget{class_kinect_wrapper_ac026341b4cf4127a4a84b24fa5547e59}\label{class_kinect_wrapper_ac026341b4cf4127a4a84b24fa5547e59}} 
+static int {\bfseries Nui\+Image\+Get\+Color\+Pixel\+Coordinates\+From\+Depth\+Pixel\+At\+Resolution} (Nui\+Image\+Resolution e\+Color\+Resolution, Nui\+Image\+Resolution e\+Depth\+Resolution, ref \mbox{\hyperlink{struct_kinect_wrapper_1_1_nui_image_view_area}{Nui\+Image\+View\+Area}} pc\+View\+Area, int l\+DepthX, int l\+DepthY, ushort s\+Depth\+Value, out int pl\+ColorX, out int pl\+ColorY)
+\item 
+\mbox{\Hypertarget{class_kinect_wrapper_a7d786c97adcf86b866e4c5233b63f5fd}\label{class_kinect_wrapper_a7d786c97adcf86b866e4c5233b63f5fd}} 
+static int {\bfseries Nui\+Get\+Sensor\+Count} (out int p\+Count)
+\item 
+\mbox{\Hypertarget{class_kinect_wrapper_a3e8731807ba8636cd10ae1b8cc7a7e4f}\label{class_kinect_wrapper_a3e8731807ba8636cd10ae1b8cc7a7e4f}} 
+static int {\bfseries Nui\+Skeleton\+Tracking\+Enable} (Int\+Ptr h\+Next\+Frame\+Event, uint dw\+Flags)
+\item 
+\mbox{\Hypertarget{class_kinect_wrapper_a07d73b189c89e8f98ee9e03623b95de3}\label{class_kinect_wrapper_a07d73b189c89e8f98ee9e03623b95de3}} 
+static int {\bfseries Nui\+Skeleton\+Get\+Next\+Frame} (uint dw\+Milliseconds\+To\+Wait, ref \mbox{\hyperlink{struct_kinect_wrapper_1_1_nui_skeleton_frame}{Nui\+Skeleton\+Frame}} p\+Skeleton\+Frame)
+\item 
+\mbox{\Hypertarget{class_kinect_wrapper_ab6c258db8ad4d3927af93397450ac30f}\label{class_kinect_wrapper_ab6c258db8ad4d3927af93397450ac30f}} 
+static int {\bfseries Nui\+Transform\+Smooth} (ref \mbox{\hyperlink{struct_kinect_wrapper_1_1_nui_skeleton_frame}{Nui\+Skeleton\+Frame}} p\+Skeleton\+Frame, ref \mbox{\hyperlink{struct_kinect_wrapper_1_1_nui_transform_smooth_parameters}{Nui\+Transform\+Smooth\+Parameters}} p\+Smoothing\+Params)
+\item 
+\mbox{\Hypertarget{class_kinect_wrapper_a6aa2e92ea435aff8b2b529f9af865a17}\label{class_kinect_wrapper_a6aa2e92ea435aff8b2b529f9af865a17}} 
+static int {\bfseries Nui\+Skeleton\+Calculate\+Bone\+Orientations} (ref \mbox{\hyperlink{struct_kinect_wrapper_1_1_nui_skeleton_data}{Nui\+Skeleton\+Data}} p\+Skeleton\+Data, \mbox{\hyperlink{struct_kinect_wrapper_1_1_nui_skeleton_bone_orientation}{Nui\+Skeleton\+Bone\+Orientation}}\mbox{[}$\,$\mbox{]} p\+Bone\+Orientations)
+\item 
+\mbox{\Hypertarget{class_kinect_wrapper_aa3d8db2048200771211ebf49f2e6ca47}\label{class_kinect_wrapper_aa3d8db2048200771211ebf49f2e6ca47}} 
+static int {\bfseries Nui\+Image\+Stream\+Open} (Nui\+Image\+Type e\+Image\+Type, Nui\+Image\+Resolution e\+Resolution, uint dw\+Image\+Frame\+Flags\+\_\+\+Not\+Used, uint dw\+Frame\+Limit, Int\+Ptr h\+Next\+Frame\+Event, ref Int\+Ptr ph\+Stream\+Handle)
+\item 
+\mbox{\Hypertarget{class_kinect_wrapper_a85917a9af5cac4b8ea42756bb0f58a1a}\label{class_kinect_wrapper_a85917a9af5cac4b8ea42756bb0f58a1a}} 
+static int {\bfseries Nui\+Image\+Stream\+Get\+Next\+Frame} (Int\+Ptr ph\+Stream\+Handle, uint dw\+Milliseconds\+To\+Wait, ref Int\+Ptr ppc\+Image\+Frame)
+\item 
+\mbox{\Hypertarget{class_kinect_wrapper_a881c04a93c8760da24c3e0d989675f7d}\label{class_kinect_wrapper_a881c04a93c8760da24c3e0d989675f7d}} 
+static int {\bfseries Nui\+Image\+Stream\+Release\+Frame} (Int\+Ptr ph\+Stream\+Handle, Int\+Ptr ppc\+Image\+Frame)
+\item 
+\mbox{\Hypertarget{class_kinect_wrapper_aa781107969acc314e12407f42fd9a886}\label{class_kinect_wrapper_aa781107969acc314e12407f42fd9a886}} 
+static int {\bfseries Nui\+Image\+Stream\+Set\+Image\+Frame\+Flags} (Int\+Ptr ph\+Stream\+Handle, Nui\+Image\+Stream\+Flags dv\+Image\+Frame\+Flags)
+\item 
+\mbox{\Hypertarget{class_kinect_wrapper_a387a5aef9e0ba9490e7c953acd662bf4}\label{class_kinect_wrapper_a387a5aef9e0ba9490e7c953acd662bf4}} 
+static int {\bfseries Nui\+Image\+Resolution\+To\+Size} (Nui\+Image\+Resolution e\+Resolution, out uint frame\+Width, out uint frame\+Height)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_kinect_wrapper_a3cb502bd9f349d6ed93d318e27f96062}\label{class_kinect_wrapper_a3cb502bd9f349d6ed93d318e27f96062}} 
+static string {\bfseries Get\+Nui\+Error\+String} (int hr)
+\item 
+\mbox{\Hypertarget{class_kinect_wrapper_afd77e6475589c7e610922ff3e0dc655c}\label{class_kinect_wrapper_afd77e6475589c7e610922ff3e0dc655c}} 
+static int {\bfseries Get\+Depth\+Width} ()
+\item 
+\mbox{\Hypertarget{class_kinect_wrapper_a205e1fe831c2ea3eba4b46a0d3fbae73}\label{class_kinect_wrapper_a205e1fe831c2ea3eba4b46a0d3fbae73}} 
+static int {\bfseries Get\+Depth\+Height} ()
+\item 
+\mbox{\Hypertarget{class_kinect_wrapper_a47574196fb217f80f0b4c348fc341758}\label{class_kinect_wrapper_a47574196fb217f80f0b4c348fc341758}} 
+static int {\bfseries Get\+Color\+Width} ()
+\item 
+\mbox{\Hypertarget{class_kinect_wrapper_a06b0c509ebf20b8528616234edd3d4f6}\label{class_kinect_wrapper_a06b0c509ebf20b8528616234edd3d4f6}} 
+static int {\bfseries Get\+Color\+Height} ()
+\item 
+\mbox{\Hypertarget{class_kinect_wrapper_a68f55b015fa7916f593a4a4a18f9537e}\label{class_kinect_wrapper_a68f55b015fa7916f593a4a4a18f9537e}} 
+static Vector3 {\bfseries Map\+Skeleton\+Point\+To\+Depth\+Point} (Vector3 skeleton\+Point)
+\item 
+\mbox{\Hypertarget{class_kinect_wrapper_a206dc55a20ec2bdaa093df0b41ee81ad}\label{class_kinect_wrapper_a206dc55a20ec2bdaa093df0b41ee81ad}} 
+static int {\bfseries Get\+Skeleton\+Joint\+Parent} (int joint\+Index)
+\item 
+\mbox{\Hypertarget{class_kinect_wrapper_a2e121255ab87d3ba7c442635f48c313c}\label{class_kinect_wrapper_a2e121255ab87d3ba7c442635f48c313c}} 
+static int {\bfseries Get\+Skeleton\+Mirrored\+Joint} (int joint\+Index)
+\item 
+\mbox{\Hypertarget{class_kinect_wrapper_a013c4895027fa5c64eca7351d21f738c}\label{class_kinect_wrapper_a013c4895027fa5c64eca7351d21f738c}} 
+static bool {\bfseries Poll\+Skeleton} (ref \mbox{\hyperlink{struct_kinect_wrapper_1_1_nui_transform_smooth_parameters}{Nui\+Transform\+Smooth\+Parameters}} smooth\+Parameters, ref \mbox{\hyperlink{struct_kinect_wrapper_1_1_nui_skeleton_frame}{Nui\+Skeleton\+Frame}} skeleton\+Frame)
+\item 
+\mbox{\Hypertarget{class_kinect_wrapper_a7432c928afbb7fae1bf3ed6b3efef0d7}\label{class_kinect_wrapper_a7432c928afbb7fae1bf3ed6b3efef0d7}} 
+static bool {\bfseries Poll\+Color} (Int\+Ptr color\+Stream\+Handle, ref byte\mbox{[}$\,$\mbox{]} video\+Buffer, ref Color32\mbox{[}$\,$\mbox{]} color\+Image)
+\item 
+\mbox{\Hypertarget{class_kinect_wrapper_aa489e01c830842c81e6ecaa15d773efb}\label{class_kinect_wrapper_aa489e01c830842c81e6ecaa15d773efb}} 
+static bool {\bfseries Poll\+Depth} (Int\+Ptr depth\+Stream\+Handle, bool is\+Near\+Mode, ref ushort\mbox{[}$\,$\mbox{]} depth\+Player\+Data)
+\item 
+\mbox{\Hypertarget{class_kinect_wrapper_a7afb7682da9118353458bb6c5c0c9636}\label{class_kinect_wrapper_a7afb7682da9118353458bb6c5c0c9636}} 
+static void {\bfseries Get\+Skeleton\+Joint\+Orientation} (ref Vector3\mbox{[}$\,$\mbox{]} joints\+Pos, ref bool\mbox{[}$\,$\mbox{]} joints\+Tracked, ref Matrix4x4 \mbox{[}$\,$\mbox{]} joint\+Orients)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_kinect_wrapper_aa14891c91bfa8c6fe4761146055656da}\label{class_kinect_wrapper_aa14891c91bfa8c6fe4761146055656da}} 
+\index{Kinect\+Wrapper@{Kinect\+Wrapper}!Nui\+Initialize\+Flags@{Nui\+Initialize\+Flags}}
+\index{Nui\+Initialize\+Flags@{Nui\+Initialize\+Flags}!Kinect\+Wrapper@{Kinect\+Wrapper}}
+\subsubsection{\texorpdfstring{Nui\+Initialize\+Flags}{NuiInitializeFlags}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_kinect_wrapper_aa14891c91bfa8c6fe4761146055656da}{Kinect\+Wrapper.\+Nui\+Initialize\+Flags}} \+: uint\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Structs and constants for interfacing C\# with the Kinect.\+dll 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Kinect\+Scripts/Kinect\+Wrapper.\+cs\end{DoxyCompactItemize}

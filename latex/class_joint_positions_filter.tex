@@ -1,0 +1,69 @@
+\hypertarget{class_joint_positions_filter}{}\section{Joint\+Positions\+Filter Class Reference}
+\label{class_joint_positions_filter}\index{Joint\+Positions\+Filter@{Joint\+Positions\+Filter}}
+
+
+Implementation of a Holt Double Exponential Smoothing filter. The double exponential smooths the curve and predicts. There is also noise jitter removal. And maximum prediction bounds. The parameters are commented in the Init function.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_joint_positions_filter_aab7201ee120c14aec70402cc6a7ac1f9}\label{class_joint_positions_filter_aab7201ee120c14aec70402cc6a7ac1f9}} 
+\mbox{\hyperlink{class_joint_positions_filter_aab7201ee120c14aec70402cc6a7ac1f9}{Joint\+Positions\+Filter}} ()
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_joint_positions_filter_a15e0a5e5df56f73100e78bc7f9b9274e}\label{class_joint_positions_filter_a15e0a5e5df56f73100e78bc7f9b9274e}} 
+void {\bfseries Init} ()
+\item 
+void \mbox{\hyperlink{class_joint_positions_filter_a3815ebb632cddd00240f03a8ba0b429a}{Init}} (float smoothing\+Value, float correction\+Value, float prediction\+Value, float jitter\+Radius\+Value, float max\+Deviation\+Radius\+Value)
+\begin{DoxyCompactList}\small\item\em Initialize the filter with a set of manually specified Transform\+Smooth\+Parameters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_joint_positions_filter_a5ed2fce9405fbd1231bfb184400a448e}\label{class_joint_positions_filter_a5ed2fce9405fbd1231bfb184400a448e}} 
+void {\bfseries Init} (\mbox{\hyperlink{struct_kinect_wrapper_1_1_nui_transform_smooth_parameters}{Kinect\+Wrapper.\+Nui\+Transform\+Smooth\+Parameters}} smoothing\+Parameters)
+\item 
+\mbox{\Hypertarget{class_joint_positions_filter_a25feb954527213cd0b28d803001f29ce}\label{class_joint_positions_filter_a25feb954527213cd0b28d803001f29ce}} 
+void {\bfseries Reset} ()
+\item 
+\mbox{\Hypertarget{class_joint_positions_filter_abdef3ba9b7efe903f10c4ba628e674ed}\label{class_joint_positions_filter_abdef3ba9b7efe903f10c4ba628e674ed}} 
+void {\bfseries Update\+Filter} (ref \mbox{\hyperlink{struct_kinect_wrapper_1_1_nui_skeleton_data}{Kinect\+Wrapper.\+Nui\+Skeleton\+Data}} skeleton)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_joint_positions_filter_a8dcf8fb2da8cfcb5f76599df193f00d5}\label{class_joint_positions_filter_a8dcf8fb2da8cfcb5f76599df193f00d5}} 
+void {\bfseries Filter\+Joint} (ref \mbox{\hyperlink{struct_kinect_wrapper_1_1_nui_skeleton_data}{Kinect\+Wrapper.\+Nui\+Skeleton\+Data}} skeleton, int joint\+Index, ref \mbox{\hyperlink{struct_kinect_wrapper_1_1_nui_transform_smooth_parameters}{Kinect\+Wrapper.\+Nui\+Transform\+Smooth\+Parameters}} smoothing\+Parameters)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of a Holt Double Exponential Smoothing filter. The double exponential smooths the curve and predicts. There is also noise jitter removal. And maximum prediction bounds. The parameters are commented in the Init function. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_joint_positions_filter_a3815ebb632cddd00240f03a8ba0b429a}\label{class_joint_positions_filter_a3815ebb632cddd00240f03a8ba0b429a}} 
+\index{Joint\+Positions\+Filter@{Joint\+Positions\+Filter}!Init@{Init}}
+\index{Init@{Init}!Joint\+Positions\+Filter@{Joint\+Positions\+Filter}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Joint\+Positions\+Filter.\+Init (\begin{DoxyParamCaption}\item[{float}]{smoothing\+Value,  }\item[{float}]{correction\+Value,  }\item[{float}]{prediction\+Value,  }\item[{float}]{jitter\+Radius\+Value,  }\item[{float}]{max\+Deviation\+Radius\+Value }\end{DoxyParamCaption})}
+
+
+
+Initialize the filter with a set of manually specified Transform\+Smooth\+Parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em smoothing\+Value} & Smoothing = \mbox{[}0..1\mbox{]}, lower values is closer to the raw data and more noisy.\\
+\hline
+{\em correction\+Value} & Correction = \mbox{[}0..1\mbox{]}, higher values correct faster and feel more responsive.\\
+\hline
+{\em prediction\+Value} & Prediction = \mbox{[}0..n\mbox{]}, how many frames into the future we want to predict.\\
+\hline
+{\em jitter\+Radius\+Value} & Jitter\+Radius = The deviation distance in m that defines jitter.\\
+\hline
+{\em max\+Deviation\+Radius\+Value} & Max\+Deviation = The maximum distance in m that filtered positions are allowed to deviate from raw data.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Kinect\+Scripts/\+Filters/Joint\+Positions\+Filter.\+cs\end{DoxyCompactItemize}

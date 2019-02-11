@@ -1,0 +1,254 @@
+\hypertarget{class_kinect_manager}{}\section{Kinect\+Manager Class Reference}
+\label{class_kinect_manager}\index{Kinect\+Manager@{Kinect\+Manager}}
+Inheritance diagram for Kinect\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_kinect_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_kinect_manager_aec17a057770162214385062b140fe969}\label{class_kinect_manager_aec17a057770162214385062b140fe969}} 
+enum {\bfseries Smoothing} \+: int \{ {\bfseries None}, 
+{\bfseries Default}, 
+{\bfseries Medium}, 
+{\bfseries Aggressive}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_kinect_manager_aa07e9cb88230c121afccf01a22716673}\label{class_kinect_manager_aa07e9cb88230c121afccf01a22716673}} 
+bool {\bfseries Is\+Initialized} ()
+\item 
+\mbox{\Hypertarget{class_kinect_manager_ab05138e9b95ebb46853c2c268c6f8f93}\label{class_kinect_manager_ab05138e9b95ebb46853c2c268c6f8f93}} 
+ushort \mbox{[}$\,$\mbox{]} {\bfseries Get\+Raw\+Depth\+Map} ()
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a4d82afa0b4034d9138038ed8c073ebc1}\label{class_kinect_manager_a4d82afa0b4034d9138038ed8c073ebc1}} 
+ushort {\bfseries Get\+Depth\+For\+Pixel} (int x, int y)
+\item 
+\mbox{\Hypertarget{class_kinect_manager_aabf3116ff588a1b7ff564f54c9d93964}\label{class_kinect_manager_aabf3116ff588a1b7ff564f54c9d93964}} 
+Vector2 {\bfseries Get\+Depth\+Map\+Pos\+For\+Joint\+Pos} (Vector3 pos\+Joint)
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a66c9e59129890772e71357820026470f}\label{class_kinect_manager_a66c9e59129890772e71357820026470f}} 
+Vector2 {\bfseries Get\+Color\+Map\+Pos\+For\+Depth\+Pos} (Vector2 pos\+Depth)
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a496b20df4657e69c701e5822b12ef763}\label{class_kinect_manager_a496b20df4657e69c701e5822b12ef763}} 
+Texture2D {\bfseries Get\+Users\+Lbl\+Tex} ()
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a8b96d9349b9c0a3533057c36b6cd85d2}\label{class_kinect_manager_a8b96d9349b9c0a3533057c36b6cd85d2}} 
+Texture2D {\bfseries Get\+Users\+Clr\+Tex} ()
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a552c99f810205b173741f9898edb62bf}\label{class_kinect_manager_a552c99f810205b173741f9898edb62bf}} 
+bool {\bfseries Is\+User\+Detected} ()
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a2aa6087c65ebd098da4e0b09c4ab915e}\label{class_kinect_manager_a2aa6087c65ebd098da4e0b09c4ab915e}} 
+uint {\bfseries Get\+Player1\+ID} ()
+\item 
+\mbox{\Hypertarget{class_kinect_manager_ac64453e53112fb39afe7b50c16c6f3ce}\label{class_kinect_manager_ac64453e53112fb39afe7b50c16c6f3ce}} 
+uint {\bfseries Get\+Player2\+ID} ()
+\item 
+\mbox{\Hypertarget{class_kinect_manager_ac1073faa906fd0fa1974d0d064a710f8}\label{class_kinect_manager_ac1073faa906fd0fa1974d0d064a710f8}} 
+int {\bfseries Get\+Player1\+Index} ()
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a85ab5d1f3a4bf3b208291127941378a2}\label{class_kinect_manager_a85ab5d1f3a4bf3b208291127941378a2}} 
+int {\bfseries Get\+Player2\+Index} ()
+\item 
+\mbox{\Hypertarget{class_kinect_manager_ac63bc71be34ca7399ff1a097abe9f679}\label{class_kinect_manager_ac63bc71be34ca7399ff1a097abe9f679}} 
+bool {\bfseries Is\+Player\+Calibrated} (uint User\+Id)
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a425f59c9b84e1e89f93b8b1091b4d473}\label{class_kinect_manager_a425f59c9b84e1e89f93b8b1091b4d473}} 
+Vector3 {\bfseries Get\+Raw\+Skeleton\+Joint\+Pos} (uint User\+Id, int joint)
+\item 
+\mbox{\Hypertarget{class_kinect_manager_aca20e9d8cd5ebb481673fcf63b6b18fc}\label{class_kinect_manager_aca20e9d8cd5ebb481673fcf63b6b18fc}} 
+Vector3 {\bfseries Get\+User\+Position} (uint User\+Id)
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a7f15cd908891e9cee89520cb63f45577}\label{class_kinect_manager_a7f15cd908891e9cee89520cb63f45577}} 
+Quaternion {\bfseries Get\+User\+Orientation} (uint User\+Id, bool flip)
+\item 
+\mbox{\Hypertarget{class_kinect_manager_ac55fb953a35d5290e0004fb9ac4cc139}\label{class_kinect_manager_ac55fb953a35d5290e0004fb9ac4cc139}} 
+bool {\bfseries Is\+Joint\+Tracked} (uint User\+Id, int joint)
+\item 
+\mbox{\Hypertarget{class_kinect_manager_acda02655d464aaa83c8b71ca492805d3}\label{class_kinect_manager_acda02655d464aaa83c8b71ca492805d3}} 
+Vector3 {\bfseries Get\+Joint\+Position} (uint User\+Id, int joint)
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a1b74d41febb7bf73681c4a8f2f5b0f19}\label{class_kinect_manager_a1b74d41febb7bf73681c4a8f2f5b0f19}} 
+Vector3 {\bfseries Get\+Joint\+Local\+Position} (uint User\+Id, int joint)
+\item 
+\mbox{\Hypertarget{class_kinect_manager_aa11213684be7e8f0f79ada8fb1fee9c5}\label{class_kinect_manager_aa11213684be7e8f0f79ada8fb1fee9c5}} 
+Quaternion {\bfseries Get\+Joint\+Orientation} (uint User\+Id, int joint, bool flip)
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a11b8288ad51dc8f11c05c92efb041572}\label{class_kinect_manager_a11b8288ad51dc8f11c05c92efb041572}} 
+Quaternion {\bfseries Get\+Joint\+Local\+Orientation} (uint User\+Id, int joint, bool flip)
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a5aaa167f101f8143c309300c6d8a0a21}\label{class_kinect_manager_a5aaa167f101f8143c309300c6d8a0a21}} 
+Vector3 {\bfseries Get\+Direction\+Between\+Joints} (uint User\+Id, int base\+Joint, int next\+Joint, bool flipX, bool flipZ)
+\item 
+\mbox{\Hypertarget{class_kinect_manager_aaa496d55486a07be1bd33ab29c4aeb31}\label{class_kinect_manager_aaa496d55486a07be1bd33ab29c4aeb31}} 
+void {\bfseries Detect\+Gesture} (uint User\+Id, Kinect\+Gestures.\+Gestures gesture)
+\item 
+\mbox{\Hypertarget{class_kinect_manager_afc3ee5ab5f438c6b89b303cdfcd7c0ae}\label{class_kinect_manager_afc3ee5ab5f438c6b89b303cdfcd7c0ae}} 
+bool {\bfseries Reset\+Gesture} (uint User\+Id, Kinect\+Gestures.\+Gestures gesture)
+\item 
+\mbox{\Hypertarget{class_kinect_manager_afdc90787281b1b722a7369ccd82d219c}\label{class_kinect_manager_afdc90787281b1b722a7369ccd82d219c}} 
+void {\bfseries Reset\+Player\+Gestures} (uint User\+Id)
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a2ddd469d4fd9700e45561dc6a9d38f95}\label{class_kinect_manager_a2ddd469d4fd9700e45561dc6a9d38f95}} 
+bool {\bfseries Delete\+Gesture} (uint User\+Id, Kinect\+Gestures.\+Gestures gesture)
+\item 
+\mbox{\Hypertarget{class_kinect_manager_abc1de536fb4facd54a3dc1f5b5cad2c0}\label{class_kinect_manager_abc1de536fb4facd54a3dc1f5b5cad2c0}} 
+void {\bfseries Clear\+Gestures} (uint User\+Id)
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a3d88f366f8d3bc64bcb4acf789003bf6}\label{class_kinect_manager_a3d88f366f8d3bc64bcb4acf789003bf6}} 
+int {\bfseries Get\+Gestures\+Count} (uint User\+Id)
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a5e9bfb77ebeddcfdd41e5d147f3a2146}\label{class_kinect_manager_a5e9bfb77ebeddcfdd41e5d147f3a2146}} 
+List$<$ Kinect\+Gestures.\+Gestures $>$ {\bfseries Get\+Gestures\+List} (uint User\+Id)
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a5429e07bee4a98d43fb944944773478f}\label{class_kinect_manager_a5429e07bee4a98d43fb944944773478f}} 
+bool {\bfseries Is\+Gesture\+Detected} (uint User\+Id, Kinect\+Gestures.\+Gestures gesture)
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a4ac2e1fa4bb8dd384e81762e1aded2a4}\label{class_kinect_manager_a4ac2e1fa4bb8dd384e81762e1aded2a4}} 
+bool {\bfseries Is\+Gesture\+Complete} (uint User\+Id, Kinect\+Gestures.\+Gestures gesture, bool b\+Reset\+On\+Complete)
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a6642ea6b0a23a7a0f41f24f4e8462c6e}\label{class_kinect_manager_a6642ea6b0a23a7a0f41f24f4e8462c6e}} 
+bool {\bfseries Is\+Gesture\+Cancelled} (uint User\+Id, Kinect\+Gestures.\+Gestures gesture)
+\item 
+\mbox{\Hypertarget{class_kinect_manager_af436804eb157c64939d7c6c2e702692e}\label{class_kinect_manager_af436804eb157c64939d7c6c2e702692e}} 
+float {\bfseries Get\+Gesture\+Progress} (uint User\+Id, Kinect\+Gestures.\+Gestures gesture)
+\item 
+\mbox{\Hypertarget{class_kinect_manager_ae49078d0c021ce0b32ec9184473d6d1c}\label{class_kinect_manager_ae49078d0c021ce0b32ec9184473d6d1c}} 
+Vector3 {\bfseries Get\+Gesture\+Screen\+Pos} (uint User\+Id, Kinect\+Gestures.\+Gestures gesture)
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a953a21442c027afb9e90e2050d51a3a5}\label{class_kinect_manager_a953a21442c027afb9e90e2050d51a3a5}} 
+void {\bfseries Reset\+Gesture\+Listeners} ()
+\item 
+\mbox{\Hypertarget{class_kinect_manager_aea21a184826f2f9246c3454c42ca8977}\label{class_kinect_manager_aea21a184826f2f9246c3454c42ca8977}} 
+void {\bfseries Reset\+Avatar\+Controllers} ()
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a67fb0d4dcae391f1001946e824a6da03}\label{class_kinect_manager_a67fb0d4dcae391f1001946e824a6da03}} 
+void {\bfseries Clear\+Kinect\+Users} ()
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a8fbf332b12f038ddfdaf57ea901814eb}\label{class_kinect_manager_a8fbf332b12f038ddfdaf57ea901814eb}} 
+void {\bfseries Reset\+Filters} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a8ae249cd0d129fbb074a0adea775c17b}\label{class_kinect_manager_a8ae249cd0d129fbb074a0adea775c17b}} 
+static bool {\bfseries Is\+Kinect\+Initialized} ()
+\item 
+\mbox{\Hypertarget{class_kinect_manager_ad2199069d8de4de2310bd3c5099c3aca}\label{class_kinect_manager_ad2199069d8de4de2310bd3c5099c3aca}} 
+static bool {\bfseries Is\+Calibration\+Needed} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a879ec008deb45c758eeca8864039dfc7}\label{class_kinect_manager_a879ec008deb45c758eeca8864039dfc7}} 
+bool {\bfseries Two\+Users} = false
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a8e6e5e0d04f23445d1720def7ccbe3d2}\label{class_kinect_manager_a8e6e5e0d04f23445d1720def7ccbe3d2}} 
+bool {\bfseries Compute\+User\+Map} = false
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a28dd356e585e5c93352e284123ca31d2}\label{class_kinect_manager_a28dd356e585e5c93352e284123ca31d2}} 
+bool {\bfseries Compute\+Color\+Map} = false
+\item 
+\mbox{\Hypertarget{class_kinect_manager_ade9fc37e5708d4c917928abe1172a38b}\label{class_kinect_manager_ade9fc37e5708d4c917928abe1172a38b}} 
+bool {\bfseries Display\+User\+Map} = false
+\item 
+\mbox{\Hypertarget{class_kinect_manager_ab31b9e8dd0c28a6a83b1015b56f98c5a}\label{class_kinect_manager_ab31b9e8dd0c28a6a83b1015b56f98c5a}} 
+bool {\bfseries Display\+Color\+Map} = false
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a94977f0342f0cb171273630e7ea9f8f6}\label{class_kinect_manager_a94977f0342f0cb171273630e7ea9f8f6}} 
+bool {\bfseries Display\+Skeleton\+Lines} = false
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a395d0a5ec2e523353aab6b9990d3658d}\label{class_kinect_manager_a395d0a5ec2e523353aab6b9990d3658d}} 
+float {\bfseries Display\+Maps\+Width\+Percent} = 20f
+\item 
+\mbox{\Hypertarget{class_kinect_manager_ab2866c2eb8d810fb4f4011e379cacf37}\label{class_kinect_manager_ab2866c2eb8d810fb4f4011e379cacf37}} 
+float {\bfseries Sensor\+Height} = 1.\+0f
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a51cae469c515bb03dbfb2b7927e008e0}\label{class_kinect_manager_a51cae469c515bb03dbfb2b7927e008e0}} 
+int {\bfseries Sensor\+Angle} = 0
+\item 
+\mbox{\Hypertarget{class_kinect_manager_ab37fba532b9d678a6b94ebbfd0c3ce5d}\label{class_kinect_manager_ab37fba532b9d678a6b94ebbfd0c3ce5d}} 
+float {\bfseries Min\+User\+Distance} = 1.\+0f
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a320801e487e725635d3dfeb61589bcf0}\label{class_kinect_manager_a320801e487e725635d3dfeb61589bcf0}} 
+float {\bfseries Max\+User\+Distance} = 0f
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a92e937bb385e6e5f207e977a3088a0df}\label{class_kinect_manager_a92e937bb385e6e5f207e977a3088a0df}} 
+bool {\bfseries Detect\+Closest\+User} = true
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a9df2132aca3b0eeedbd6a3ea6769bcbe}\label{class_kinect_manager_a9df2132aca3b0eeedbd6a3ea6769bcbe}} 
+bool {\bfseries Ignore\+Inferred\+Joints} = true
+\item 
+\mbox{\Hypertarget{class_kinect_manager_af826888df34de5aee73763244f578bb7}\label{class_kinect_manager_af826888df34de5aee73763244f578bb7}} 
+Smoothing {\bfseries smoothing} = Smoothing.\+Default
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a33edc6af031dd7911da68e01f9b5afbe}\label{class_kinect_manager_a33edc6af031dd7911da68e01f9b5afbe}} 
+bool {\bfseries Use\+Bone\+Orientations\+Filter} = false
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a185b7df9ffd5b4a3d87d48455a1ed5b7}\label{class_kinect_manager_a185b7df9ffd5b4a3d87d48455a1ed5b7}} 
+bool {\bfseries Use\+Clipped\+Legs\+Filter} = false
+\item 
+\mbox{\Hypertarget{class_kinect_manager_acb96553f28871e4b8ad885fa0dab4bf8}\label{class_kinect_manager_acb96553f28871e4b8ad885fa0dab4bf8}} 
+bool {\bfseries Use\+Bone\+Orientations\+Constraint} = true
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a9400057e02fd653f5ae4fadaef57ed1e}\label{class_kinect_manager_a9400057e02fd653f5ae4fadaef57ed1e}} 
+bool {\bfseries Use\+Self\+Intersection\+Constraint} = false
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a5b7488faae7c2110ec04ca0f62fabeb2}\label{class_kinect_manager_a5b7488faae7c2110ec04ca0f62fabeb2}} 
+List$<$ Game\+Object $>$ {\bfseries Player1\+Avatars}
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a08198215025975998679474f46df1546}\label{class_kinect_manager_a08198215025975998679474f46df1546}} 
+List$<$ Game\+Object $>$ {\bfseries Player2\+Avatars}
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a35ecac746973e3cf60734eda5f3ff7a2}\label{class_kinect_manager_a35ecac746973e3cf60734eda5f3ff7a2}} 
+Kinect\+Gestures.\+Gestures {\bfseries Player1\+Calibration\+Pose}
+\item 
+\mbox{\Hypertarget{class_kinect_manager_ac59fc32fdd612d789d5ce25e6ea246dc}\label{class_kinect_manager_ac59fc32fdd612d789d5ce25e6ea246dc}} 
+Kinect\+Gestures.\+Gestures {\bfseries Player2\+Calibration\+Pose}
+\item 
+\mbox{\Hypertarget{class_kinect_manager_aa6776a77e3dc3c598ce7988e123bc435}\label{class_kinect_manager_aa6776a77e3dc3c598ce7988e123bc435}} 
+List$<$ Kinect\+Gestures.\+Gestures $>$ {\bfseries Player1\+Gestures}
+\item 
+\mbox{\Hypertarget{class_kinect_manager_ae57ce2eaaa9461b5e07486a4e1b67c6a}\label{class_kinect_manager_ae57ce2eaaa9461b5e07486a4e1b67c6a}} 
+List$<$ Kinect\+Gestures.\+Gestures $>$ {\bfseries Player2\+Gestures}
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a903eee63e4808c7389ccbae4aa440eb5}\label{class_kinect_manager_a903eee63e4808c7389ccbae4aa440eb5}} 
+float {\bfseries Min\+Time\+Between\+Gestures} = 0.\+7f
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a2b4fc705e42ca9612d307fbf0ebb1b83}\label{class_kinect_manager_a2b4fc705e42ca9612d307fbf0ebb1b83}} 
+List$<$ Mono\+Behaviour $>$ {\bfseries Gesture\+Listeners}
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a7d0d4d7538c0c428b408c8f475058876}\label{class_kinect_manager_a7d0d4d7538c0c428b408c8f475058876}} 
+G\+U\+I\+Text {\bfseries Calibration\+Text}
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a7be62988c680b23ea117075ec00328dd}\label{class_kinect_manager_a7be62988c680b23ea117075ec00328dd}} 
+Game\+Object {\bfseries Hand\+Cursor1}
+\item 
+\mbox{\Hypertarget{class_kinect_manager_ad8ca02e3a607dba673506ed151d25f0c}\label{class_kinect_manager_ad8ca02e3a607dba673506ed151d25f0c}} 
+Game\+Object {\bfseries Hand\+Cursor2}
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a17ab5b97a7d8473c24fc0ef93d87fbff}\label{class_kinect_manager_a17ab5b97a7d8473c24fc0ef93d87fbff}} 
+bool {\bfseries Control\+Mouse\+Cursor} = false
+\item 
+\mbox{\Hypertarget{class_kinect_manager_ae2c34913121504744086fb882a9a8038}\label{class_kinect_manager_ae2c34913121504744086fb882a9a8038}} 
+G\+U\+I\+Text {\bfseries Gestures\+Debug\+Text}
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a3ecfea0fbd8d8a705fe429bcbd5ee24a}\label{class_kinect_manager_a3ecfea0fbd8d8a705fe429bcbd5ee24a}} 
+List$<$ \mbox{\hyperlink{interface_kinect_gestures_1_1_gesture_listener_interface}{Kinect\+Gestures.\+Gesture\+Listener\+Interface}} $>$ {\bfseries gesture\+Listeners}
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_kinect_manager_a9a10cdd70f266d89669ac15c5351c7ac}\label{class_kinect_manager_a9a10cdd70f266d89669ac15c5351c7ac}} 
+static \mbox{\hyperlink{class_kinect_manager}{Kinect\+Manager}} {\bfseries Instance}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Kinect\+Scripts/Kinect\+Manager.\+cs\end{DoxyCompactItemize}

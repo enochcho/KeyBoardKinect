@@ -1,0 +1,69 @@
+\hypertarget{class_tracking_state_filter}{}\section{Tracking\+State\+Filter Class Reference}
+\label{class_tracking_state_filter}\index{Tracking\+State\+Filter@{Tracking\+State\+Filter}}
+
+
+Implementation of a Holt Double Exponential Smoothing filter. The double exponential smooths the curve and predicts. There is also noise jitter removal.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tracking_state_filter_a5b6bbc0762bd99b07d858927149f8e99}\label{class_tracking_state_filter_a5b6bbc0762bd99b07d858927149f8e99}} 
+\mbox{\hyperlink{class_tracking_state_filter_a5b6bbc0762bd99b07d858927149f8e99}{Tracking\+State\+Filter}} ()
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tracking_state_filter_a93adcb0571eed573d08d29df99c052d2}\label{class_tracking_state_filter_a93adcb0571eed573d08d29df99c052d2}} 
+void {\bfseries Init} ()
+\item 
+void \mbox{\hyperlink{class_tracking_state_filter_a04be8b493efd27ca4e283194b0c88345}{Init}} (float smoothing\+Value, float correction\+Value, float prediction\+Value, float jitter\+Radius\+Value, float max\+Deviation\+Radius\+Value)
+\begin{DoxyCompactList}\small\item\em Initialize the filter with a set of manually specified Transform\+Smooth\+Parameters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tracking_state_filter_a94f28ab818af63dc0dbff981471b9155}\label{class_tracking_state_filter_a94f28ab818af63dc0dbff981471b9155}} 
+void {\bfseries Init} (\mbox{\hyperlink{struct_kinect_wrapper_1_1_nui_transform_smooth_parameters}{Kinect\+Wrapper.\+Nui\+Transform\+Smooth\+Parameters}} smoothing\+Parameters)
+\item 
+\mbox{\Hypertarget{class_tracking_state_filter_aaebd55fd1665a15ec96813b24acee475}\label{class_tracking_state_filter_aaebd55fd1665a15ec96813b24acee475}} 
+void {\bfseries Reset} ()
+\item 
+\mbox{\Hypertarget{class_tracking_state_filter_a32f3730ec7efc024aa0b3776634e5126}\label{class_tracking_state_filter_a32f3730ec7efc024aa0b3776634e5126}} 
+void {\bfseries Update\+Filter} (ref \mbox{\hyperlink{struct_kinect_wrapper_1_1_nui_skeleton_data}{Kinect\+Wrapper.\+Nui\+Skeleton\+Data}} skeleton)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tracking_state_filter_a1893e102dd433941dc3dcd844f932ae4}\label{class_tracking_state_filter_a1893e102dd433941dc3dcd844f932ae4}} 
+void {\bfseries Filter\+Joint} (ref \mbox{\hyperlink{struct_kinect_wrapper_1_1_nui_skeleton_data}{Kinect\+Wrapper.\+Nui\+Skeleton\+Data}} skeleton, int joint\+Index, ref \mbox{\hyperlink{struct_kinect_wrapper_1_1_nui_transform_smooth_parameters}{Kinect\+Wrapper.\+Nui\+Transform\+Smooth\+Parameters}} smoothing\+Parameters)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of a Holt Double Exponential Smoothing filter. The double exponential smooths the curve and predicts. There is also noise jitter removal. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tracking_state_filter_a04be8b493efd27ca4e283194b0c88345}\label{class_tracking_state_filter_a04be8b493efd27ca4e283194b0c88345}} 
+\index{Tracking\+State\+Filter@{Tracking\+State\+Filter}!Init@{Init}}
+\index{Init@{Init}!Tracking\+State\+Filter@{Tracking\+State\+Filter}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Tracking\+State\+Filter.\+Init (\begin{DoxyParamCaption}\item[{float}]{smoothing\+Value,  }\item[{float}]{correction\+Value,  }\item[{float}]{prediction\+Value,  }\item[{float}]{jitter\+Radius\+Value,  }\item[{float}]{max\+Deviation\+Radius\+Value }\end{DoxyParamCaption})}
+
+
+
+Initialize the filter with a set of manually specified Transform\+Smooth\+Parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em smoothing\+Value} & Smoothing = \mbox{[}0..1\mbox{]}, lower values is closer to the raw data and more noisy.\\
+\hline
+{\em correction\+Value} & Correction = \mbox{[}0..1\mbox{]}, higher values correct faster and feel more responsive.\\
+\hline
+{\em prediction\+Value} & Prediction = \mbox{[}0..n\mbox{]}, how many frames into the future we want to predict.\\
+\hline
+{\em jitter\+Radius\+Value} & Jitter\+Radius = The deviation distance in m that defines jitter.\\
+\hline
+{\em max\+Deviation\+Radius\+Value} & Max\+Deviation = The maximum distance in m that filtered positions are allowed to deviate from raw data.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Kinect\+Scripts/\+Filters/Tracking\+State\+Filter.\+cs\end{DoxyCompactItemize}
