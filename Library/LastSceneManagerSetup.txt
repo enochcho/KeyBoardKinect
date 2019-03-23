@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/KeyboardGame.unity
+- path: Assets/help.unity
   isLoaded: 1
   isActive: 1

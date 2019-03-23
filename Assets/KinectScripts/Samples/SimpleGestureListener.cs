@@ -9,23 +9,23 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
     public Text gestureInfo;
 
     //planets
-    public GameObject c3;
-    public GameObject d3;
-    public GameObject e3;
-    public GameObject f3;
-    public GameObject g3;
-    public GameObject a3;
-/*    public GameObject neptune;
+    public GameObject mercury;
+    public GameObject mars;
+    public GameObject venus;
+    public GameObject earth;
+    public GameObject jupiter;
+    public GameObject saturn;
+    public GameObject neptune;
     public GameObject uranus;
-    public GameObject pluto; */
+    public GameObject pluto;
 
     public GameObject spaceship;
 
     // private bool to track if progress message has been displayed
     private bool progressDisplayed;
 
-    private bool keyClicked = false;
-    public GameObject selectedKey;
+    private bool planetClicked = false;
+    public GameObject selectedPlanet;
     private correctlyPlacedScript correctlyPlaced;
 
     public void UserDetected(uint userId, int userIndex)
@@ -35,7 +35,7 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
 
         if (gestureInfo != null)
         {
-            gestureInfo.text = "Click a key for a message";
+            gestureInfo.text = "Capture planets by clicking on them!";
         }
     }
 
@@ -127,9 +127,11 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
     void Update()
     {
 
-        if (keyClicked == true && selectedKey != null && correctlyPlaced.correctlyPlaced != true)
+        if (planetClicked == true && selectedPlanet != null && correctlyPlaced.correctlyPlaced != true)
         {
-            selectedKey.transform.position = spaceship.transform.position;
+            //selectedPlanet.transform.position = spaceship.transform.position;
+            gestureInfo.text = "don't move";
+            //Debug.Log("clicked");
         }
         if (Input.GetMouseButtonDown(0))
         {
@@ -166,13 +168,15 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
             RaycastHit2D hit = Physics2D.Raycast(rayPos, Vector2.zero, 0f);
             if (hit)
             {
-                if (hit.transform.gameObject.name.Contains("Key"))
+                if (hit.transform.gameObject.name.Contains("Planet"))
                 {
+                    //gestureInfo.text = hit.transform.gameObject.name;
+                    Debug.Log("clicked a planet");
                     Debug.Log(hit.transform.name);
                     Debug.Log(hit.transform.gameObject.tag);
-                    keyClicked = true;
-                    selectedKey = hit.transform.gameObject;
-                   // correctlyPlaced = selectedPlanet.GetComponent<correctlyPlacedScript>();
+                    planetClicked = true;
+                    selectedPlanet = hit.transform.gameObject;
+                    correctlyPlaced = selectedPlanet.GetComponent<correctlyPlacedScript>();
                 }
             }
 

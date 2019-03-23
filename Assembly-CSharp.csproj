@@ -99,6 +99,7 @@
     <Compile Include="Assets\PlanetsGame\checkCollisionVenus.cs" />
     <Compile Include="Assets\PlanetsGame\correctlyPlacedScript.cs" />
     <Compile Include="Assets\PlanetsGame\ObjectRandomLocation.cs" />
+    <Compile Include="Assets\Sounds\btnfx.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/celeste8/Documents/Senior Year/Spring 2019/COMP585/jaycee-burn-center/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
