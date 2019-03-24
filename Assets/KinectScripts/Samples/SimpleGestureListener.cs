@@ -176,6 +176,7 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
                     Debug.Log(hit.transform.gameObject.tag);
                     planetClicked = true;
                     selectedPlanet = hit.transform.gameObject;
+                    selectedPlanet.GetComponent<AudioSource>().Play();
                     correctlyPlaced = selectedPlanet.GetComponent<correctlyPlacedScript>();
                 }
             }
