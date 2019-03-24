@@ -9,15 +9,19 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
     public Text gestureInfo;
 
     //planets
-    public GameObject mercury;
-    public GameObject mars;
-    public GameObject venus;
-    public GameObject earth;
-    public GameObject jupiter;
-    public GameObject saturn;
-    public GameObject neptune;
-    public GameObject uranus;
-    public GameObject pluto;
+    public GameObject c3;
+    public GameObject cs3;
+    public GameObject d3;
+    public GameObject ds3;
+    public GameObject e3;
+    public GameObject f3;
+    public GameObject fs3;
+    public GameObject g3;
+    public GameObject gs3;
+    public GameObject a3;
+    public GameObject as3;
+    public GameObject b3;
+    public GameObject c4;
 
     public GameObject spaceship;
 
@@ -26,7 +30,7 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
 
     private bool planetClicked = false;
     public GameObject selectedPlanet;
-    private correctlyPlacedScript correctlyPlaced;
+    //private correctlyPlacedScript correctlyPlaced;
 
     public void UserDetected(uint userId, int userIndex)
     {
@@ -127,10 +131,10 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
     void Update()
     {
 
-        if (planetClicked == true && selectedPlanet != null && correctlyPlaced.correctlyPlaced != true)
+        if (planetClicked == true && selectedPlanet != null)// && correctlyPlaced.correctlyPlaced != true)
         {
             //selectedPlanet.transform.position = spaceship.transform.position;
-            gestureInfo.text = "don't move";
+            //gestureInfo.text = "don't move";
             //Debug.Log("clicked");
         }
         if (Input.GetMouseButtonDown(0))
@@ -168,16 +172,16 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
             RaycastHit2D hit = Physics2D.Raycast(rayPos, Vector2.zero, 0f);
             if (hit)
             {
-                if (hit.transform.gameObject.name.Contains("Planet"))
+                if (hit.transform.gameObject.name.Contains("Key"))
                 {
                     //gestureInfo.text = hit.transform.gameObject.name;
-                    Debug.Log("clicked a planet");
                     Debug.Log(hit.transform.name);
+                    gestureInfo.text = hit.transform.name;
                     Debug.Log(hit.transform.gameObject.tag);
                     planetClicked = true;
                     selectedPlanet = hit.transform.gameObject;
                     selectedPlanet.GetComponent<AudioSource>().Play();
-                    correctlyPlaced = selectedPlanet.GetComponent<correctlyPlacedScript>();
+                    //correctlyPlaced = selectedPlanet.GetComponent<correctlyPlacedScript>();
                 }
             }
 
