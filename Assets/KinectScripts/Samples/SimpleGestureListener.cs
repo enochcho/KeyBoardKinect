@@ -39,7 +39,7 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
 
         if (gestureInfo != null)
         {
-            gestureInfo.text = "Capture planets by clicking on them!";
+           //gestureInfo.text = "Capture planets by clicking on them!";
         }
     }
 
@@ -59,7 +59,7 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
             string sGestureText = string.Format("capture {0:F1}% complete", progress * 100);
 
             if (gestureInfo != null)
-                gestureInfo.text = sGestureText;
+             //   gestureInfo.text = sGestureText;
 
             progressDisplayed = true;
         }
