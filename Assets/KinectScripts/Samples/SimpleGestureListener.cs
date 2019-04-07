@@ -207,35 +207,16 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
         }
     }
 
-<<<<<<< HEAD
     private IEnumerator LightUpKey(GameObject key, float time)
     {
         Color32 startColor;
         Color32 flashColor = Color.cyan;
+
         startColor = key.GetComponent<MeshRenderer>().material.color;
         key.GetComponent<MeshRenderer>().material.color = flashColor;
         yield return new WaitForSeconds(time);
         key.GetComponent<MeshRenderer>().material.color = startColor;
     }
-    
-=======
-    private IEnumerator LightUpKey(GameObject key, float
-time)
-
-{
-Color32 startColor;
-
-Color32 flashColor = Color.cyan;
-
-startColor = key.GetComponent<MeshRenderer>().material.color;
-
-key.GetComponent<MeshRenderer>().material.color = flashColor;
-
-yield return new WaitForSeconds(time);
-
-key.GetComponent<MeshRenderer>().material.color = startColor;
-
-}
 
 
     // private void StopAudio()
@@ -243,7 +224,6 @@ key.GetComponent<MeshRenderer>().material.color = startColor;
     //     GetComponent<AudioSource>().Stop();
     // }
 
->>>>>>> 923107afe9d7fa3a0a2ee045de43dc25d145ed63
     void Update()
     {
 
