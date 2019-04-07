@@ -8,29 +8,46 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
     // GUI Text to display the gesture messages.
     public Text gestureInfo;
 
-    //planets
-    public GameObject c3;
-    public GameObject cs3;
-    public GameObject d3;
-    public GameObject ds3;
-    public GameObject e3;
-    public GameObject f3;
-    public GameObject fs3;
-    public GameObject g3;
-    public GameObject gs3;
-    public GameObject a3;
-    public GameObject as3;
+    // Keys
     public GameObject b3;
     public GameObject c4;
+    public GameObject cs4;
+    public GameObject d4;
+    public GameObject ds4;
+    public GameObject e4;
+    public GameObject f4;
+    public GameObject fs4;
+    public GameObject g4;
+    public GameObject gs4;
+    public GameObject a4;
+    public GameObject as4;
+    public GameObject b4;
+    public GameObject c5;
+    public GameObject cs5;
+    public GameObject d5;
 
     public GameObject spaceship;
 
     // private bool to track if progress message has been displayed
     private bool progressDisplayed;
 
-    private bool planetClicked = false;
-    public GameObject selectedPlanet;
+    private bool keyClicked = false;
+    public GameObject selectedKey;
     //private correctlyPlacedScript correctlyPlaced;
+    static float whole = 1f;
+    static float quarter = .33f;
+    static float half = .66f;
+    static float tied = 2f;
+
+    /*float[] duration = new float[half, quarter, quarter, quarter, quarter, whole, whole,
+        half, quarter, quarter, quarter, quarter, tied,
+        quarter, quarter, quarter, quarter, quarter, quarter, half, quarter, whole,
+        half, quarter, quarter, quarter, quarter, quarter, quarter, quarter, quarter, quarter, quarter,
+        half, quarter, quarter, quarter, quarter, whole, half, quarter,
+        half, quarter, quarter, quarter, quarter, whole, quarter/*rest*/, /* quarter, quarter,
+        whole, whole, quarter, quarter, quarter, quarter, quarter, quarter,
+        whole, whole, tied]; */
+    GameObject[] player;
 
     public void UserDetected(uint userId, int userIndex)
     {
@@ -72,17 +89,17 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
         if (gesture == KinectGestures.Gestures.Click)
         {
 
-            switch (planetClicked)
+            switch (keyClicked)
             {
                 case true:
                     if (correctlyPlaced.correctlyPlaced == false)
                     {
-                        sGestureText = selectedPlanet.tag + " deposited.";
+                        sGestureText = selectedKey.tag + " deposited.";
                     }
 
 
-                    planetClicked = false;
-                    selectedPlanet = null;
+                    keyClicked = false;
+                    selectedKey = null;
 
                     break;
                 case false:
@@ -92,10 +109,10 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
                     {
                         Debug.Log(hit.transform.name);
                         Debug.Log(hit.transform.gameObject.tag);
-                        planetClicked = true;
-                        selectedPlanet = hit.transform.gameObject;
-                        correctlyPlaced = selectedPlanet.GetComponent<correctlyPlacedScript>();
-                        sGestureText = selectedPlanet.tag + " captured";
+                        keyClicked = true;
+                        selectedKey = hit.transform.gameObject;
+                        correctlyPlaced = selectedKey.GetComponent<correctlyPlacedScript>();
+                        sGestureText = selectedKey.tag + " captured";
                     }
                     break;
             }
@@ -128,12 +145,23 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
         return true;
     }
 
+    public void PlayForTime(float time)
+    {
+        GetComponent<AudioSource>().Play();
+        Invoke("StopAudio", time);
+    }
+
+    private void StopAudio()
+    {
+        GetComponent<AudioSource>().Stop();
+    }
+
     void Update()
     {
 
-        if (planetClicked == true && selectedPlanet != null)// && correctlyPlaced.correctlyPlaced != true)
+        if (keyClicked == true && selectedKey != null)// && correctlyPlaced.correctlyPlaced != true)
         {
-            //selectedPlanet.transform.position = spaceship.transform.position;
+            //selectedKey.transform.position = spaceship.transform.position;
             //gestureInfo.text = "don't move";
             //Debug.Log("clicked");
         }
@@ -142,7 +170,7 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
             Debug.Log("Pressed primary button.");
 
 
-            /*switch (planetClicked)
+            /*switch (keyClicked)
             {
             // timer for not holding down button or audio clip stopped playing 
             // attach spaceship to hand modify in kinectmanager and this script
@@ -150,8 +178,8 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
             // Unity Input.getaxis
                 case true:
 
-                    planetClicked = false;
-                    selectedPlanet = null;
+                    keyClicked = false;
+                    selectedKey = null;
 
                     break;
                 case false:
@@ -161,9 +189,9 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
                     {
                         Debug.Log(hit.transform.name);
                         Debug.Log(hit.transform.gameObject.tag);
-                        planetClicked = true;
-                        selectedPlanet = hit.transform.gameObject;
-                        correctlyPlaced = selectedPlanet.GetComponent<correctlyPlacedScript>();
+                        keyClicked = true;
+                        selectedKey = hit.transform.gameObject;
+                        correctlyPlaced = selectedKey.GetComponent<correctlyPlacedScript>();
                     }
                     break;
             }*/
@@ -178,10 +206,10 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
                     Debug.Log(hit.transform.name);
                     gestureInfo.text = hit.transform.name;
                     Debug.Log(hit.transform.gameObject.tag);
-                    planetClicked = true;
-                    selectedPlanet = hit.transform.gameObject;
-                    selectedPlanet.GetComponent<AudioSource>().Play();
-                    //correctlyPlaced = selectedPlanet.GetComponent<correctlyPlacedScript>();
+                    keyClicked = true;
+                    selectedKey = hit.transform.gameObject;
+                    selectedKey.GetComponent<AudioSource>().Play();
+                    //correctlyPlaced = selectedKey.GetComponent<correctlyPlacedScript>();
                 }
             }
 
