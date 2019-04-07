@@ -95,7 +95,7 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
             fs4, g4, a4, b4, c5
         };
 
-        StartCoroutine(PlayForTime(correct, duration, ));
+        StartCoroutine(PlayForTime(correct, duration, 0, 8));
     }
 
     public void UserDetected(uint userId, int userIndex)
