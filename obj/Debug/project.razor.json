@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "c:\\Users\\enocho\\Documents\\Classes\\Comp 585\\jaycee-burn-center\\Assembly-CSharp.csproj",
+  "TargetFramework": "v3.5",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
+}
