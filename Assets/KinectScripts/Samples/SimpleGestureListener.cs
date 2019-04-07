@@ -9,6 +9,7 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
     public Text gestureInfo;
 
     // Keys
+    
     public GameObject b3;
     public GameObject c4;
     public GameObject cs4;
@@ -34,20 +35,68 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
     private bool keyClicked = false;
     public GameObject selectedKey;
     //private correctlyPlacedScript correctlyPlaced;
-    static float whole = 1f;
+    static float dottedhalf = 1f;
     static float quarter = .33f;
     static float half = .66f;
     static float tied = 2f;
+    static float whole = 1.33f;
 
-    /*float[] duration = new float[half, quarter, quarter, quarter, quarter, whole, whole,
-        half, quarter, quarter, quarter, quarter, tied,
-        quarter, quarter, quarter, quarter, quarter, quarter, half, quarter, whole,
-        half, quarter, quarter, quarter, quarter, quarter, quarter, quarter, quarter, quarter, quarter,
-        half, quarter, quarter, quarter, quarter, whole, half, quarter,
-        half, quarter, quarter, quarter, quarter, whole, quarter/*rest*/, /* quarter, quarter,
-        whole, whole, quarter, quarter, quarter, quarter, quarter, quarter,
-        whole, whole, tied]; */
+
+
+    float[] duration = new float[] {
+            half, quarter, quarter, quarter, quarter, dottedhalf, dottedhalf,
+            half, quarter, quarter, quarter, quarter, tied,
+            quarter, quarter, quarter, quarter, quarter, quarter,
+            half, quarter, dottedhalf,
+            half, quarter, quarter, quarter, quarter,
+            quarter, quarter, quarter, quarter, quarter, quarter,
+            half, quarter, quarter, quarter, quarter, dottedhalf, half, quarter,
+            half, quarter, quarter, quarter, quarter, whole,
+            quarter, quarter, dottedhalf, dottedhalf, quarter, quarter, quarter, quarter,
+            quarter, quarter, dottedhalf, dottedhalf, tied
+        };
     GameObject[] player;
+
+    int[] notesPerLevel = new int[]
+        {
+            7, 6, 6, 3, 5, 6, 8, 6, 8, 5, 60
+        };
+
+   
+
+    void Awake(){
+        b3 = GameObject.Find("Key B3");
+        c4 = GameObject.Find("Key C4");
+        cs4 = GameObject.Find("Key C#4");
+        d4 = GameObject.Find("Key D4");
+        ds4 = GameObject.Find("Key D#4");
+        e4 = GameObject.Find("Key E4");
+        f4 = GameObject.Find("Key F4");
+        fs4 = GameObject.Find("Key F#4");
+        g4 = GameObject.Find("Key G4");
+        gs4 = GameObject.Find("Key G#4");
+        a4 = GameObject.Find("Key A4");
+        as4 = GameObject.Find("KeyA#4");
+        b4 = GameObject.Find("Key B4");
+        c5 = GameObject.Find("Key C5");
+        cs5 = GameObject.Find("Key C#5");
+        d5 = GameObject.Find("Key D5");
+
+        GameObject[] correct = new GameObject[] {
+            c4, c5, a4, g4, e4, g4, d4,
+            c4, c5, a4, g4, e4, g4,
+            a4, gs4, a4, e4, f4, g4,
+            a4, f4, d4,
+            a4, a4, a4, b4, c5,
+            d5, b4, a4, g4, e4, d4,
+            c4, c5, a4, g4, e4, g4, d4, d4,
+            c4, d4, e4, f4, g4, a4,
+            a4, b4, c5, c5, c5, b4, a4, g4,
+            fs4, g4, a4, b4, c5
+        };
+
+        StartCoroutine(PlayForTime(correct, duration, ));
+    }
 
     public void UserDetected(uint userId, int userIndex)
     {
@@ -145,17 +194,20 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
         return true;
     }
 
-    public void PlayForTime(float time)
-    {
-        GetComponent<AudioSource>().Play();
-        Invoke("StopAudio", time);
+    public IEnumerator PlayForTime(GameObject[] notes, float[] durations, int start, int stop)
+    {   AudioSource audio1;
+        for(int i = start; i<stop; i++){
+            audio1 = notes[i].GetComponent<AudioSource>();
+            //audio1.time = audio1.clip.length -
+            audio1.Play();
+            //audio1.SetScheduledEndTime(t0 + duration[i]);
+            yield return new WaitForSeconds(durations[i]);
+
+            //Invoke("StopAudio",durations[i]);
+        }
     }
 
-    private void StopAudio()
-    {
-        GetComponent<AudioSource>().Stop();
-    }
-
+<<<<<<< HEAD
     private IEnumerator LightUpKey(GameObject key, float time)
     {
         Color32 startColor;
@@ -166,6 +218,32 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
         key.GetComponent<MeshRenderer>().material.color = startColor;
     }
     
+=======
+    private IEnumerator LightUpKey(GameObject key, float
+time)
+
+{
+Color32 startColor;
+
+Color32 flashColor = Color.cyan;
+
+startColor = key.GetComponent<MeshRenderer>().material.color;
+
+key.GetComponent<MeshRenderer>().material.color = flashColor;
+
+yield return new WaitForSeconds(time);
+
+key.GetComponent<MeshRenderer>().material.color = startColor;
+
+}
+
+
+    // private void StopAudio()
+    // {
+    //     GetComponent<AudioSource>().Stop();
+    // }
+
+>>>>>>> 923107afe9d7fa3a0a2ee045de43dc25d145ed63
     void Update()
     {
 

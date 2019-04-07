@@ -4469,22 +4469,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54b9637035d55784cbbe08ec594f34d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gestureInfo: {fileID: 734109599}
-  c3: {fileID: 0}
-  cs3: {fileID: 0}
-  d3: {fileID: 0}
-  ds3: {fileID: 0}
-  e3: {fileID: 0}
-  f3: {fileID: 0}
-  fs3: {fileID: 0}
-  g3: {fileID: 0}
-  gs3: {fileID: 0}
-  a3: {fileID: 0}
-  as3: {fileID: 0}
-  b3: {fileID: 0}
-  c4: {fileID: 0}
+  gestureInfo: {fileID: 0}
+  d4: {fileID: 0}
+  ds4: {fileID: 0}
+  e4: {fileID: 0}
+  f4: {fileID: 0}
+  fs4: {fileID: 0}
+  g4: {fileID: 0}
+  gs4: {fileID: 0}
+  a4: {fileID: 0}
+  as4: {fileID: 0}
+  b4: {fileID: 0}
+  c5: {fileID: 0}
+  cs5: {fileID: 0}
+  d5: {fileID: 0}
   spaceship: {fileID: 1565478765}
-  selectedPlanet: {fileID: 0}
+  selectedKey: {fileID: 0}
 --- !u!114 &2023097378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4498,8 +4498,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TwoUsers: 0
-  ComputeUserMap: 1
-  ComputeColorMap: 1
+  ComputeUserMap: 0
+  ComputeColorMap: 0
   DisplayUserMap: 0
   DisplayColorMap: 0
   DisplaySkeletonLines: 0
@@ -4519,16 +4519,15 @@ MonoBehaviour:
   Player2Avatars: []
   Player1CalibrationPose: 0
   Player2CalibrationPose: 0
-  Player1Gestures: 0d0000000c00000007000000
+  Player1Gestures: 
   Player2Gestures: 
   MinTimeBetweenGestures: 0.7
-  GestureListeners:
-  - {fileID: 2023097377}
-  CalibrationText: {fileID: 1135888303}
-  HandCursor1: {fileID: 1565478765}
+  GestureListeners: []
+  CalibrationText: {fileID: 0}
+  HandCursor1: {fileID: 0}
   HandCursor2: {fileID: 0}
   ControlMouseCursor: 0
-  GesturesDebugText: {fileID: 922136450}
+  GesturesDebugText: {fileID: 0}
 --- !u!81 &2023097379
 AudioListener:
   m_ObjectHideFlags: 0
