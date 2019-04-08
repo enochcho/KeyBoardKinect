@@ -9,9 +9,9 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
     public Text gestureInfo;
 
     // Keys
-    
-    public GameObject b3;
-    public GameObject c4;
+
+    public GameObject b3;     //it keeps saying planet names because the tags on 
+    public GameObject c4;     //the keys are the planet's names...
     public GameObject cs4;
     public GameObject d4;
     public GameObject ds4;
@@ -41,6 +41,11 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
     static float tied = 2f;
     static float whole = 1.33f;
 
+   // public int numNotesPlayed;
+   // public int level = 0;
+    int numNotesPlayed = 0;
+    int level = 0;
+    bool endGame = false;
 
 
     float[] duration = new float[] {
@@ -55,16 +60,19 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
             quarter, quarter, dottedhalf, dottedhalf, quarter, quarter, quarter, quarter,
             quarter, quarter, dottedhalf, dottedhalf, tied
         };
-    GameObject[] player;
+    GameObject[] player=new GameObject[60];
+    GameObject[] correct; 
 
     int[] notesPerLevel = new int[]
         {
             7, 6, 6, 3, 5, 6, 8, 6, 8, 5, 60
         };
+    int[] notesPerLevelSum = new int[]
+    {
+            0, 7, 13, 19, 22, 27, 33, 41, 47, 55, 60
+    };
 
-   
-
-    void Awake(){
+    void Awake() {
         b3 = GameObject.Find("Key B3");
         c4 = GameObject.Find("Key C4");
         cs4 = GameObject.Find("Key C#4");
@@ -76,13 +84,13 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
         g4 = GameObject.Find("Key G4");
         gs4 = GameObject.Find("Key G#4");
         a4 = GameObject.Find("Key A4");
-        as4 = GameObject.Find("KeyA#4");
+        as4 = GameObject.Find("Key A#4");
         b4 = GameObject.Find("Key B4");
         c5 = GameObject.Find("Key C5");
         cs5 = GameObject.Find("Key C#5");
         d5 = GameObject.Find("Key D5");
 
-        GameObject[] correct = new GameObject[] {
+         correct = new GameObject[] {
             c4, c5, a4, g4, e4, g4, d4,
             c4, c5, a4, g4, e4, g4,
             a4, gs4, a4, e4, f4, g4,
@@ -95,8 +103,10 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
             fs4, g4, a4, b4, c5
         };
 
-        StartCoroutine(PlayForTime(correct, duration, 0, 8));
+
+        StartCoroutine(PlayForTime(correct, duration, 0, notesPerLevel[0]));
     }
+
 
     public void UserDetected(uint userId, int userIndex)
     {
@@ -196,27 +206,75 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
 
     public IEnumerator PlayForTime(GameObject[] notes, float[] durations, int start, int stop)
     {   AudioSource audio1;
+        GameObject key;
+        Color32 startColor;
+        Color32 flashColor = Color.cyan;
         for(int i = start; i<stop; i++){
+            key = notes[i];
             audio1 = notes[i].GetComponent<AudioSource>();
             //audio1.time = audio1.clip.length -
             audio1.Play();
             //audio1.SetScheduledEndTime(t0 + duration[i]);
+            startColor = key.GetComponent<SpriteRenderer>().color;
+            key.GetComponent<SpriteRenderer>().color = flashColor;
             yield return new WaitForSeconds(durations[i]);
+            key.GetComponent<SpriteRenderer>().color = startColor; 
 
             //Invoke("StopAudio",durations[i]);
         }
     }
 
-    private IEnumerator LightUpKey(GameObject key, float time)
-    {
-        Color32 startColor;
-        Color32 flashColor = Color.cyan;
 
-        startColor = key.GetComponent<MeshRenderer>().material.color;
-        key.GetComponent<MeshRenderer>().material.color = flashColor;
-        yield return new WaitForSeconds(time);
-        key.GetComponent<MeshRenderer>().material.color = startColor;
+    public IEnumerator PlayBack(GameObject[] notes, float[] durations, int start, int stop)
+    {
+        AudioSource audio1;
+        GameObject key;
+        Color32 startColor;
+        Color32 flashColor = Color.green;
+        
+        for (int i = start; i < stop; i++)
+        {
+            key = notes[i];
+            Debug.Log(key.name);
+            Debug.Log(correct[i].name);
+            if (String.Compare(key.name,correct[i].name)!=0)
+            {
+                flashColor = Color.red;
+            }
+            if (String.Compare(key.name,correct[i].name)==0)
+            {
+                flashColor = Color.green;
+            }
+            audio1 = notes[i].GetComponent<AudioSource>();
+
+         
+            //audio1.time = audio1.clip.length -
+            audio1.Play();
+            //audio1.SetScheduledEndTime(t0 + duration[i]);
+            startColor = key.GetComponent<SpriteRenderer>().color;
+            key.GetComponent<SpriteRenderer>().color = flashColor;
+            yield return new WaitForSeconds(durations[i]);
+            key.GetComponent<SpriteRenderer>().color = startColor;
+
+            //Invoke("StopAudio",durations[i]);
+        }
     }
+
+
+
+
+
+
+    /* private IEnumerator LightUpKey(GameObject key, float time)
+     {
+         Color32 startColor;
+         Color32 flashColor = Color.cyan;
+
+         startColor = key.GetComponent<MeshRenderer>().material.color;
+         key.GetComponent<MeshRenderer>().material.color = flashColor;
+         yield return new WaitForSeconds(time);
+         key.GetComponent<MeshRenderer>().material.color = startColor;
+     }*/
 
 
     // private void StopAudio()
@@ -226,7 +284,21 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
 
     void Update()
     {
+        bool canMoveOn = false;
+        bool playMore = true;
 
+        
+        if (numNotesPlayed == notesPerLevel[level])
+        {
+            // un-grey button
+            Debug.Log("can move on");
+            canMoveOn = true;
+            playMore = false;
+            if (level == 9)
+            {
+                endGame = true;
+            }
+        }
         if (keyClicked == true && selectedKey != null)// && correctlyPlaced.correctlyPlaced != true)
         {
             //selectedKey.transform.position = spaceship.transform.position;
@@ -238,49 +310,46 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
             Debug.Log("Pressed primary button.");
 
 
-            /*switch (keyClicked)
-            {
-            // timer for not holding down button or audio clip stopped playing 
-            // attach spaceship to hand modify in kinectmanager and this script
-            // project settings > input > mess with axes
-            // Unity Input.getaxis
-                case true:
-
-                    keyClicked = false;
-                    selectedKey = null;
-
-                    break;
-                case false:
-                    Vector2 rayPos = new Vector2(spaceship.transform.position.x, spaceship.transform.position.y);
-                    RaycastHit2D hit = Physics2D.Raycast(rayPos, Vector2.zero, 0f);
-                    if (hit)
-                    {
-                        Debug.Log(hit.transform.name);
-                        Debug.Log(hit.transform.gameObject.tag);
-                        keyClicked = true;
-                        selectedKey = hit.transform.gameObject;
-                        correctlyPlaced = selectedKey.GetComponent<correctlyPlacedScript>();
-                    }
-                    break;
-            }*/
+         
 
             Vector2 rayPos = new Vector2(spaceship.transform.position.x, spaceship.transform.position.y);
             RaycastHit2D hit = Physics2D.Raycast(rayPos, Vector2.zero, 0f);
             if (hit)
             {
-                if (hit.transform.gameObject.name.Contains("Key"))
+                if (hit.transform.gameObject.name.Contains("Key") && playMore)
                 {
-                    //gestureInfo.text = hit.transform.gameObject.name;
-                    Debug.Log(hit.transform.name);
-                    gestureInfo.text = hit.transform.name;
-                    Debug.Log(hit.transform.gameObject.tag);
+                  
+                    //gestureInfo.text = hit.transform.name;
+           
                     keyClicked = true;
                     selectedKey = hit.transform.gameObject;
                     selectedKey.GetComponent<AudioSource>().Play();
-                    //correctlyPlaced = selectedKey.GetComponent<correctlyPlacedScript>();
+                    numNotesPlayed++;
+                     player[notesPerLevelSum[level] + numNotesPlayed-1] =selectedKey; //what is this doing???
+                
+                }
+                if (hit.transform.gameObject.name.Contains("Start") && canMoveOn)
+                {
+                    if (!endGame)
+                    {
+                        level++;
+                        numNotesPlayed = 0;
+                        StartCoroutine(PlayForTime(correct, duration, notesPerLevelSum[level], notesPerLevelSum[level+1]));
+                    }
+                    else
+                    {
+                        Debug.Log("end game");
+                        // compare arrays - maybe color keys red if missed?
+                        //  StartCoroutine(PlayForTime(correct, duration, 0, 60));
+                        StartCoroutine(PlayBack(player, duration, 0, 60));         //if player keeps track of the notes they've played, this should work 
+                        // tally up score and possibly update in real time
+
+                    }
+                    // grey out button
                 }
             }
-
         }
     }
-}
+        
+    }
+//}
