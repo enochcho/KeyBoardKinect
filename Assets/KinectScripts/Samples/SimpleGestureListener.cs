@@ -27,6 +27,8 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
     public GameObject cs5;
     public GameObject d5;
 
+    public GameObject startbutton;
+
     public GameObject spaceship;
 
     // private bool to track if progress message has been displayed
@@ -89,6 +91,7 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
         c5 = GameObject.Find("Key C5");
         cs5 = GameObject.Find("Key C#5");
         d5 = GameObject.Find("Key D5");
+        startbutton = GameObject.Find("Start");
 
          correct = new GameObject[] {
             c4, c5, a4, g4, e4, g4, d4,
@@ -286,12 +289,15 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
     {
         bool canMoveOn = false;
         bool playMore = true;
+        startbutton.GetComponent<SpriteRenderer>().color = Color.grey;
+
 
         
         if (numNotesPlayed == notesPerLevel[level])
         {
             // un-grey button
             Debug.Log("can move on");
+            startbutton.GetComponent<SpriteRenderer>().color = Color.white;
             canMoveOn = true;
             playMore = false;
             if (level == 9)
@@ -325,13 +331,14 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
                     selectedKey = hit.transform.gameObject;
                     selectedKey.GetComponent<AudioSource>().Play();
                     numNotesPlayed++;
-                     player[notesPerLevelSum[level] + numNotesPlayed-1] =selectedKey; //what is this doing???
+                    player[notesPerLevelSum[level] + numNotesPlayed-1] =selectedKey; //what is this doing???
                 
                 }
                 if (hit.transform.gameObject.name.Contains("Start") && canMoveOn)
                 {
                     if (!endGame)
                     {
+                        startbutton.GetComponent<SpriteRenderer>().color = Color.grey;
                         level++;
                         numNotesPlayed = 0;
                         StartCoroutine(PlayForTime(correct, duration, notesPerLevelSum[level], notesPerLevelSum[level+1]));

@@ -4595,9 +4595,9 @@ MonoBehaviour:
   c5: {fileID: 0}
   cs5: {fileID: 0}
   d5: {fileID: 0}
+  nextbutton: {fileID: 0}
   spaceship: {fileID: 1565478765}
   selectedKey: {fileID: 0}
-  numNotesPlayed: 0
 --- !u!114 &2023097378
 MonoBehaviour:
   m_ObjectHideFlags: 0
