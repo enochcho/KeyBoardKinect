@@ -8,8 +8,10 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
     // GUI Text to display the gesture messages.
     public Text gestureInfo;
 
-    // Keys
+    // GUI Text to display the score.
+    public Text scoreInfo;
 
+    // Keys
     public GameObject b3;     //it keeps saying planet names because the tags on 
     public GameObject c4;     //the keys are the planet's names...
     public GameObject cs4;
@@ -48,7 +50,7 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
     int numNotesPlayed = 0;
     int level = 0;
     bool endGame = false;
-
+    int score = 0;
 
     float[] duration = new float[] {
             half, quarter, quarter, quarter, quarter, dottedhalf, dottedhalf,
@@ -106,6 +108,7 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
             fs4, g4, a4, b4, c5
         };
 
+        scoreInfo.text = "Score:";
 
         StartCoroutine(PlayForTime(correct, duration, 0, notesPerLevel[0]));
     }
@@ -222,7 +225,6 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
             key.GetComponent<SpriteRenderer>().color = flashColor;
             yield return new WaitForSeconds(durations[i]);
             key.GetComponent<SpriteRenderer>().color = startColor; 
-
             //Invoke("StopAudio",durations[i]);
         }
     }
@@ -247,10 +249,12 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
             if (String.Compare(key.name,correct[i].name)==0)
             {
                 flashColor = Color.green;
+                score += 100;
             }
-            audio1 = notes[i].GetComponent<AudioSource>();
 
-         
+            String scoreText = "Score: " + score.ToString();
+            scoreInfo.text = scoreText;
+            audio1 = notes[i].GetComponent<AudioSource>();
             //audio1.time = audio1.clip.length -
             audio1.Play();
             //audio1.SetScheduledEndTime(t0 + duration[i]);
@@ -258,7 +262,6 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
             key.GetComponent<SpriteRenderer>().color = flashColor;
             yield return new WaitForSeconds(durations[i]);
             key.GetComponent<SpriteRenderer>().color = startColor;
-
             //Invoke("StopAudio",durations[i]);
         }
     }
@@ -290,13 +293,9 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
         bool canMoveOn = false;
         bool playMore = true;
         startbutton.GetComponent<SpriteRenderer>().color = Color.grey;
-
-
-        
         if (numNotesPlayed == notesPerLevel[level])
         {
-            // un-grey button
-            Debug.Log("can move on");
+            //Debug.Log("can move on");
             startbutton.GetComponent<SpriteRenderer>().color = Color.white;
             canMoveOn = true;
             playMore = false;
@@ -314,25 +313,18 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
         if (Input.GetMouseButtonDown(0))
         {
             Debug.Log("Pressed primary button.");
-
-
-         
-
             Vector2 rayPos = new Vector2(spaceship.transform.position.x, spaceship.transform.position.y);
             RaycastHit2D hit = Physics2D.Raycast(rayPos, Vector2.zero, 0f);
             if (hit)
             {
+                Debug.Log(hit);
                 if (hit.transform.gameObject.name.Contains("Key") && playMore)
                 {
-                  
-                    //gestureInfo.text = hit.transform.name;
-           
                     keyClicked = true;
                     selectedKey = hit.transform.gameObject;
                     selectedKey.GetComponent<AudioSource>().Play();
                     numNotesPlayed++;
-                    player[notesPerLevelSum[level] + numNotesPlayed-1] =selectedKey; //what is this doing???
-                
+                    player[notesPerLevelSum[level] + numNotesPlayed-1] = selectedKey;                
                 }
                 if (hit.transform.gameObject.name.Contains("Start") && canMoveOn)
                 {
@@ -346,13 +338,11 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
                     else
                     {
                         Debug.Log("end game");
-                        // compare arrays - maybe color keys red if missed?
-                        //  StartCoroutine(PlayForTime(correct, duration, 0, 60));
+                        startbutton.GetComponent<SpriteRenderer>().color = Color.grey;
+                        canMoveOn = false;
                         StartCoroutine(PlayBack(player, duration, 0, 60));         //if player keeps track of the notes they've played, this should work 
                         // tally up score and possibly update in real time
-
                     }
-                    // grey out button
                 }
             }
         }
