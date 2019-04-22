@@ -17,7 +17,7 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
     Song currentSong;
 
     // GameObjects
-    public GameObject startbutton;
+    public GameObject nextbutton;
     public GameObject spaceship;
 
     // private bool to track if progress message has been displayed
@@ -41,7 +41,7 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
     void Start()
     {
 
-        startbutton = GameObject.Find("Start");
+        nextbutton = GameObject.Find("Next");
 
         // Set currentSong based on what the player chooses
         // Now defaults to Ballgame
@@ -224,11 +224,11 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
     {
         bool canMoveOn = false;
         bool playMore = true;
-        startbutton.GetComponent<SpriteRenderer>().color = Color.grey;
+        nextbutton.GetComponent<SpriteRenderer>().color = Color.grey;
         if (numNotesPlayed == notesPerLevel[level])
         {
             //Debug.Log("can move on");
-            startbutton.GetComponent<SpriteRenderer>().color = Color.white;
+            nextbutton.GetComponent<SpriteRenderer>().color = Color.white;
             canMoveOn = true;
             playMore = false;
             if (level == (notesPerLevel.Length - 1))
@@ -267,7 +267,7 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
                 {
                     if (!endGame)
                     {
-                        startbutton.GetComponent<SpriteRenderer>().color = Color.grey;
+                        nextbutton.GetComponent<SpriteRenderer>().color = Color.grey;
                         level++;
                         numNotesPlayed = 0;
                         StartCoroutine(PlayForTime(correct, duration, notesPerLevelSum[level], notesPerLevelSum[level + 1]));
@@ -276,7 +276,7 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
                     {
                         Debug.Log("end game");
                         // For Practice => just move on
-                        startbutton.GetComponent<SpriteRenderer>().color = Color.grey;
+                        nextbutton.GetComponent<SpriteRenderer>().color = Color.grey;
                         canMoveOn = false;
                         StartCoroutine(PlayBack(player, duration, 0, 60));
                     }
