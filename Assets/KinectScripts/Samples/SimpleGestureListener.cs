@@ -14,11 +14,13 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
     public Text scoreInfo;
 
     // Song to play
-    Song currentSong;
+    public Song currentSong;
 
     // GameObjects
     public GameObject nextbutton;
     public GameObject spaceship;
+
+    int songNum;
 
     // private bool to track if progress message has been displayed
     private bool progressDisplayed;
@@ -45,7 +47,8 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
 
         // Set currentSong based on what the player chooses
         // Now defaults to Ballgame
-        currentSong = new Song(0);
+        //currentSong = new Song(songNum);
+        currentSong = new Song(ChooseSong.songNum);
         // set all of the arrays here
         player = new Key[currentSong.getNumNotes()];
         correct = currentSong.getSongNotes();
@@ -82,14 +85,14 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
     public void GestureInProgress(uint userId, int userIndex, KinectGestures.Gestures gesture,
         float progress, KinectWrapper.NuiSkeletonPositionIndex joint, Vector3 screenPos)
     {
-        if (gesture == KinectGestures.Gestures.Click && progress > 0.3f)
+       /* if (gesture == KinectGestures.Gestures.Click && progress > 0.3f)
         {
             string sGestureText = string.Format("capture {0:F1}% complete", progress * 100);
 
             if (gestureInfo != null)
                 //   gestureInfo.text = sGestureText;
                 progressDisplayed = true;
-        }
+        }*/
     }
 
     public bool GestureCompleted(uint userId, int userIndex, KinectGestures.Gestures gesture,
@@ -157,7 +160,7 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
         AudioSource audio1;
         Key key;
         Color32 startColor;
-        Color32 flashColor = Color.cyan;
+        Color32 flashColor = Color.blue;
         for (int i = start; i < stop; i++)
         {
             key = notes[i];
@@ -263,7 +266,7 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
                     numNotesPlayed++;
                     player[notesPerLevelSum[level] + numNotesPlayed - 1] = selectedKey.GetComponent<Key>();
                 }
-                if (hit.transform.gameObject.name.Contains("Start") && canMoveOn)
+                if (hit.transform.gameObject.name.Contains("Next") && canMoveOn)
                 {
                     if (!endGame)
                     {

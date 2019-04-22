@@ -1120,13 +1120,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1792436275}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 329aae988c726164c871b5c8511b5bed, type: 3}
+  m_Script: {fileID: 11500000, guid: a980de36da6c36043ad935fa8c47a6d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gestureInfo: {fileID: 818654029}
-  startbutton: {fileID: 0}
-  optionbutton: {fileID: 0}
-  freeplaybutton: {fileID: 0}
+  happybdaybutton: {fileID: 0}
+  takemebutton: {fileID: 0}
+  londonbutton: {fileID: 0}
   spaceship: {fileID: 495194930}
 --- !u!114 &1792436278
 MonoBehaviour:
@@ -1179,7 +1179,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1792436275}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!4 &1792436280
 Transform:
   m_ObjectHideFlags: 0
