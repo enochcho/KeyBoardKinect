@@ -3,6 +3,7 @@ using System.Collections;
 using System;
 using UnityEngine.UI;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListenerInterface
 {
@@ -249,6 +250,11 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
             if (hit)
             {
                 Debug.Log(hit);
+                if (hit.transform.gameObject.name.Contains("Home"))
+                {
+                    SceneManager.LoadScene("MainMenu");
+                }
+
                 if (hit.transform.gameObject.name.Contains("Key") && playMore)
                 {
                     keyClicked = true;

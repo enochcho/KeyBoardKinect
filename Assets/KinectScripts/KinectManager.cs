@@ -996,7 +996,7 @@ public class KinectManager : MonoBehaviour
 			flipMatrix[2, 2] = -1;
 			
 			instance = this;
-			DontDestroyOnLoad(gameObject);
+			//DontDestroyOnLoad(gameObject);
 		}
 		catch(DllNotFoundException e)
 		{
