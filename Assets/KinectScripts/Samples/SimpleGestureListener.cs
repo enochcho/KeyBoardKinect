@@ -18,9 +18,14 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
 
     // GameObjects
     public GameObject nextbutton;
+    public GameObject homebutton;
+    public GameObject skiptutorialbutton;
+
+    public GameObject instructions; //??
+  
     public GameObject spaceship;
 
-    int songNum;
+    int songNum;  //should be the correct one passed from choose song (will always be the practice)
 
     // private bool to track if progress message has been displayed
     private bool progressDisplayed;
@@ -44,6 +49,9 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
     {
 
         nextbutton = GameObject.Find("Next");
+        homebutton = GameObject.Find("Home");
+        skiptutorialbutton = GameObject.Find("Skip Tutorial");
+        instructions = GameObject.Find("Instructions");
 
         // Set currentSong based on what the player chooses
         // Now defaults to Ballgame
@@ -258,6 +266,19 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
                     SceneManager.LoadScene("MainMenu");
                 }
 
+                if(hit.transform.gameObject.name.Contains("Skip Tutorial"))
+                {
+                    currentSong = new Song(ChooseSong.songNum-1); //don't know if this is the best way to do this...
+                    player = new Key[currentSong.getNumNotes()];
+                    correct = currentSong.getSongNotes();
+                    duration = currentSong.getKeyDurations();
+                    notesPerLevel = currentSong.getNotesPerLevel();
+                    notesPerLevelSum = currentSong.getNotesPerLevelSum();
+                    StartCoroutine(PlayForTime(correct, duration, 0, notesPerLevel[0]));
+                    Destroy(GameObject.Find("Skip Tutorial"));
+//ooh if I make a button that says start or something, but is still called skip tutorial, hopefully it will do this code again
+                }
+
                 if (hit.transform.gameObject.name.Contains("Key") && playMore)
                 {
                     keyClicked = true;
@@ -273,6 +294,9 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
                         nextbutton.GetComponent<SpriteRenderer>().color = Color.grey;
                         level++;
                         numNotesPlayed = 0;
+//I'm trying to disable the instructions...it's just a ui text mesh thingy 
+//possibly just instructions.enabled=false; 
+                        instructions.GetComponent<Text>().enabled=false;
                         StartCoroutine(PlayForTime(correct, duration, notesPerLevelSum[level], notesPerLevelSum[level + 1]));
                     }
                     else
@@ -281,7 +305,11 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
                         // For Practice => just move on
                         nextbutton.GetComponent<SpriteRenderer>().color = Color.grey;
                         canMoveOn = false;
-                        StartCoroutine(PlayBack(player, duration, 0, 60));
+//think this is the right number of notes-was just 60 before 
+                        StartCoroutine(PlayBack(player, duration, 0, currentSong.getNumNotes()));
+                        //StartCoroutine(PlayForTime(correct, duration, 0, notesPerLevel[0]));
+//this will just have the same skip tutorial for now...hopefully it will put the button back on screen 
+                        skiptutorialbutton.enabled = true; 
                     }
                 }
             }

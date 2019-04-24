@@ -8,7 +8,6 @@ public class ChooseSong : MonoBehaviour, KinectGestures.GestureListenerInterface
     // Start is called before the first frame update
 
     public Text gestureInfo;
-    //public GameObject nextbutton;
     public GameObject happybdaybutton;
     public GameObject takemebutton;
     public GameObject londonbutton;
