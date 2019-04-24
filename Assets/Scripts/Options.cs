@@ -108,6 +108,32 @@ public class Options : MonoBehaviour, KinectGestures.GestureListenerInterface
     // Update is called once per frame
     void Update()
     {
+        //Test
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+                 {
+                         Vector3 position = spaceship.transform.position;
+                         position.x--;
+                         spaceship.transform.position = position;
+                 }
+                 if (Input.GetKeyDown(KeyCode.RightArrow))
+                 {
+                         Vector3 position = spaceship.transform.position;
+                         position.x++;
+                         spaceship.transform.position = position;
+                 }
+                 if (Input.GetKeyDown(KeyCode.UpArrow))
+                 {
+                         Vector3 position = spaceship.transform.position;
+                         position.y++;
+                         spaceship.transform.position = position;
+                 }
+                 if (Input.GetKeyDown(KeyCode.DownArrow))
+                 {
+                         Vector3 position = spaceship.transform.position;
+                         position.y--;
+                         spaceship.transform.position = position;
+                 }
+        //Test
         if (Input.GetMouseButtonDown(0))
         {
             //Debug.Log("Pressed primary button.");

@@ -46,6 +46,7 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
     void Start()
     {
         notecolors = PlayerPrefs.GetString("noteColors", "rg");
+        //Debug.Log(notecolors);
 
         nextbutton = GameObject.Find("Next");
         homebutton = GameObject.Find("Home");
@@ -58,7 +59,7 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
         //currentSong = new Song(songNum);
         //currentSong = new Song(ChooseSong.songNum);
         currentSong= new Song(PlayerPrefs.GetInt("songNum"));
-        Debug.Log(PlayerPrefs.GetInt("songNum"));
+        //Debug.Log(PlayerPrefs.GetInt("songNum"));
         // set all of the arrays here
         player = new Key[currentSong.getNumNotes()];
         correct = currentSong.getSongNotes();
@@ -69,7 +70,7 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
         // set score text
         scoreInfo.text = "Score:";
 
-        // Maybe put this elsewhere? Start on play?
+        // Maybe put spaceship elsewhere? Start on play?
         StartCoroutine(PlayForTime(correct, duration, 0, notesPerLevel[0]));
     }
 
@@ -252,6 +253,33 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
         bool canMoveOn = false;
         bool playMore = true;
         nextbutton.GetComponent<SpriteRenderer>().color = Color.grey;
+
+        //Test
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+                 {
+                         Vector3 position = spaceship.transform.position;
+                         position.x--;
+                         spaceship.transform.position = position;
+                 }
+                 if (Input.GetKeyDown(KeyCode.RightArrow))
+                 {
+                         Vector3 position = spaceship.transform.position;
+                         position.x++;
+                         spaceship.transform.position = position;
+                 }
+                 if (Input.GetKeyDown(KeyCode.UpArrow))
+                 {
+                         Vector3 position = spaceship.transform.position;
+                         position.y++;
+                         spaceship.transform.position = position;
+                 }
+                 if (Input.GetKeyDown(KeyCode.DownArrow))
+                 {
+                         Vector3 position = spaceship.transform.position;
+                         position.y--;
+                         spaceship.transform.position = position;
+                 }
+        //Test
         if (numNotesPlayed == notesPerLevel[level])
         {
             //Debug.Log("can move on");
@@ -306,10 +334,10 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
                         // For Practice => just move on
                         nextbutton.GetComponent<SpriteRenderer>().color = Color.grey;
                         canMoveOn = false;
-//think this is the right number of notes-was just 60 before 
+//think spaceship is the right number of notes-was just 60 before 
                         StartCoroutine(PlayBack(player, duration, 0, currentSong.getNumNotes()));
                         //StartCoroutine(PlayForTime(correct, duration, 0, notesPerLevel[0]));
-//this will just have the same skip tutorial for now...hopefully it will put the button back on screen 
+//spaceship will just have the same skip tutorial for now...hopefully it will put the button back on screen 
                        // skiptutorialbutton.enabled = true;                     
                        }
                 }
