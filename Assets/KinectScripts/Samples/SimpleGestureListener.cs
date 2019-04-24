@@ -58,7 +58,7 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
         // Now defaults to Ballgame
         //currentSong = new Song(songNum);
         //currentSong = new Song(ChooseSong.songNum);
-        currentSong= new Song(PlayerPrefs.GetInt("songNum"));
+        currentSong= new Song(PlayerPrefs.GetInt("songNum"),PlayerPrefs.GetFloat("noteSpeed", 1f));
         //Debug.Log(PlayerPrefs.GetInt("songNum"));
         // set all of the arrays here
         player = new Key[currentSong.getNumNotes()];
@@ -255,31 +255,9 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
         nextbutton.GetComponent<SpriteRenderer>().color = Color.grey;
 
         //Test
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
-                 {
-                         Vector3 position = spaceship.transform.position;
-                         position.x--;
-                         spaceship.transform.position = position;
-                 }
-                 if (Input.GetKeyDown(KeyCode.RightArrow))
-                 {
-                         Vector3 position = spaceship.transform.position;
-                         position.x++;
-                         spaceship.transform.position = position;
-                 }
-                 if (Input.GetKeyDown(KeyCode.UpArrow))
-                 {
-                         Vector3 position = spaceship.transform.position;
-                         position.y++;
-                         spaceship.transform.position = position;
-                 }
-                 if (Input.GetKeyDown(KeyCode.DownArrow))
-                 {
-                         Vector3 position = spaceship.transform.position;
-                         position.y--;
-                         spaceship.transform.position = position;
-                 }
-        //Test
+            var move = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
+            spaceship.transform.position += move * (float)10.0 * Time.deltaTime;
+        //endTest
         if (numNotesPlayed == notesPerLevel[level])
         {
             //Debug.Log("can move on");

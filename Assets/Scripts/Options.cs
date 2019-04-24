@@ -50,11 +50,11 @@ public class Options : MonoBehaviour, KinectGestures.GestureListenerInterface
             noteSpeed = "normal";
             Tempo.GetComponent<Text>().text = "Normal";
         } else if (PlayerPrefs.GetFloat("noteSpeed", 1f) == 0.5f) {
-            noteSpeed = "slow";
-            Tempo.GetComponent<Text>().text = "Slow";
-        } else if (PlayerPrefs.GetFloat("noteSpeed", 1f) == 1.5f) {
-           noteSpeed = "fast";
-           Tempo.GetComponent<Text>().text = "Fast";
+            noteSpeed = "fast";
+            Tempo.GetComponent<Text>().text = "Fast";
+        } else if (PlayerPrefs.GetFloat("noteSpeed", 1f) == 2.0f) {
+           noteSpeed = "slow";
+           Tempo.GetComponent<Text>().text = "Slow";
         } else {
             noteSpeed = "normal";
         }
@@ -109,31 +109,10 @@ public class Options : MonoBehaviour, KinectGestures.GestureListenerInterface
     void Update()
     {
         //Test
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
-                 {
-                         Vector3 position = spaceship.transform.position;
-                         position.x--;
-                         spaceship.transform.position = position;
-                 }
-                 if (Input.GetKeyDown(KeyCode.RightArrow))
-                 {
-                         Vector3 position = spaceship.transform.position;
-                         position.x++;
-                         spaceship.transform.position = position;
-                 }
-                 if (Input.GetKeyDown(KeyCode.UpArrow))
-                 {
-                         Vector3 position = spaceship.transform.position;
-                         position.y++;
-                         spaceship.transform.position = position;
-                 }
-                 if (Input.GetKeyDown(KeyCode.DownArrow))
-                 {
-                         Vector3 position = spaceship.transform.position;
-                         position.y--;
-                         spaceship.transform.position = position;
-                 }
-        //Test
+            var move = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
+            spaceship.transform.position += move * (float)10.0 * Time.deltaTime;
+        //endTest
+        
         if (Input.GetMouseButtonDown(0))
         {
             //Debug.Log("Pressed primary button.");
@@ -164,7 +143,7 @@ public class Options : MonoBehaviour, KinectGestures.GestureListenerInterface
                     Debug.Log("Fast");
                     noteSpeed = "fast";
                     Tempo.GetComponent<Text>().text = "Fast";
-                    PlayerPrefs.SetFloat("noteSpeed", 1.5f);
+                    PlayerPrefs.SetFloat("noteSpeed", 0.5f);
                 } else if (hit.transform.gameObject.name.Contains("Normal")) {
                     Debug.Log("Normal");
                     noteSpeed = "normal";
@@ -174,7 +153,7 @@ public class Options : MonoBehaviour, KinectGestures.GestureListenerInterface
                     Debug.Log("Slow");
                     noteSpeed = "slow";
                     Tempo.GetComponent<Text>().text = "Slow";
-                    PlayerPrefs.SetFloat("noteSpeed", 0.5f);
+                    PlayerPrefs.SetFloat("noteSpeed", 2f);
                 } else if (hit.transform.gameObject.name.Contains("Home")){
                     SceneManager.LoadScene("MainMenu");
                 }

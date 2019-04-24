@@ -4598,7 +4598,6 @@ GameObject:
   - component: {fileID: 2023097379}
   - component: {fileID: 2023097378}
   - component: {fileID: 2023097377}
-  - component: {fileID: 2023097381}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4657,16 +4656,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2023097375}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54b9637035d55784cbbe08ec594f34d0, type: 3}
+  m_Script: {fileID: 11500000, guid: ebe283caddf086b469893d292c8b6ffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gestureInfo: {fileID: 0}
-  scoreInfo: {fileID: 0}
-  nextbutton: {fileID: 0}
+  spaceship: {fileID: 0}
   homebutton: {fileID: 0}
-  skiptutorialbutton: {fileID: 0}
-  spaceship: {fileID: 1565478765}
-  selectedKey: {fileID: 0}
 --- !u!114 &2023097378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4732,18 +4727,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2023097381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2023097375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fea8f99b5fae47b4c8565cd7cf6a3f95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2044314229
 GameObject:
   m_ObjectHideFlags: 0

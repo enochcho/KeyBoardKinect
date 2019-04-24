@@ -75,31 +75,9 @@ public class ChangeScene : MonoBehaviour, KinectGestures.GestureListenerInterfac
     void Update()
     {
         //Test
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
-                 {
-                         Vector3 position = spaceship.transform.position;
-                         position.x--;
-                         spaceship.transform.position = position;
-                 }
-                 if (Input.GetKeyDown(KeyCode.RightArrow))
-                 {
-                         Vector3 position = spaceship.transform.position;
-                         position.x++;
-                         spaceship.transform.position = position;
-                 }
-                 if (Input.GetKeyDown(KeyCode.UpArrow))
-                 {
-                         Vector3 position = spaceship.transform.position;
-                         position.y++;
-                         spaceship.transform.position = position;
-                 }
-                 if (Input.GetKeyDown(KeyCode.DownArrow))
-                 {
-                         Vector3 position = spaceship.transform.position;
-                         position.y--;
-                         spaceship.transform.position = position;
-                 }
-        //Test
+            var move = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
+            spaceship.transform.position += move * (float)10.0 * Time.deltaTime;
+        //endTest
         if (Input.GetMouseButtonDown(0))
         {
             //Debug.Log("Pressed primary button.");

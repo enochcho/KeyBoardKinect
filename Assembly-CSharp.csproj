@@ -94,6 +94,7 @@
      <Compile Include="Assets\PlanetsGame\ObjectRandomLocation.cs" />
      <Compile Include="Assets\Scripts\ChangeScene.cs" />
      <Compile Include="Assets\Scripts\ChooseSong.cs" />
+     <Compile Include="Assets\Scripts\FreePlay.cs" />
      <Compile Include="Assets\Scripts\Key.cs" />
      <Compile Include="Assets\Scripts\KeyDurationPair.cs" />
      <Compile Include="Assets\Scripts\Options.cs" />
