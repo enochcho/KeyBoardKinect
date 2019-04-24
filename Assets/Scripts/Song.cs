@@ -11,7 +11,7 @@ public class Song
     enum possibleSongs {BallGame=0, BallPractice=1, BirthdaySong=2, BirthdayPractice=3, LondonBridge=4, LondonPractice=5}
     possibleSongs currentSong = 0;
 
-    static float tempo = PlayerPrefs.GetFloat("noteSpeed", 1f);
+    public static float tempo = PlayerPrefs.GetFloat("noteSpeed", 1f);
 
     //SetOfKeys allKeys;
     public Key b3, c4, cs4, d4, ds4, e4, f4, fs4, g4, gs4, a4, as4, b4, c5, cs5, d5;

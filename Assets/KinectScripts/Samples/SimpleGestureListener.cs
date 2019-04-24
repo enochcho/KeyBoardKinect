@@ -45,7 +45,7 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
 
     void Start()
     {
-        notecolors = PlayerPrefs.GetString("notecolors", "rg");
+        notecolors = PlayerPrefs.GetString("noteColors", "rg");
 
         nextbutton = GameObject.Find("Next");
         homebutton = GameObject.Find("Home");
@@ -56,7 +56,9 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
         // Set currentSong based on what the player chooses
         // Now defaults to Ballgame
         //currentSong = new Song(songNum);
-        currentSong = new Song(ChooseSong.songNum);
+        //currentSong = new Song(ChooseSong.songNum);
+        currentSong= new Song(PlayerPrefs.GetInt("songNum"));
+        Debug.Log(PlayerPrefs.GetInt("songNum"));
         // set all of the arrays here
         player = new Key[currentSong.getNumNotes()];
         correct = currentSong.getSongNotes();
@@ -268,7 +270,8 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
             //Debug.Log("clicked");
         }
         if (Input.GetMouseButtonDown(0))
-        {
+        {   
+            //currentSong.tempo = 
             Debug.Log("Pressed primary button.");
             Vector2 rayPos = new Vector2(spaceship.transform.position.x, spaceship.transform.position.y);
             RaycastHit2D hit = Physics2D.Raycast(rayPos, Vector2.zero, 0f);

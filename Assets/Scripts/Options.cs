@@ -31,18 +31,30 @@ public class Options : MonoBehaviour, KinectGestures.GestureListenerInterface
         Normal = GameObject.Find("Normal");
         Fast = GameObject.Find("Fast");
         Tempo = GameObject.Find("Tempo");
-        if(PlayerPrefs.GetString("notecolors","rg") == "rg"){
+        if(PlayerPrefs.GetString("noteColors","rg") == "rg"){
             redgreen = true;
-        } else{
+            ColorA.GetComponent<Text>().color = Color.red;
+            ColorA.GetComponent<Text>().text = "RED";
+            ColorB.GetComponent<Text>().color = Color.green;
+            ColorB.GetComponent<Text>().text = "GREEN";
+            
+        } else {
             redgreen = false;
+            ColorA.GetComponent<Text>().color = Color.magenta;
+            ColorA.GetComponent<Text>().text = "MAGENTA";
+            ColorB.GetComponent<Text>().color = Color.grey;
+            ColorB.GetComponent<Text>().text = "GREY";
         }
 
         if (PlayerPrefs.GetFloat("noteSpeed", 1f) == 1f) {
             noteSpeed = "normal";
+            Tempo.GetComponent<Text>().text = "Normal";
         } else if (PlayerPrefs.GetFloat("noteSpeed", 1f) == 0.5f) {
             noteSpeed = "slow";
+            Tempo.GetComponent<Text>().text = "Slow";
         } else if (PlayerPrefs.GetFloat("noteSpeed", 1f) == 1.5f) {
            noteSpeed = "fast";
+           Tempo.GetComponent<Text>().text = "Fast";
         } else {
             noteSpeed = "normal";
         }
@@ -111,7 +123,7 @@ public class Options : MonoBehaviour, KinectGestures.GestureListenerInterface
                         ColorA.GetComponent<Text>().text = "MAGENTA";
                         ColorB.GetComponent<Text>().color = Color.grey;
                         ColorB.GetComponent<Text>().text = "GREY";
-                        
+                        PlayerPrefs.SetString("noteColors","mg");
                         
                     } else {
                         redgreen = true;
@@ -119,42 +131,28 @@ public class Options : MonoBehaviour, KinectGestures.GestureListenerInterface
                         ColorA.GetComponent<Text>().text = "RED";
                         ColorB.GetComponent<Text>().color = Color.green;
                         ColorB.GetComponent<Text>().text = "GREEN";
+                        PlayerPrefs.SetString("noteColors","rg");
                     }
                     
                 } else if (hit.transform.gameObject.name.Contains("Fast")) {
                     Debug.Log("Fast");
                     noteSpeed = "fast";
                     Tempo.GetComponent<Text>().text = "Fast";
+                    PlayerPrefs.SetFloat("noteSpeed", 1.5f);
                 } else if (hit.transform.gameObject.name.Contains("Normal")) {
                     Debug.Log("Normal");
                     noteSpeed = "normal";
                     Tempo.GetComponent<Text>().text = "Normal";
+                    PlayerPrefs.SetFloat("noteSpeed", 1f);
                 } else if (hit.transform.gameObject.name.Contains("Slow")) {
                     Debug.Log("Slow");
                     noteSpeed = "slow";
                     Tempo.GetComponent<Text>().text = "Slow";
+                    PlayerPrefs.SetFloat("noteSpeed", 0.5f);
                 } else if (hit.transform.gameObject.name.Contains("Home")){
                     SceneManager.LoadScene("MainMenu");
                 }
             }
         }
     }
-    void OnDestroy(){
-        if(redgreen){
-            PlayerPrefs.SetString("noteColors","rg");
-        } else{
-            PlayerPrefs.SetString("noteColors","mg");
-        }
-
-        if (noteSpeed.Equals("slow")) {
-            PlayerPrefs.SetFloat("noteSpeed", 0.5f);
-        } else if (noteSpeed.Equals("normal")) {
-            PlayerPrefs.SetFloat("noteSpeed", 1f);
-        } else if (noteSpeed.Equals("fast")) {
-            PlayerPrefs.SetFloat("noteSpeed", 1.5f);
-        } else {
-            PlayerPrefs.SetFloat("noteSpeed", 1f);
-        }
-    }
-
 }
