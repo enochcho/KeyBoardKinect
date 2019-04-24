@@ -26,6 +26,7 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
     private bool keyClicked = false;
     public GameObject selectedKey;
     public GameObject homebutton;
+    public GameObject skiptutorialbutton;
     public GameObject instructions;
 
     int numNotesPlayed = 0;
@@ -49,6 +50,7 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
 
         nextbutton = GameObject.Find("Next");
         homebutton = GameObject.Find("Home");
+        skiptutorialbutton = GameObject.Find("Skip Tutorial");
         instructions = GameObject.Find("Instructions");
         
 
@@ -107,6 +109,45 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
     public bool GestureCompleted(uint userId, int userIndex, KinectGestures.Gestures gesture,
         KinectWrapper.NuiSkeletonPositionIndex joint, Vector3 screenPos)
     {
+        /*string sGestureText = "";
+        if (gesture == KinectGestures.Gestures.Click)
+        {
+
+            switch (keyClicked)
+            {
+                case true:
+                    if (correctlyPlaced.correctlyPlaced == false)
+                    {
+                        sGestureText = selectedKey.tag + " deposited.";
+                    }
+
+
+                    keyClicked = false;
+                    selectedKey = null;
+
+                    break;
+                case false:
+                    Vector2 rayPos = new Vector2(spaceship.transform.position.x, spaceship.transform.position.y);
+                    RaycastHit2D hit = Physics2D.Raycast(rayPos, Vector2.zero, 0f);
+                    if (hit)
+                    {
+                        Debug.Log(hit.transform.name);
+                        Debug.Log(hit.transform.gameObject.tag);
+                        keyClicked = true;
+                        selectedKey = hit.transform.gameObject;
+                        correctlyPlaced = selectedKey.GetComponent<correctlyPlacedScript>();
+                        sGestureText = selectedKey.tag + " captured";
+                    }
+                    break;
+            }
+        }
+        if (gestureInfo != null)
+        {
+            gestureInfo.text = sGestureText;
+        }
+
+        progressDisplayed = false;
+        */
         return true;
     }
 
@@ -191,6 +232,22 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
         }
     }
 
+    /* private IEnumerator LightUpKey(GameObject key, float time)
+     {
+         Color32 startColor;
+         Color32 flashColor = Color.cyan;
+
+         startColor = key.GetComponent<MeshRenderer>().material.color;
+         key.GetComponent<MeshRenderer>().material.color = flashColor;
+         yield return new WaitForSeconds(time);
+         key.GetComponent<MeshRenderer>().material.color = startColor;
+     }*/
+
+    /* private void StopAudio()
+     {
+         GetComponent<AudioSource>().Stop();
+     } */
+
     void Update()
     {
         bool canMoveOn = false;
@@ -255,7 +312,8 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
 //think spaceship is the right number of notes-was just 60 before 
                         StartCoroutine(PlayBack(player, duration, 0, currentSong.getNumNotes()));
                         //StartCoroutine(PlayForTime(correct, duration, 0, notesPerLevel[0]));
-//spaceship will just have the same skip tutorial for now...hopefully it will put the button back on screen                 
+//spaceship will just have the same skip tutorial for now...hopefully it will put the button back on screen 
+                       // skiptutorialbutton.enabled = true;                     
                        }
                 }
             }
