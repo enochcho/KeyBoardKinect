@@ -88,22 +88,22 @@ public class ChooseSong : MonoBehaviour, KinectGestures.GestureListenerInterface
                 if (hit.transform.gameObject.name.Contains("Happy Birthday"))
                 {
                     //songNum=PlayerPrefs.GetInt("songNum",1);
-                    PlayerPrefs.SetInt("songNum",3);
-                  //  SceneManager.LoadScene("Game");
-                }
-                if (hit.transform.gameObject.name.Contains("Take Me Out to The Ball Game"))
+                    PlayerPrefs.SetInt("songNum",2);
+                    SceneManager.LoadScene("Game");
+                } else if (hit.transform.gameObject.name.Contains("Take Me Out to The Ball Game"))
                 {
                    //songNum= PlayerPrefs.GetInt("songNum",3);
-                   PlayerPrefs.SetInt("songNum",1);
-                   // SceneManager.LoadScene("Game");
-                }
-                if (hit.transform.gameObject.name.Contains("London Bridge"))
+                   PlayerPrefs.SetInt("songNum",0);
+                   SceneManager.LoadScene("Game");
+                }else if (hit.transform.gameObject.name.Contains("London Bridge"))
                 {
                    // songNum=PlayerPrefs.GetInt("songNum",5);
-                   PlayerPrefs.SetInt("songNum",5);
-                 //   SceneManager.LoadScene("FreePlay");
+                   PlayerPrefs.SetInt("songNum",4);
+                   SceneManager.LoadScene("Game");
+                } else if (hit.transform.gameObject.name.Contains("Home"))
+                {
+                    SceneManager.LoadScene("MainMenu");
                 }
-                SceneManager.LoadScene("Game");
             }
         }
     }

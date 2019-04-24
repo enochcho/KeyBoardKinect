@@ -13,6 +13,7 @@ public class ChangeScene : MonoBehaviour, KinectGestures.GestureListenerInterfac
     public GameObject optionbutton;
     public GameObject freeplaybutton;
     public GameObject spaceship;
+    public GameObject tutorialbutton;
 
     private bool progressDisplayed;
 
@@ -23,6 +24,7 @@ public class ChangeScene : MonoBehaviour, KinectGestures.GestureListenerInterfac
         startbutton = GameObject.Find("Start");
         optionbutton = GameObject.Find("Options");
         freeplaybutton = GameObject.Find("Free play");
+        tutorialbutton = GameObject.Find("Tutorial");
 
     }
 
@@ -88,14 +90,15 @@ public class ChangeScene : MonoBehaviour, KinectGestures.GestureListenerInterfac
                 if (hit.transform.gameObject.name.Contains("Start"))
                 {
                     SceneManager.LoadScene("PickSong");
-                }
-                if (hit.transform.gameObject.name.Contains("Options"))
+                } else if (hit.transform.gameObject.name.Contains("Options"))
                 {
                     SceneManager.LoadScene("OptionMenu");
-                }
-                if (hit.transform.gameObject.name.Contains("Free Play"))
+                } else if (hit.transform.gameObject.name.Contains("Free Play"))
                 {
                     SceneManager.LoadScene("FreePlay");
+                } else if(hit.transform.gameObject.name.Contains("Tutorial"))
+                {
+                    SceneManager.LoadScene("PickTutorial");
                 }
             }
         }

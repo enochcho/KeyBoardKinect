@@ -1229,7 +1229,6 @@ MonoBehaviour:
   spaceship: {fileID: 736817801}
   selectedKey: {fileID: 0}
   homebutton: {fileID: 0}
-  skiptutorialbutton: {fileID: 0}
   instructions: {fileID: 0}
 --- !u!114 &698016055
 MonoBehaviour:
@@ -2816,7 +2815,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!60 &1453893500
 PolygonCollider2D:
   m_ObjectHideFlags: 0
