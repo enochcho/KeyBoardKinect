@@ -4656,11 +4656,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2023097375}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebe283caddf086b469893d292c8b6ffa, type: 3}
+  m_Script: {fileID: 11500000, guid: f0062f69a410c0e4db9f3ecc371d4ffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gestureInfo: {fileID: 0}
-  spaceship: {fileID: 0}
+  spaceship: {fileID: 1565478765}
   homebutton: {fileID: 0}
 --- !u!114 &2023097378
 MonoBehaviour:
