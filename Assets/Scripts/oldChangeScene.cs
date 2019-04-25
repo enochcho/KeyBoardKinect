@@ -3,7 +3,7 @@ using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-public class ChangeScene : MonoBehaviour, KinectGestures.GestureListenerInterface
+public class oldChangeScene : MonoBehaviour, KinectGestures.GestureListenerInterface
 {
     // Start is called before the first frame update
 

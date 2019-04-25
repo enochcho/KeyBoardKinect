@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{B05EB861-1638-5D42-A272-5815E7158E77}</ProjectGuid>
+    <ProjectGuid>{84DD1510-11C5-50C2-D75B-6D95CB474D87}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -76,8 +76,8 @@
      <Compile Include="Assets\KinectScripts\Samples\GetJointPositionDemo.cs" />
      <Compile Include="Assets\KinectScripts\Samples\LoadMainLevel.cs" />
      <Compile Include="Assets\KinectScripts\Samples\MouseControl.cs" />
+     <Compile Include="Assets\KinectScripts\Samples\oldSimpleGestureListener.cs" />
      <Compile Include="Assets\KinectScripts\Samples\SetSceneAvatars.cs" />
-     <Compile Include="Assets\KinectScripts\Samples\SimpleGestureListener.cs" />
      <Compile Include="Assets\OptionMenu.cs" />
      <Compile Include="Assets\OverlayDemo\Scripts\KinectOverlayer.cs" />
      <Compile Include="Assets\PlanetsGame\checkCollision.cs" />
@@ -92,31 +92,38 @@
      <Compile Include="Assets\PlanetsGame\checkCollisionVenus.cs" />
      <Compile Include="Assets\PlanetsGame\correctlyPlacedScript.cs" />
      <Compile Include="Assets\PlanetsGame\ObjectRandomLocation.cs" />
-     <Compile Include="Assets\Scripts\ChangeScene.cs" />
+     <Compile Include="Assets\Scripts\BodySourceManager.cs" />
      <Compile Include="Assets\Scripts\ChooseSong.cs" />
      <Compile Include="Assets\Scripts\ChooseTutorial.cs" />
      <Compile Include="Assets\Scripts\FreePlay.cs" />
      <Compile Include="Assets\Scripts\Key.cs" />
      <Compile Include="Assets\Scripts\KeyDurationPair.cs" />
+     <Compile Include="Assets\Scripts\Menu.cs" />
+     <Compile Include="Assets\Scripts\oldChangeScene.cs" />
+     <Compile Include="Assets\Scripts\oldChooseSong.cs" />
+     <Compile Include="Assets\Scripts\oldChooseTutorial.cs" />
+     <Compile Include="Assets\Scripts\oldFreePlay.cs" />
+     <Compile Include="Assets\Scripts\oldOptions.cs" />
      <Compile Include="Assets\Scripts\Options.cs" />
      <Compile Include="Assets\Scripts\SetOfKeys.cs" />
+     <Compile Include="Assets\Scripts\SimpleGestureListener.cs" />
      <Compile Include="Assets\Scripts\Song.cs" />
      <Compile Include="Assets\Sounds\btnfx.cs" />
      <Compile Include="Assets\TakeMeOut.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/enocho/Documents/Classes/Comp 585/jaycee-burn-center/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/enocho/Documents/Classes/Comp 585/jaycee-burn-center - Copy/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/enocho/Documents/Classes/Comp 585/jaycee-burn-center/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/enocho/Documents/Classes/Comp 585/jaycee-burn-center - Copy/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>C:/Users/enocho/Documents/Classes/Comp 585/jaycee-burn-center/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>C:/Users/enocho/Documents/Classes/Comp 585/jaycee-burn-center - Copy/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/enocho/Documents/Classes/Comp 585/jaycee-burn-center/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/enocho/Documents/Classes/Comp 585/jaycee-burn-center - Copy/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>C:/Users/enocho/Documents/Classes/Comp 585/jaycee-burn-center/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ <HintPath>C:/Users/enocho/Documents/Classes/Comp 585/jaycee-burn-center - Copy/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -320,13 +327,13 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Editor">
- <HintPath>C:/Users/enocho/Documents/Classes/Comp 585/jaycee-burn-center/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+ <HintPath>C:/Users/enocho/Documents/Classes/Comp 585/jaycee-burn-center - Copy/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>C:/Users/enocho/Documents/Classes/Comp 585/jaycee-burn-center/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/enocho/Documents/Classes/Comp 585/jaycee-burn-center - Copy/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
- <HintPath>C:/Users/enocho/Documents/Classes/Comp 585/jaycee-burn-center/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+ <HintPath>C:/Users/enocho/Documents/Classes/Comp 585/jaycee-burn-center - Copy/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -673,6 +680,10 @@
  <Reference Include="System.Xml.Serialization">
  <HintPath>C:/Program Files/Unity/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{3EA398ED-D8E0-5EC7-80B5-07115940DFFF}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

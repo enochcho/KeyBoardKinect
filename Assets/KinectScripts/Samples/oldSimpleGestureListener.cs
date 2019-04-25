@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using System.IO;
 using UnityEngine.SceneManagement;
 
-public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListenerInterface
+public class oldSimpleGestureListener : MonoBehaviour, KinectGestures.GestureListenerInterface
 {
     // GUI Text to display the gesture messages.
     public Text gestureInfo;

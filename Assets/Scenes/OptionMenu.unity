@@ -1682,7 +1682,6 @@ GameObject:
   - component: {fileID: 2082222985}
   - component: {fileID: 2082222981}
   - component: {fileID: 2082222984}
-  - component: {fileID: 2082222983}
   - component: {fileID: 2082222982}
   m_Layer: 0
   m_Name: Main Camera
@@ -1742,10 +1741,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2082222980}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f841e3550ad90e4a862806cf989e988, type: 3}
+  m_Script: {fileID: 11500000, guid: 83fd570c74d9e9c489fb83ea28404077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gestureInfo: {fileID: 479474375}
+  mBodySourceManager: {fileID: 2108897838}
   ColorofKeys: {fileID: 0}
   spaceship: {fileID: 959708406}
   ColorA: {fileID: 0}
@@ -1755,50 +1754,6 @@ MonoBehaviour:
   Slow: {fileID: 0}
   Normal: {fileID: 0}
   Fast: {fileID: 0}
---- !u!114 &2082222983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2082222980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00db858c1f8ff90478dad0aa1bac9a2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TwoUsers: 0
-  ComputeUserMap: 1
-  ComputeColorMap: 1
-  DisplayUserMap: 0
-  DisplayColorMap: 0
-  DisplaySkeletonLines: 0
-  DisplayMapsWidthPercent: 20
-  SensorHeight: 1
-  SensorAngle: 0
-  MinUserDistance: 1
-  MaxUserDistance: 0
-  DetectClosestUser: 1
-  IgnoreInferredJoints: 1
-  smoothing: 1
-  UseBoneOrientationsFilter: 0
-  UseClippedLegsFilter: 0
-  UseBoneOrientationsConstraint: 1
-  UseSelfIntersectionConstraint: 0
-  Player1Avatars: []
-  Player2Avatars: []
-  Player1CalibrationPose: 0
-  Player2CalibrationPose: 0
-  Player1Gestures: 0d0000000c00000007000000
-  Player2Gestures: 
-  MinTimeBetweenGestures: 0.7
-  GestureListeners:
-  - {fileID: 0}
-  CalibrationText: {fileID: 1981156098}
-  HandCursor1: {fileID: 959708406}
-  HandCursor2: {fileID: 0}
-  ControlMouseCursor: 0
-  GesturesDebugText: {fileID: 1038974917}
 --- !u!81 &2082222984
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1931,4 +1886,47 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2108897837
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2108897839}
+  - component: {fileID: 2108897838}
+  m_Layer: 0
+  m_Name: BodySourceManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2108897838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108897837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fdc3dd646ee30c42b1612dee871704c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &2108897839
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108897837}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.1, y: 0.3, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -525,7 +525,6 @@ GameObject:
   - component: {fileID: 698016058}
   - component: {fileID: 698016057}
   - component: {fileID: 698016056}
-  - component: {fileID: 698016055}
   - component: {fileID: 698016054}
   m_Layer: 0
   m_Name: Main Camera
@@ -543,59 +542,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 698016053}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 329aae988c726164c871b5c8511b5bed, type: 3}
+  m_Script: {fileID: 11500000, guid: e3bbc24c0b77401458d84d47441f44ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gestureInfo: {fileID: 773620440}
+  mBodySourceManager: {fileID: 1927933081}
   startbutton: {fileID: 0}
   optionbutton: {fileID: 0}
   freeplaybutton: {fileID: 0}
   spaceship: {fileID: 736817801}
   tutorialbutton: {fileID: 0}
---- !u!114 &698016055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 698016053}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00db858c1f8ff90478dad0aa1bac9a2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TwoUsers: 0
-  ComputeUserMap: 1
-  ComputeColorMap: 1
-  DisplayUserMap: 0
-  DisplayColorMap: 0
-  DisplaySkeletonLines: 0
-  DisplayMapsWidthPercent: 20
-  SensorHeight: 1
-  SensorAngle: 0
-  MinUserDistance: 1
-  MaxUserDistance: 0
-  DetectClosestUser: 1
-  IgnoreInferredJoints: 1
-  smoothing: 1
-  UseBoneOrientationsFilter: 0
-  UseClippedLegsFilter: 0
-  UseBoneOrientationsConstraint: 1
-  UseSelfIntersectionConstraint: 0
-  Player1Avatars: []
-  Player2Avatars: []
-  Player1CalibrationPose: 0
-  Player2CalibrationPose: 0
-  Player1Gestures: 0d0000000c00000007000000
-  Player2Gestures: 
-  MinTimeBetweenGestures: 0.7
-  GestureListeners:
-  - {fileID: 0}
-  CalibrationText: {fileID: 1342014795}
-  HandCursor1: {fileID: 736817801}
-  HandCursor2: {fileID: 0}
-  ControlMouseCursor: 0
-  GesturesDebugText: {fileID: 637400465}
 --- !u!81 &698016056
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1444,4 +1399,47 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1927933080
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1927933082}
+  - component: {fileID: 1927933081}
+  m_Layer: 0
+  m_Name: BodySourceManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1927933081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927933080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fdc3dd646ee30c42b1612dee871704c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1927933082
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927933080}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.1, y: 0.3, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
