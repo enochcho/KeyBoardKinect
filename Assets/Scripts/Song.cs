@@ -36,6 +36,11 @@ public class Song
         return notesPerLevelSum[notesPerLevelSum.Length - 1];
     }
 
+    public int getNumNotesPractice()
+    {
+        return notesPerLevel[notesPerLevel.Length - 1];
+    }
+
     public Key[] getSongNotes()
     {
         return songNotes;

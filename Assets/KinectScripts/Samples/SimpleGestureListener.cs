@@ -28,6 +28,7 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
     public GameObject homebutton;
     public GameObject skiptutorialbutton;
     public GameObject instructions;
+    public GameObject nextstart; 
 
     int numNotesPlayed = 0;
     int level = 0;
@@ -51,6 +52,7 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
         nextbutton = GameObject.Find("Next");
         homebutton = GameObject.Find("Home");
         skiptutorialbutton = GameObject.Find("Skip Tutorial");
+        nextstart = GameObject.Find("NextStart");
         instructions = GameObject.Find("Instructions");
         
 
@@ -277,7 +279,6 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
         }
         if (Input.GetMouseButtonDown(0))
         {   
-            //currentSong.tempo = 
             Debug.Log("Pressed primary button.");
             Vector2 rayPos = new Vector2(spaceship.transform.position.x, spaceship.transform.position.y);
             RaycastHit2D hit = Physics2D.Raycast(rayPos, Vector2.zero, 0f);
@@ -307,13 +308,22 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
                     {
                         Debug.Log("end game");
                         // For Practice => just move on
-                        nextbutton.GetComponent<SpriteRenderer>().color = Color.grey;
+                         nextbutton.GetComponent<SpriteRenderer>().color = Color.grey;
                         canMoveOn = false;
-//think spaceship is the right number of notes-was just 60 before 
-                        StartCoroutine(PlayBack(player, duration, 0, currentSong.getNumNotes()));
-                        //StartCoroutine(PlayForTime(correct, duration, 0, notesPerLevel[0]));
-//spaceship will just have the same skip tutorial for now...hopefully it will put the button back on screen 
-                       // skiptutorialbutton.enabled = true;                     
+                        Debug.Log(currentSong.getNumNotes());
+                        Debug.Log(notesPerLevelSum[notesPerLevel.Length - 1]);
+                        Debug.Log(currentSong.getNumNotesPractice());
+                       // if (currentSong.getNumNotes() == notesPerLevel[notesPerLevel.Length - 1])
+                     //   {
+                            StartCoroutine(PlayBack(player, duration, 0, currentSong.getNumNotes()));
+                      //  }
+                      /*  else
+                        {*/
+                            nextbutton.SetActive(false);
+                          //  nextstart.SetActive(true);
+                            
+
+                        //}
                        }
                 }
             }
