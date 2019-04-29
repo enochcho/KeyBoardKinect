@@ -8,7 +8,6 @@ public class ChangeScene : MonoBehaviour, KinectGestures.GestureListenerInterfac
     // Start is called before the first frame update
 
     public Text gestureInfo;
-    //public GameObject nextbutton;
     public GameObject startbutton;
     public GameObject optionbutton;
     public GameObject freeplaybutton;
@@ -19,8 +18,6 @@ public class ChangeScene : MonoBehaviour, KinectGestures.GestureListenerInterfac
 
     void Start()
     {
-        // DontDestroyOnLoad(this);
-       // nextbutton = GameObject.Find("Next");
         startbutton = GameObject.Find("Start");
         optionbutton = GameObject.Find("Options");
         freeplaybutton = GameObject.Find("Free play");
@@ -76,7 +73,7 @@ public class ChangeScene : MonoBehaviour, KinectGestures.GestureListenerInterfac
     // Update is called once per frame
     void Update()
     {
-        //Test
+        //Test--arrow keys to move spaceship
             var move = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
             spaceship.transform.position += move * (float)10.0 * Time.deltaTime;
         //endTest

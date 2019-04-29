@@ -29,6 +29,7 @@ public class FreePlay : MonoBehaviour, KinectGestures.GestureListenerInterface
         {
             //gestureInfo.text = "Capture planets by clicking on them!";
         }
+        Debug.Log("there's a user");
     }
 
     public void UserLost(uint userId, int userIndex)
@@ -53,15 +54,19 @@ public class FreePlay : MonoBehaviour, KinectGestures.GestureListenerInterface
     }
 
     public bool GestureCancelled(uint userId, int userIndex, KinectGestures.Gestures gesture,
-        KinectWrapper.NuiSkeletonPositionIndex joint)
+            KinectWrapper.NuiSkeletonPositionIndex joint)
     {
         return true;
     }
+
     void Update()
     {
+        //Test--arrow keys to move spaceship (just for our purposes, not gameplay)
+        var move = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
+        spaceship.transform.position += move * (float)10.0 * Time.deltaTime;
+        //endTest
         if (Input.GetMouseButtonDown(0))
         {   
-            //currentSong.tempo = 
             Debug.Log("Pressed primary button.");
             Vector2 rayPos = new Vector2(spaceship.transform.position.x, spaceship.transform.position.y);
             RaycastHit2D hit = Physics2D.Raycast(rayPos, Vector2.zero, 0f);
@@ -73,8 +78,7 @@ public class FreePlay : MonoBehaviour, KinectGestures.GestureListenerInterface
                     SceneManager.LoadScene("MainMenu");
                 } else if (hit.transform.gameObject.name.Contains("Key"))
                 {
-                  hit.transform.gameObject.GetComponent<AudioSource>().Play();
-                    
+                  hit.transform.gameObject.GetComponent<AudioSource>().Play();   
                 } 
             }
         }

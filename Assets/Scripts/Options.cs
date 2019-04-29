@@ -40,10 +40,10 @@ public class Options : MonoBehaviour, KinectGestures.GestureListenerInterface
             
         } else {
             redgreen = false;
-            ColorA.GetComponent<Text>().color = Color.magenta;
-            ColorA.GetComponent<Text>().text = "MAGENTA";
-            ColorB.GetComponent<Text>().color = Color.grey;
-            ColorB.GetComponent<Text>().text = "GREY";
+            ColorA.GetComponent<Text>().color = Color.gray;
+            ColorA.GetComponent<Text>().text = "Gray";
+            ColorB.GetComponent<Text>().color = Color.magenta;
+            ColorB.GetComponent<Text>().text = "MAGENTA";
         }
 
         if (PlayerPrefs.GetFloat("noteSpeed", 1f) == 1f) {
@@ -124,10 +124,10 @@ public class Options : MonoBehaviour, KinectGestures.GestureListenerInterface
                 { Debug.Log("Hit");
                     if (redgreen) {
                         redgreen = false;
-                        ColorA.GetComponent<Text>().color = Color.magenta;
-                        ColorA.GetComponent<Text>().text = "MAGENTA";
-                        ColorB.GetComponent<Text>().color = Color.grey;
-                        ColorB.GetComponent<Text>().text = "GREY";
+                        ColorA.GetComponent<Text>().color = Color.gray;
+                        ColorA.GetComponent<Text>().text = "GRAY";
+                        ColorB.GetComponent<Text>().color = Color.magenta;
+                        ColorB.GetComponent<Text>().text = "MAGENTA";
                         PlayerPrefs.SetString("noteColors","mg");
                         
                     } else {
@@ -143,7 +143,8 @@ public class Options : MonoBehaviour, KinectGestures.GestureListenerInterface
                     Debug.Log("Fast");
                     noteSpeed = "fast";
                     Tempo.GetComponent<Text>().text = "Fast";
-                    PlayerPrefs.SetFloat("noteSpeed", 0.5f);
+                    PlayerPrefs.SetFloat("noteSpeed", 0.5f); 
+                    //pprefs lets you set properties such as this note speed, so it's saved in the other scenes
                 } else if (hit.transform.gameObject.name.Contains("Normal")) {
                     Debug.Log("Normal");
                     noteSpeed = "normal";
