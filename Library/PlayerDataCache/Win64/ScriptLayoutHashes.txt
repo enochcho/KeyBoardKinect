@@ -1,23 +1,23 @@
 Win64
 PlayerPath?
-C:/Users/bebbitt/Documents/GitHub/jaycee-burn-center/Game64Bit!!/2D.exe
+C:/Users/celeste8/Documents/Senior Year/Spring 2019/COMP585/jaycee-burn-center/Builds/64-bit/2D.exe
 SceneListBegin?
 Assets/Scenes/MainMenu.unity
 Assets/Scenes/Game.unity
-Assets/Scenes/FreePlay.unity
 Assets/Scenes/PickSong.unity
 Assets/Scenes/OptionMenu.unity
 Assets/Scenes/PickTutorial.unity
+Assets/Scenes/FreePlay.unity
 SceneListEnd?
 7667fea7d83b8f299d55af9e261db531 Assembly-CSharp.dll:.checkCollisionVenus
 1d4be5c1b319289321fa422d085dd7da Assembly-CSharp.dll:.ChooseTutorial
 984dcc0ba3707b7691fbdca8ff508d28 Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 01aa15e337e3a9c62f15153dfac6d589 Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
-769cd410c155495344c2f858a567ab4f Assembly-CSharp.dll:.SimpleGestureListener
+920a6a571a004b0b86b7d8612311551e Assembly-CSharp.dll:.GamePlay
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 06f0fef534ca4c1d6064fd77a26bf722 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
-780e8f682b3221346c034a6712a0fd25 UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
-bfe92276ffffff8b72df49ef40f0c1ea UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationTrack
+8747051d8c53856e2def93af4f2a8b08 UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
+c5d8c2663a1fd929fe8160c755998615 UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationTrack
 1b3bcc00907f1f74e346e850f93a79c2 UnityEngine.Timeline.dll:UnityEngine.Timeline.AudioPlayableAsset
 e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.AudioTrack
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Timeline.dll:UnityEngine.Timeline.BasicPlayableBehaviour
@@ -98,8 +98,8 @@ abf1930d8126d0b2e00e9449129a0190 UnityEngine.UI.dll:UnityEngine.EventSystems.Tou
 d4aa0593453ba98c36bce74ac1fa4498 Assembly-CSharp.dll:.checkCollisionEarth
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 06f0fef534ca4c1d6064fd77a26bf722 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
-780e8f682b3221346c034a6712a0fd25 UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
-bfe92276ffffff8b72df49ef40f0c1ea UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationTrack
+8747051d8c53856e2def93af4f2a8b08 UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
+c5d8c2663a1fd929fe8160c755998615 UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationTrack
 1b3bcc00907f1f74e346e850f93a79c2 UnityEngine.Timeline.dll:UnityEngine.Timeline.AudioPlayableAsset
 e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.AudioTrack
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Timeline.dll:UnityEngine.Timeline.BasicPlayableBehaviour
@@ -136,7 +136,6 @@ dd5db5f8ea294a4e1dce4c3d0d82ad16 Assembly-CSharp.dll:.Options
 1d4be5c1b319289321fa422d085dd7da Assembly-CSharp.dll:.ChooseSong
 d86a17a29c94a1384aa50b6751f5ad9b Assembly-CSharp.dll:.AvatarController
 b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.OptionMenu
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.DepthImageViewer
 a4c7bada63b933999e18d57c312cc80b Assembly-CSharp.dll:.CubemanController
 4c086e606f974e58431f32c513aa3999 Assembly-CSharp.dll:.KinectOverlayer
@@ -180,7 +179,6 @@ fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.TakeMeOut
 a4f0a4f62100f1a4fb5cbe0e00dde83f Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 5fc094978ce3e3591a7500ed380d854a Unity.Analytics.DataPrivacy.dll:UnityEngine.Analytics.DataPrivacyButton
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver

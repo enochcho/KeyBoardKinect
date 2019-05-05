@@ -93,9 +93,12 @@ public class ChangeScene : MonoBehaviour, KinectGestures.GestureListenerInterfac
                 } else if (hit.transform.gameObject.name.Contains("Free Play"))
                 {
                     SceneManager.LoadScene("FreePlay");
-                } else if(hit.transform.gameObject.name.Contains("Tutorial"))
+                } else if (hit.transform.gameObject.name.Contains("Tutorial"))
                 {
                     SceneManager.LoadScene("PickTutorial");
+                } else if (hit.transform.gameObject.name.Contains("Quit"))
+                {
+                    Application.Quit();
                 }
             }
         }
