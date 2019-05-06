@@ -183,10 +183,88 @@ public class GamePlay : MonoBehaviour, KinectGestures.GestureListenerInterface
         }
     }
 
+    public IEnumerator LightUpKey(Key key, int location, bool WorB)
+    {
+        Color32 startColor;
+        Color32 flashColor;
+        if (notecolors == "rg")
+        {
+            flashColor = Color.green;
+        }
+        else
+        {
+            flashColor = Color.magenta;
+        }
+        if (String.Compare(key.name, correct[location].name) != 0)
+            {
+
+                if (notecolors == "rg")
+                {
+                    flashColor = Color.red;
+                }
+                else
+                {
+                    flashColor = Color.grey;
+                }
+            }
+            if (String.Compare(key.name, correct[location].name) == 0)
+            {
+                if (notecolors == "rg")
+                {
+                    flashColor = Color.green;
+                }
+                else
+                {
+                    flashColor = Color.magenta;
+                }
+            }
+        // Set key color based on boolean
+        if (WorB)
+        {
+            startColor = Color.white;
+        } else
+        {
+            startColor = Color.black;
+        }
+        const float secToIncrement = 1f; //When to time out (Every 1 second)
+        float counter = 0;
+        bool loop = true;
+        while (loop)
+        {
+            key.GetComponent<SpriteRenderer>().color = flashColor;
+            // Check if we have reached time limit
+            if (counter > secToIncrement)
+            {
+                // Time out flash
+                key.GetComponent<SpriteRenderer>().color = startColor;
+                loop = false;
+                yield break;
+            }
+
+            // Increment counter
+            counter += Time.deltaTime;
+
+            // Check if we want to exit coroutine early due to mouse click
+            if (Input.GetMouseButtonDown(0) && counter > 0.02)
+            {
+                Debug.Log("Color flash is broken");
+                key.GetComponent<SpriteRenderer>().color = startColor;
+                loop = false;
+                yield break;
+            }
+
+            //Yield in a while loop to prevent freezing 
+            yield return null;
+        }
+        // Literally a just in case thing
+        key.GetComponent<SpriteRenderer>().color = startColor;
+    }
+
     void Update()
     {
         bool canMoveOn = false;
         bool playMore = true;
+        bool WorB = true;
         nextbutton.GetComponent<SpriteRenderer>().color = Color.grey;
 
         //Test--able to move the spaceship with the arrow keys 
@@ -224,6 +302,14 @@ public class GamePlay : MonoBehaviour, KinectGestures.GestureListenerInterface
                     numNotesPlayed++;
                     //adding the notes the player presses to an aray to play back at the end 
                     player[notesPerLevelSum[level] + numNotesPlayed - 1] = selectedKey.GetComponent<Key>();
+                    if (hit.transform.gameObject.name.Contains("#"))
+                    {
+                        WorB = false;
+                    } else
+                    {
+                        WorB = true;
+                    }
+                    StartCoroutine(LightUpKey(selectedKey.GetComponent<Key>(), notesPerLevelSum[level] + numNotesPlayed - 1, WorB));
                 } else if (hit.transform.gameObject.name.Contains("Next") && canMoveOn)
                 {
                     if (!endGame)
