@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.Networking;
-using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using Kinect = Windows.Kinect;
 using Joint = Windows.Kinect.Joint;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class ChangeScene : MonoBehaviour 
 {
     
@@ -16,30 +16,34 @@ public class ChangeScene : MonoBehaviour
     public GameObject freeplaybutton;
     public GameObject spaceship;
     public GameObject tutorialbutton;
-
+    public GameObject quitbutton;
     private bool progressDisplayed;
-
+    private List<Kinect.JointType> _joints;
     void Start()
     {
         startbutton = GameObject.Find("Start");
         optionbutton = GameObject.Find("Options");
         freeplaybutton = GameObject.Find("Free play");
         tutorialbutton = GameObject.Find("Tutorial");
+        quitbutton = GameObject.Find("Quit");
 
+         if(PlayerPrefs.GetString("hand", "right") == "right"){
+           _joints = new List<Kinect.JointType>{Kinect.JointType.HandRight,};
+        } else{ 
+            _joints = new List<Kinect.JointType>{Kinect.JointType.HandLeft,};
+        }
     }
+
+
     
     private Dictionary<ulong, GameObject> mBodies = new Dictionary<ulong, GameObject>();
-    private List<Kinect.JointType> _joints = new List<Kinect.JointType>
-    {
-        //Kinect.JointType.HandLeft,
-        Kinect.JointType.HandRight,
-    };
+    
 
     
     void Update () 
     {
         #region Process Clicks
-        //Test--arrow keys to move spaceship
+         //Test--arrow keys to move spaceship
             var move = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
             spaceship.transform.position += move * (float)10.0 * Time.deltaTime;
         //endTest
@@ -64,6 +68,7 @@ public class ChangeScene : MonoBehaviour
                     SceneManager.LoadScene("PickTutorial");
                 } else if (hit.transform.gameObject.name.Contains("Quit"))
                 {
+                    
                     Application.Quit();
                 }
             }
@@ -95,7 +100,7 @@ public class ChangeScene : MonoBehaviour
         {
             if (!trackedIds.Contains(trackingID))
             {
-               //set spaceship parnet to null so it doesn't get destroyed
+                //set spaceship parnet to null so it doesn't get destroyed
                 spaceship.transform.parent = null;
                 //Destroy body object
                 Destroy(mBodies[trackingID]);
@@ -125,6 +130,8 @@ public class ChangeScene : MonoBehaviour
             }
         }
         #endregion
+      
+       
     }
     
     private GameObject CreateBodyObject(ulong id)
@@ -140,13 +147,12 @@ public class ChangeScene : MonoBehaviour
 
             //Parent to body
             spaceship.transform.parent = body.transform;
-            
 
         }
         return body;
     }
 
-    private void UpdateBodyObject(Kinect.Body body, GameObject bodyObject)
+     private void UpdateBodyObject(Kinect.Body body, GameObject bodyObject)
     {
         //Update joints
         foreach (Kinect.JointType _joint in _joints)

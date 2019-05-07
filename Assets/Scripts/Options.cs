@@ -18,8 +18,13 @@ public class Options : MonoBehaviour
     public GameObject Tempo;
     public GameObject Home;
     public GameObject Slow, Normal, Fast;
+    public GameObject Hand, HandChoice;
     private bool progressDisplayed;
     private bool redgreen;
+
+    private bool righthand;
+    private List<Kinect.JointType> _joints;
+    
 
     private String noteSpeed;
 
@@ -34,6 +39,8 @@ public class Options : MonoBehaviour
         Normal = GameObject.Find("Normal");
         Fast = GameObject.Find("Fast");
         Tempo = GameObject.Find("Tempo");
+        Hand = GameObject.Find("Hand");
+        HandChoice = GameObject.Find("HandChoice");
         if(PlayerPrefs.GetString("noteColors","rg") == "rg"){
             redgreen = true;
             ColorA.GetComponent<Text>().color = Color.red;
@@ -61,14 +68,21 @@ public class Options : MonoBehaviour
         } else {
             noteSpeed = "normal";
         }
+
+        if(PlayerPrefs.GetString("hand", "right") == "right"){
+            Hand.GetComponent<Text>().text = "Right";
+           _joints = new List<Kinect.JointType>{Kinect.JointType.HandRight,};
+           righthand= true;
+        } else{
+            Hand.GetComponent<Text>().text = "Left";
+            _joints = new List<Kinect.JointType>{Kinect.JointType.HandLeft,};
+            righthand= false;
+
+        }
     }
 
     private Dictionary<ulong, GameObject> mBodies = new Dictionary<ulong, GameObject>();
-    private List<Kinect.JointType> _joints = new List<Kinect.JointType>
-    {
-        //Kinect.JointType.HandLeft,
-        Kinect.JointType.HandRight,
-    };
+  
 
     
     void Update () 
@@ -123,6 +137,19 @@ public class Options : MonoBehaviour
                     PlayerPrefs.SetFloat("noteSpeed", 2f);
                 } else if (hit.transform.gameObject.name.Contains("Home")){
                     SceneManager.LoadScene("MainMenu");
+                } else if (hit.transform.gameObject.name.Contains("HandChoice")){
+                   
+                    if(righthand){
+                        Hand.GetComponent<Text>().text = "Left";
+                        //_joints = new List<Kinect.JointType>{Kinect.JointType.HandLeft,};
+                        righthand= false;
+                        PlayerPrefs.SetString("hand", "left");
+                    } else{
+                        Hand.GetComponent<Text>().text = "Right";
+                        //_joints = new List<Kinect.JointType>{Kinect.JointType.HandRight,};
+                        righthand= true;
+                        PlayerPrefs.SetString("hand", "right");
+                    }
                 }
             }
         }
@@ -194,7 +221,7 @@ public class Options : MonoBehaviour
         GameObject body = new GameObject("Body:" + id);
 
         //Create joints
-        foreach (Kinect.JointType joint in _joints)
+         foreach (Kinect.JointType joint in _joints)
         {
             //Create object
             spaceship.name = joint.ToString();
@@ -203,6 +230,7 @@ public class Options : MonoBehaviour
             spaceship.transform.parent = body.transform;
 
         }
+
         return body;
     }
 

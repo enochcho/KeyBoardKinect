@@ -44,6 +44,7 @@ public class GamePlay : MonoBehaviour
 
     String notecolors;
 
+    private List<Kinect.JointType> _joints;
     void Start()
     {
         notecolors = PlayerPrefs.GetString("noteColors", "rg");
@@ -58,6 +59,7 @@ public class GamePlay : MonoBehaviour
         // set all of the arrays here
         player = new Key[currentSong.getNumNotes()];
         correct = currentSong.getSongNotes();
+        Debug.Log(PlayerPrefs.GetInt("songNum"));
         duration = currentSong.getKeyDurations();
         notesPerLevel = currentSong.getNotesPerLevel();
         notesPerLevelSum = currentSong.getNotesPerLevelSum();
@@ -65,17 +67,20 @@ public class GamePlay : MonoBehaviour
         // set score text
         scoreInfo.text = "Score:";
 
+        //set left or right hand
+        if(PlayerPrefs.GetString("hand", "right") == "right"){
+           _joints = new List<Kinect.JointType>{Kinect.JointType.HandRight,};
+        } else{ 
+            _joints = new List<Kinect.JointType>{Kinect.JointType.HandLeft,};
+        }
+
         // Maybe put spaceship elsewhere? Start on play?
         StartCoroutine(PlayForTime(correct, duration, 0, notesPerLevel[0]));
     }
 
     
     private Dictionary<ulong, GameObject> mBodies = new Dictionary<ulong, GameObject>();
-    private List<Kinect.JointType> _joints = new List<Kinect.JointType>
-    {
-        //Kinect.JointType.HandLeft,
-        Kinect.JointType.HandRight,
-    };
+    
 
     
     void Update () 
@@ -219,6 +224,7 @@ public class GamePlay : MonoBehaviour
         Key key;
         Color32 startColor;
         Color32 flashColor = Color.blue;
+        Debug.Log("this is the length being passed" + notes.Length);
         for (int i = start; i < stop; i++)
         {
             key = notes[i];

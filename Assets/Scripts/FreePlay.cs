@@ -12,16 +12,17 @@ public class FreePlay : MonoBehaviour
     public GameObject spaceship;
     public GameObject homebutton;
 
+    private List<Kinect.JointType> _joints;
      void Start()
     {
         homebutton = GameObject.Find("Home");
+        if(PlayerPrefs.GetString("hand", "right") == "right"){
+           _joints = new List<Kinect.JointType>{Kinect.JointType.HandRight,};
+        } else{ 
+            _joints = new List<Kinect.JointType>{Kinect.JointType.HandLeft,};
+        }
     }
     private Dictionary<ulong, GameObject> mBodies = new Dictionary<ulong, GameObject>();
-    private List<Kinect.JointType> _joints = new List<Kinect.JointType>
-    {
-        //Kinect.JointType.HandLeft,
-        Kinect.JointType.HandRight,
-    };
 
     
     void Update () 

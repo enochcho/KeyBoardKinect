@@ -78,8 +78,6 @@
      <Compile Include="Assets\KinectScripts\Samples\MouseControl.cs" />
      <Compile Include="Assets\KinectScripts\Samples\oldSimpleGestureListener.cs" />
      <Compile Include="Assets\KinectScripts\Samples\SetSceneAvatars.cs" />
-     <Compile Include="Assets\newwww.cs" />
-     <Compile Include="Assets\OptionMenu.cs" />
      <Compile Include="Assets\OverlayDemo\Scripts\KinectOverlayer.cs" />
      <Compile Include="Assets\PlanetsGame\checkCollision.cs" />
      <Compile Include="Assets\PlanetsGame\checkCollisionEarth.cs" />
@@ -111,7 +109,6 @@
      <Compile Include="Assets\Scripts\SetOfKeys.cs" />
      <Compile Include="Assets\Scripts\Song.cs" />
      <Compile Include="Assets\Sounds\btnfx.cs" />
-     <Compile Include="Assets\TakeMeOut.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/enocho/Documents/Classes/Comp 585/jaycee-burn-center/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>

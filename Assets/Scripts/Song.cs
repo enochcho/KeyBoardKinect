@@ -16,7 +16,7 @@ public class Song
 
     //SetOfKeys allKeys;
     public Key b3, c4, cs4, d4, ds4, e4, f4, fs4, g4, gs4, a4, as4, b4, c5, cs5, d5;
-  float dottedhalf = 1f;
+    float dottedhalf = 1f;
     float quarter = .33f;
     float half = .66f;
     float tied = 2f;
@@ -24,6 +24,7 @@ public class Song
 
     public Song(int songToPlay, float tempo) {
         currentSong = (possibleSongs)songToPlay;
+        Debug.Log("The song is: " + currentSong);
         dottedhalf = 1f * tempo;
         quarter = .33f * tempo;
         half = .66f * tempo;
@@ -44,6 +45,9 @@ public class Song
 
     public Key[] getSongNotes()
     {
+        Debug.Log("this shouldn't be null");
+        Debug.Log(b3);
+        
         return songNotes;
     }
 

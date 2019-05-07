@@ -16,22 +16,21 @@ public class ChooseSong : MonoBehaviour
 
    static public int songNum;
 
+    private List<Kinect.JointType> _joints;
     private bool progressDisplayed;
     void Start()
     {
-        // nextbutton = GameObject.Find("Next");
         happybdaybutton = GameObject.Find("Happy Birthday");
         takemebutton = GameObject.Find("Take Me Out to The Ball Game");
         londonbutton = GameObject.Find("London Bridge");
-
+        if(PlayerPrefs.GetString("hand", "right") == "right"){
+           _joints = new List<Kinect.JointType>{Kinect.JointType.HandRight,};
+        } else{ 
+            _joints = new List<Kinect.JointType>{Kinect.JointType.HandLeft,};
+        }
     }
     
     private Dictionary<ulong, GameObject> mBodies = new Dictionary<ulong, GameObject>();
-    private List<Kinect.JointType> _joints = new List<Kinect.JointType>
-    {
-        //Kinect.JointType.HandLeft,
-        Kinect.JointType.HandRight,
-    };
 
     
     void Update () 
@@ -68,6 +67,7 @@ public class ChooseSong : MonoBehaviour
                     SceneManager.LoadScene("MainMenu");
                 }
             }
+        }
         #endregion
         #region Get Kinect data
         Kinect.Body[] data = mBodySourceManager.GetData();
@@ -127,7 +127,7 @@ public class ChooseSong : MonoBehaviour
         #endregion
 
         
-        }
+        
        
     }
     
