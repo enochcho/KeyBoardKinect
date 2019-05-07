@@ -9,10 +9,11 @@ using System;
 using UnityEngine.UI;
 public class GamePlay : MonoBehaviour 
 {
-    
+    //Collects data from Kinect
     public BodySourceManager mBodySourceManager;
     public Text gestureInfo;
 
+    
     // GUI Text to display the score.
     public Text scoreInfo;
 
@@ -44,6 +45,9 @@ public class GamePlay : MonoBehaviour
 
     String notecolors;
 
+    //will track the uLong of the main player. 
+    ulong playerID = 999;
+
     private List<Kinect.JointType> _joints;
     void Start()
     {
@@ -59,7 +63,6 @@ public class GamePlay : MonoBehaviour
         // set all of the arrays here
         player = new Key[currentSong.getNumNotes()];
         correct = currentSong.getSongNotes();
-        Debug.Log(PlayerPrefs.GetInt("songNum"));
         duration = currentSong.getKeyDurations();
         notesPerLevel = currentSong.getNotesPerLevel();
         notesPerLevelSum = currentSong.getNotesPerLevelSum();
@@ -78,7 +81,7 @@ public class GamePlay : MonoBehaviour
         StartCoroutine(PlayForTime(correct, duration, 0, notesPerLevel[0]));
     }
 
-    
+    //Holds the bodies that the Kinect is tracking
     private Dictionary<ulong, GameObject> mBodies = new Dictionary<ulong, GameObject>();
     
 
@@ -159,6 +162,7 @@ public class GamePlay : MonoBehaviour
             }
         }
         #endregion
+        //Gets data from the Kinect 
         #region Get Kinect data
         Kinect.Body[] data = mBodySourceManager.GetData();
 
@@ -185,8 +189,12 @@ public class GamePlay : MonoBehaviour
         {
             if (!trackedIds.Contains(trackingID))
             {
-                //set spaceship parnet to null so it doesn't get destroyed
-                spaceship.transform.parent = null;
+                //if the main player disappears
+                if(trackingID == playerID){
+                    //set spaceship parent to null so it doesn't get destroyed
+                    spaceship.transform.parent = null;
+                    playerID = 999;
+                }
                 //Destroy body object
                 Destroy(mBodies[trackingID]);
 
@@ -196,7 +204,7 @@ public class GamePlay : MonoBehaviour
         }
         #endregion
 
-        #region Create Kinect bodies
+        #region Create and update Kinect bodies
         foreach (var body in data)
         {
             //if no body, skip
@@ -208,7 +216,11 @@ public class GamePlay : MonoBehaviour
                 //IF body isn't tracked, create body
                 if(!mBodies.ContainsKey(body.TrackingId))
                     mBodies[body.TrackingId] = CreateBodyObject(body.TrackingId);
-
+                
+                if(playerID == 999){
+                    playerID = body.TrackingId;
+                    AssignSpaceship(body.TrackingId, mBodies[body.TrackingId]);
+                }
                 // Update positions
                 UpdateBodyObject(body, mBodies[body.TrackingId]);
 
@@ -218,13 +230,48 @@ public class GamePlay : MonoBehaviour
        
     }
 
+    private GameObject CreateBodyObject(ulong id)
+    {
+        //Create body parent
+        GameObject body = new GameObject("Body:" + id);
+
+         //Creates joints if a player does not exist
+        if(playerID == 999){
+            playerID = id;
+            //Create joints
+            foreach (Kinect.JointType joint in _joints)
+            {
+                //Create object
+                spaceship.name = joint.ToString();
+
+                //Parent to body
+                spaceship.transform.parent = body.transform;
+
+            }
+        } 
+        return body;
+    }
+
+    private void AssignSpaceship(ulong id, GameObject body){
+        playerID = id;
+        //Create joints
+        foreach (Kinect.JointType joint in _joints)
+            {
+                //Create object
+                spaceship.name = joint.ToString();
+
+                //Parent to body
+                spaceship.transform.parent = body.transform;
+
+            }
+    }
+
         public IEnumerator PlayForTime(Key[] notes, float[] durations, int start, int stop)
     {
         AudioSource audio1;
         Key key;
         Color32 startColor;
         Color32 flashColor = Color.blue;
-        Debug.Log("this is the length being passed" + notes.Length);
         for (int i = start; i < stop; i++)
         {
             key = notes[i];
@@ -363,24 +410,7 @@ public class GamePlay : MonoBehaviour
         key.GetComponent<SpriteRenderer>().color = startColor;
     }
     
-    private GameObject CreateBodyObject(ulong id)
-    {
-        //Create body parent
-        GameObject body = new GameObject("Body:" + id);
-
-        //Create joints
-        foreach (Kinect.JointType joint in _joints)
-        {
-            //Create object
-            spaceship.name = joint.ToString();
-
-            //Parent to body
-            spaceship.transform.parent = body.transform;
-
-        }
-        return body;
-    }
-
+    
     private void UpdateBodyObject(Kinect.Body body, GameObject bodyObject)
     {
         //Update joints

@@ -19,6 +19,7 @@ public class ChangeScene : MonoBehaviour
     public GameObject quitbutton;
     private bool progressDisplayed;
     private List<Kinect.JointType> _joints;
+    private ulong playerID=999;
     void Start()
     {
         startbutton = GameObject.Find("Start");
@@ -94,14 +95,18 @@ public class ChangeScene : MonoBehaviour
 
         #endregion
 
-        #region Delete Kinect bodies
+         #region Delete Kinect bodies
         List<ulong> knownIds = new List<ulong>(mBodies.Keys);
         foreach (ulong trackingID in knownIds)
         {
             if (!trackedIds.Contains(trackingID))
             {
-                //set spaceship parnet to null so it doesn't get destroyed
-                spaceship.transform.parent = null;
+                //if the main player disappears
+                if(trackingID == playerID){
+                    //set spaceship parent to null so it doesn't get destroyed
+                    spaceship.transform.parent = null;
+                    playerID = 999;
+                }
                 //Destroy body object
                 Destroy(mBodies[trackingID]);
 
@@ -111,7 +116,7 @@ public class ChangeScene : MonoBehaviour
         }
         #endregion
 
-        #region Create Kinect bodies
+        #region Create and update Kinect bodies
         foreach (var body in data)
         {
             //if no body, skip
@@ -123,35 +128,55 @@ public class ChangeScene : MonoBehaviour
                 //IF body isn't tracked, create body
                 if(!mBodies.ContainsKey(body.TrackingId))
                     mBodies[body.TrackingId] = CreateBodyObject(body.TrackingId);
-
+                
+                if(playerID == 999){
+                    playerID = body.TrackingId;
+                    AssignSpaceship(body.TrackingId, mBodies[body.TrackingId]);
+                }
                 // Update positions
                 UpdateBodyObject(body, mBodies[body.TrackingId]);
 
             }
         }
         #endregion
-      
        
     }
-    
+
     private GameObject CreateBodyObject(ulong id)
     {
         //Create body parent
         GameObject body = new GameObject("Body:" + id);
 
-        //Create joints
-        foreach (Kinect.JointType joint in _joints)
-        {
-            //Create object
-            spaceship.name = joint.ToString();
+         //Creates joints if a player does not exist
+        if(playerID == 999){
+            playerID = id;
+            //Create joints
+            foreach (Kinect.JointType joint in _joints)
+            {
+                //Create object
+                spaceship.name = joint.ToString();
 
-            //Parent to body
-            spaceship.transform.parent = body.transform;
+                //Parent to body
+                spaceship.transform.parent = body.transform;
 
-        }
+            }
+        } 
         return body;
     }
 
+    private void AssignSpaceship(ulong id, GameObject body){
+        playerID = id;
+        //Create joints
+        foreach (Kinect.JointType joint in _joints)
+            {
+                //Create object
+                spaceship.name = joint.ToString();
+
+                //Parent to body
+                spaceship.transform.parent = body.transform;
+
+            }
+    }
      private void UpdateBodyObject(Kinect.Body body, GameObject bodyObject)
     {
         //Update joints

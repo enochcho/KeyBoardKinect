@@ -24,7 +24,6 @@ public class Song
 
     public Song(int songToPlay, float tempo) {
         currentSong = (possibleSongs)songToPlay;
-        Debug.Log("The song is: " + currentSong);
         dottedhalf = 1f * tempo;
         quarter = .33f * tempo;
         half = .66f * tempo;
@@ -45,9 +44,6 @@ public class Song
 
     public Key[] getSongNotes()
     {
-        Debug.Log("this shouldn't be null");
-        Debug.Log(b3);
-        
         return songNotes;
     }
 
