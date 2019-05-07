@@ -408,7 +408,7 @@ public class GamePlay : MonoBehaviour
             counter += Time.deltaTime;
 
             // Check if we want to exit coroutine early due to mouse click
-            if (Input.GetMouseButtonDown(0) && counter > 0.02)
+            if (Input.GetMouseButtonDown(0) && counter > 0.05)
             {
                 Debug.Log("Color flash is broken");
                 key.GetComponent<SpriteRenderer>().color = startColor;
