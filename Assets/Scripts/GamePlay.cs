@@ -231,6 +231,7 @@ public class GamePlay : MonoBehaviour, KinectGestures.GestureListenerInterface
         bool loop = true;
         while (loop)
         {
+            Debug.Log(counter);
             key.GetComponent<SpriteRenderer>().color = flashColor;
             // Check if we have reached time limit
             if (counter > secToIncrement)
@@ -245,7 +246,7 @@ public class GamePlay : MonoBehaviour, KinectGestures.GestureListenerInterface
             counter += Time.deltaTime;
 
             // Check if we want to exit coroutine early due to mouse click
-            if (Input.GetMouseButtonDown(0) && counter > 0.02)
+            if (Input.GetMouseButtonDown(0) && counter > 0.05)
             {
                 Debug.Log("Color flash is broken");
                 key.GetComponent<SpriteRenderer>().color = startColor;
@@ -325,12 +326,16 @@ public class GamePlay : MonoBehaviour, KinectGestures.GestureListenerInterface
                         // For Practice => just move on
                         nextbutton.GetComponent<SpriteRenderer>().color = Color.grey;
                         canMoveOn = false;
-                        Debug.Log(currentSong.getNumNotes());
-                        Debug.Log(notesPerLevelSum[notesPerLevel.Length - 1]);
-                        Debug.Log(currentSong.getNumNotesPractice());
-                        StartCoroutine(PlayBack(player, duration, 0, currentSong.getNumNotes()));
-                        nextbutton.SetActive(false); //get rid of next button so the player has to click home button
-                       }
+                        if (PlayerPrefs.GetInt("songNum") % 2 == 0)   //if it's a song, not practice 
+                        {
+                            StartCoroutine(PlayBack(player, duration, 0, currentSong.getNumNotes()));
+                            nextbutton.SetActive(false); //get rid of next button so the player has to click home button
+                        }
+                        else
+                        {
+                            nextbutton.SetActive(false);
+                        }
+                    }
                 }
             }
         }
