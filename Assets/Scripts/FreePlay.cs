@@ -10,7 +10,12 @@ public class FreePlay : MonoBehaviour
     
     public BodySourceManager mBodySourceManager;
     public GameObject spaceship;
-    
+    public GameObject homebutton;
+
+     void Start()
+    {
+        homebutton = GameObject.Find("Home");
+    }
     private Dictionary<ulong, GameObject> mBodies = new Dictionary<ulong, GameObject>();
     private List<Kinect.JointType> _joints = new List<Kinect.JointType>
     {
@@ -21,6 +26,30 @@ public class FreePlay : MonoBehaviour
     
     void Update () 
     {
+        #region Process Clicks
+        //Test--arrow keys to move spaceship (just for our purposes, not gameplay)
+        var move = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
+        spaceship.transform.position += move * (float)10.0 * Time.deltaTime;
+        //endTest
+        if (Input.GetMouseButtonDown(0))
+        {   
+            Debug.Log("Pressed primary button.");
+            Vector2 rayPos = new Vector2(spaceship.transform.position.x, spaceship.transform.position.y);
+            RaycastHit2D hit = Physics2D.Raycast(rayPos, Vector2.zero, 0f);
+            if (hit)
+            {
+                Debug.Log(hit);
+                if (hit.transform.gameObject.name.Contains("Home"))
+                {
+                    SceneManager.LoadScene("MainMenu");
+                } else if (hit.transform.gameObject.name.Contains("Key"))
+                {
+                  hit.transform.gameObject.GetComponent<AudioSource>().Play();   
+                } 
+            }
+        
+        }
+        #endregion
         #region Get Kinect data
         Kinect.Body[] data = mBodySourceManager.GetData();
 
@@ -49,6 +78,7 @@ public class FreePlay : MonoBehaviour
             {
                 //set spaceship parnet to null so it doesn't get destroyed
                 spaceship.transform.parent = null;
+                spaceship.transform.position = new Vector3(0,0,2);
                 //Destroy body object
                 Destroy(mBodies[trackingID]);
 
@@ -77,29 +107,8 @@ public class FreePlay : MonoBehaviour
             }
         }
         #endregion
-        //Test
-            var move = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
-            spaceship.transform.position += move * (float)10.0 * Time.deltaTime;
-        //endTest
-         if (Input.GetMouseButtonDown(0))
-        {   
-            //currentSong.tempo = 
-            Debug.Log("Pressed primary button.");
-            Vector2 rayPos = new Vector2(spaceship.transform.position.x, spaceship.transform.position.y);
-            RaycastHit2D hit = Physics2D.Raycast(rayPos, Vector2.zero, 0f);
-            if (hit)
-            {
-                Debug.Log(hit);
-                if (hit.transform.gameObject.name.Contains("Home"))
-                {
-                    SceneManager.LoadScene("MainMenu");
-                } else if (hit.transform.gameObject.name.Contains("Key"))
-                {
-                  hit.transform.gameObject.GetComponent<AudioSource>().Play();
-                    
-                } 
-            }
-        }
+        
+        
        
     }
     
@@ -140,7 +149,9 @@ public class FreePlay : MonoBehaviour
             Debug.Log(Vector3.Scale(jointObject.transform.position, new Vector3(2,2,1)));
             Vector3 newp = Vector3.Scale(jointObject.transform.position, new Vector3(2,2,1));
             */
+            if(jointObject != null){
             jointObject.transform.position = Vector3.Lerp(jointObject.transform.position, targetPosition*2, 3*Time.deltaTime);
+            }
         }
     }
     

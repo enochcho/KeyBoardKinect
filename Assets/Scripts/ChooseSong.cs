@@ -16,7 +16,7 @@ public class ChooseSong : MonoBehaviour
 
    static public int songNum;
 
-    
+    private bool progressDisplayed;
     void Start()
     {
         // nextbutton = GameObject.Find("Next");
@@ -36,6 +36,39 @@ public class ChooseSong : MonoBehaviour
     
     void Update () 
     {
+        #region Process Clicks
+         //Test
+            var move = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
+            spaceship.transform.position += move * (float)10.0 * Time.deltaTime;
+        //endTest
+        if (Input.GetMouseButtonDown(0))
+        {
+            //Debug.Log("Pressed primary button.");
+            Vector2 rayPos = new Vector2(spaceship.transform.position.x, spaceship.transform.position.y);
+            RaycastHit2D hit = Physics2D.Raycast(rayPos, Vector2.zero, 0f);
+            if (hit)
+            {
+                if (hit.transform.gameObject.name.Contains("Happy Birthday"))
+                {
+                    //songNum=PlayerPrefs.GetInt("songNum",1);
+                    PlayerPrefs.SetInt("songNum",2);
+                    SceneManager.LoadScene("Game");
+                } else if (hit.transform.gameObject.name.Contains("Take Me Out to The Ball Game"))
+                {
+                   //songNum= PlayerPrefs.GetInt("songNum",3);
+                   PlayerPrefs.SetInt("songNum",0);
+                   SceneManager.LoadScene("Game");
+                }else if (hit.transform.gameObject.name.Contains("London Bridge"))
+                {
+                   // songNum=PlayerPrefs.GetInt("songNum",5);
+                   PlayerPrefs.SetInt("songNum",4);
+                   SceneManager.LoadScene("Game");
+                } else if (hit.transform.gameObject.name.Contains("Home"))
+                {
+                    SceneManager.LoadScene("MainMenu");
+                }
+            }
+        #endregion
         #region Get Kinect data
         Kinect.Body[] data = mBodySourceManager.GetData();
 
@@ -93,37 +126,7 @@ public class ChooseSong : MonoBehaviour
         }
         #endregion
 
-        //Test
-            var move = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
-            spaceship.transform.position += move * (float)10.0 * Time.deltaTime;
-        //endTest
-        if (Input.GetMouseButtonDown(0))
-        {
-            //Debug.Log("Pressed primary button.");
-            Vector2 rayPos = new Vector2(spaceship.transform.position.x, spaceship.transform.position.y);
-            RaycastHit2D hit = Physics2D.Raycast(rayPos, Vector2.zero, 0f);
-            if (hit)
-            {
-                if (hit.transform.gameObject.name.Contains("Happy Birthday"))
-                {
-                    //songNum=PlayerPrefs.GetInt("songNum",1);
-                    PlayerPrefs.SetInt("songNum",2);
-                    SceneManager.LoadScene("Game");
-                } else if (hit.transform.gameObject.name.Contains("Take Me Out to The Ball Game"))
-                {
-                   //songNum= PlayerPrefs.GetInt("songNum",3);
-                   PlayerPrefs.SetInt("songNum",0);
-                   SceneManager.LoadScene("Game");
-                }else if (hit.transform.gameObject.name.Contains("London Bridge"))
-                {
-                   // songNum=PlayerPrefs.GetInt("songNum",5);
-                   PlayerPrefs.SetInt("songNum",4);
-                   SceneManager.LoadScene("Game");
-                } else if (hit.transform.gameObject.name.Contains("Home"))
-                {
-                    SceneManager.LoadScene("MainMenu");
-                }
-            }
+        
         }
        
     }
@@ -159,12 +162,6 @@ public class ChooseSong : MonoBehaviour
             //Get joint, set new position
             Transform jointObject = bodyObject.transform.Find(_joint.ToString());
             
-            
-            /* Debug.Log("new hand movement");
-            Debug.Log(jointObject.transform.position);
-            Debug.Log(Vector3.Scale(jointObject.transform.position, new Vector3(2,2,1)));
-            Vector3 newp = Vector3.Scale(jointObject.transform.position, new Vector3(2,2,1));
-            */
             jointObject.transform.position = Vector3.Lerp(jointObject.transform.position, targetPosition*2, 3*Time.deltaTime);
         }
     }

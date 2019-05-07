@@ -43,10 +43,10 @@ public class Options : MonoBehaviour
             
         } else {
             redgreen = false;
-            ColorA.GetComponent<Text>().color = Color.magenta;
-            ColorA.GetComponent<Text>().text = "MAGENTA";
-            ColorB.GetComponent<Text>().color = Color.grey;
-            ColorB.GetComponent<Text>().text = "GREY";
+            ColorA.GetComponent<Text>().color = Color.gray;
+            ColorA.GetComponent<Text>().text = "Gray";
+            ColorB.GetComponent<Text>().color = Color.magenta;
+            ColorB.GetComponent<Text>().text = "MAGENTA";
         }
 
         if (PlayerPrefs.GetFloat("noteSpeed", 1f) == 1f) {
@@ -73,6 +73,61 @@ public class Options : MonoBehaviour
     
     void Update () 
     {
+        #region Process Clicks
+     //Test
+            var move = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
+            spaceship.transform.position += move * (float)10.0 * Time.deltaTime;
+        //endTest
+        
+        if (Input.GetMouseButtonDown(0))
+        {
+            //Debug.Log("Pressed primary button.");
+            Vector2 rayPos = new Vector2(spaceship.transform.position.x, spaceship.transform.position.y);
+            RaycastHit2D hit = Physics2D.Raycast(rayPos, Vector2.zero, 0f);
+            if (hit)
+            {
+                if (hit.transform.gameObject.name.Contains("ColorofKeys"))
+                { Debug.Log("Hit");
+                    if (redgreen) {
+                        redgreen = false;
+                        ColorA.GetComponent<Text>().color = Color.gray;
+                        ColorA.GetComponent<Text>().text = "GRAY";
+                        ColorB.GetComponent<Text>().color = Color.magenta;
+                        ColorB.GetComponent<Text>().text = "MAGENTA";
+                        PlayerPrefs.SetString("noteColors","mg");
+                        
+                    } else {
+                        redgreen = true;
+                        ColorA.GetComponent<Text>().color = Color.red;
+                        ColorA.GetComponent<Text>().text = "RED";
+                        ColorB.GetComponent<Text>().color = Color.green;
+                        ColorB.GetComponent<Text>().text = "GREEN";
+                        PlayerPrefs.SetString("noteColors","rg");
+                    }
+                    
+                } else if (hit.transform.gameObject.name.Contains("Fast")) {
+                    Debug.Log("Fast");
+                    noteSpeed = "fast";
+                    Tempo.GetComponent<Text>().text = "Fast";
+                    PlayerPrefs.SetFloat("noteSpeed", 0.5f); 
+                    //pprefs lets you set properties such as this note speed, so it's saved in the other scenes
+                } else if (hit.transform.gameObject.name.Contains("Normal")) {
+                    Debug.Log("Normal");
+                    noteSpeed = "normal";
+                    Tempo.GetComponent<Text>().text = "Normal";
+                    PlayerPrefs.SetFloat("noteSpeed", 1f);
+                } else if (hit.transform.gameObject.name.Contains("Slow")) {
+                    Debug.Log("Slow");
+                    noteSpeed = "slow";
+                    Tempo.GetComponent<Text>().text = "Slow";
+                    PlayerPrefs.SetFloat("noteSpeed", 2f);
+                } else if (hit.transform.gameObject.name.Contains("Home")){
+                    SceneManager.LoadScene("MainMenu");
+                }
+            }
+        }
+        #endregion
+
         #region Get Kinect data
         Kinect.Body[] data = mBodySourceManager.GetData();
 
@@ -129,57 +184,7 @@ public class Options : MonoBehaviour
             }
         }
         #endregion
-
-        //Test
-            var move = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
-            spaceship.transform.position += move * (float)10.0 * Time.deltaTime;
-        //endTest
-        if (Input.GetMouseButtonDown(0))
-        {
-            //Debug.Log("Pressed primary button.");
-            Vector2 rayPos = new Vector2(spaceship.transform.position.x, spaceship.transform.position.y);
-            RaycastHit2D hit = Physics2D.Raycast(rayPos, Vector2.zero, 0f);
-            if (hit)
-            {
-                if (hit.transform.gameObject.name.Contains("ColorofKeys"))
-                { Debug.Log("Hit");
-                    if (redgreen) {
-                        redgreen = false;
-                        ColorA.GetComponent<Text>().color = Color.magenta;
-                        ColorA.GetComponent<Text>().text = "MAGENTA";
-                        ColorB.GetComponent<Text>().color = Color.grey;
-                        ColorB.GetComponent<Text>().text = "GREY";
-                        PlayerPrefs.SetString("noteColors","mg");
-                        
-                    } else {
-                        redgreen = true;
-                        ColorA.GetComponent<Text>().color = Color.red;
-                        ColorA.GetComponent<Text>().text = "RED";
-                        ColorB.GetComponent<Text>().color = Color.green;
-                        ColorB.GetComponent<Text>().text = "GREEN";
-                        PlayerPrefs.SetString("noteColors","rg");
-                    }
-                    
-                } else if (hit.transform.gameObject.name.Contains("Fast")) {
-                    Debug.Log("Fast");
-                    noteSpeed = "fast";
-                    Tempo.GetComponent<Text>().text = "Fast";
-                    PlayerPrefs.SetFloat("noteSpeed", 0.5f);
-                } else if (hit.transform.gameObject.name.Contains("Normal")) {
-                    Debug.Log("Normal");
-                    noteSpeed = "normal";
-                    Tempo.GetComponent<Text>().text = "Normal";
-                    PlayerPrefs.SetFloat("noteSpeed", 1f);
-                } else if (hit.transform.gameObject.name.Contains("Slow")) {
-                    Debug.Log("Slow");
-                    noteSpeed = "slow";
-                    Tempo.GetComponent<Text>().text = "Slow";
-                    PlayerPrefs.SetFloat("noteSpeed", 2f);
-                } else if (hit.transform.gameObject.name.Contains("Home")){
-                    SceneManager.LoadScene("MainMenu");
-                }
-            }
-        }
+        
        
     }
     
