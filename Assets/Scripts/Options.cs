@@ -9,7 +9,9 @@ using System;
 using UnityEngine.UI;
 public class Options : MonoBehaviour 
 {
-    
+    //The options were saved using PlayerPrefs, which is a save file that saves Strings, Floats, and Ints using a key like a dictionary
+    // The playerprefs are implemented by referencing the key and the PlayerPref file to determine which
+    //settings the user wants. 
     public BodySourceManager mBodySourceManager;   
     public GameObject ColorofKeys;
     public GameObject spaceship;
