@@ -62,7 +62,6 @@ public class GamePlay : MonoBehaviour, KinectGestures.GestureListenerInterface
         notesPerLevelSum = currentSong.getNotesPerLevelSum();
 
         // set score text
-
         scoreInfo.text = "Score:";
 
        //starts playing the selected song
@@ -243,10 +242,10 @@ public class GamePlay : MonoBehaviour, KinectGestures.GestureListenerInterface
             }
 
             // Increment counter
-            
             counter += Time.deltaTime;
+
             // Check if we want to exit coroutine early due to mouse click
-            if (Input.GetMouseButtonDown(0) && counter > 0.03)
+            if (Input.GetMouseButtonDown(0) && counter > 0.02)
             {
                 Debug.Log("Color flash is broken");
                 key.GetComponent<SpriteRenderer>().color = startColor;
@@ -310,7 +309,7 @@ public class GamePlay : MonoBehaviour, KinectGestures.GestureListenerInterface
                     {
                         WorB = true;
                     }
-                    StartCoroutine(LightUpKey(selectedKey.GetComponent<Key>(), notesPerLevelSum[level] + numNotesPlayed-1 , WorB));
+                    StartCoroutine(LightUpKey(selectedKey.GetComponent<Key>(), notesPerLevelSum[level] + numNotesPlayed - 1, WorB));
                 } else if (hit.transform.gameObject.name.Contains("Next") && canMoveOn)
                 {
                     if (!endGame)
@@ -318,8 +317,7 @@ public class GamePlay : MonoBehaviour, KinectGestures.GestureListenerInterface
                         nextbutton.GetComponent<SpriteRenderer>().color = Color.grey;
                         level++;
                         numNotesPlayed = 0;
-                        Debug.Log(notesPerLevelSum[level + 1]);
-                        StartCoroutine(PlayForTime(correct, duration, notesPerLevelSum[level], notesPerLevelSum[level+1]));
+                        StartCoroutine(PlayForTime(correct, duration, notesPerLevelSum[level], notesPerLevelSum[level + 1]));
                     }
                     else
                     {
@@ -329,17 +327,9 @@ public class GamePlay : MonoBehaviour, KinectGestures.GestureListenerInterface
                         canMoveOn = false;
                         Debug.Log(currentSong.getNumNotes());
                         Debug.Log(notesPerLevelSum[notesPerLevel.Length - 1]);
-
                         Debug.Log(currentSong.getNumNotesPractice());
-                        if (PlayerPrefs.GetInt("songNum") % 2 == 0)   //if it's a song, not practice 
-                        {
-                            StartCoroutine(PlayBack(player, duration, 0, currentSong.getNumNotes()));
-                            nextbutton.SetActive(false); //get rid of next button so the player has to click home button
-                        }
-                        else
-                        {
-                            nextbutton.SetActive(false);
-                        }
+                        StartCoroutine(PlayBack(player, duration, 0, currentSong.getNumNotes()));
+                        nextbutton.SetActive(false); //get rid of next button so the player has to click home button
                        }
                 }
             }
