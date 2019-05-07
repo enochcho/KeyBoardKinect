@@ -23,14 +23,14 @@ public class GamePlay : MonoBehaviour
     // GameObjects
     public GameObject nextbutton;
     public GameObject spaceship;
+    public GameObject selectedKey;
+    public GameObject homebutton;
 
     // private bool to track if progress message has been displayed
     private bool progressDisplayed;
 
     private bool keyClicked = false;
-    public GameObject selectedKey;
-    public GameObject homebutton;
-
+    // Variables for tracking the user's progress
     int numNotesPlayed = 0;
     int level = 0;
     bool endGame = false;
@@ -45,10 +45,13 @@ public class GamePlay : MonoBehaviour
 
     String notecolors;
 
-    //will track the uLong of the main player. 
+    //will track the uLong of the main player. This allows for the spaceship cursor to lock onto one player
+    //regardless of whether there are other people in the frame. 
     ulong playerID = 999;
 
+    //A list of the joints the kinect should track for each body.
     private List<Kinect.JointType> _joints;
+    //This method will run everytime the script is loaded before anything else. 
     void Start()
     {
         notecolors = PlayerPrefs.GetString("noteColors", "rg");
@@ -71,13 +74,14 @@ public class GamePlay : MonoBehaviour
         scoreInfo.text = "Score:";
 
         //set left or right hand
+        //Look at the options script for more information on PlayerPrefs
         if(PlayerPrefs.GetString("hand", "right") == "right"){
            _joints = new List<Kinect.JointType>{Kinect.JointType.HandRight,};
         } else{ 
             _joints = new List<Kinect.JointType>{Kinect.JointType.HandLeft,};
         }
 
-        // Maybe put spaceship elsewhere? Start on play?
+        //This starts the Simon Says aspect of the game.
         StartCoroutine(PlayForTime(correct, duration, 0, notesPerLevel[0]));
     }
 
@@ -85,7 +89,8 @@ public class GamePlay : MonoBehaviour
     private Dictionary<ulong, GameObject> mBodies = new Dictionary<ulong, GameObject>();
     
 
-    
+    //This constantly runs and checks for user input as well as processes data
+    //from BodySourceManager. 
     void Update () 
     {
          #region Processing Clicks for Game
@@ -113,6 +118,7 @@ public class GamePlay : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {   
           //  Debug.Log("Pressed primary button.");
+          //Raycasting is used to hit buttons.
             Vector2 rayPos = new Vector2(spaceship.transform.position.x, spaceship.transform.position.y);
             RaycastHit2D hit = Physics2D.Raycast(rayPos, Vector2.zero, 0f);
             if (hit)
@@ -193,6 +199,7 @@ public class GamePlay : MonoBehaviour
                 if(trackingID == playerID){
                     //set spaceship parent to null so it doesn't get destroyed
                     spaceship.transform.parent = null;
+                    //resets the "main player" to null value of 999
                     playerID = 999;
                 }
                 //Destroy body object
@@ -217,11 +224,12 @@ public class GamePlay : MonoBehaviour
                 if(!mBodies.ContainsKey(body.TrackingId))
                     mBodies[body.TrackingId] = CreateBodyObject(body.TrackingId);
                 
+                //IF there is no main player, make the first body in data the main player
                 if(playerID == 999){
                     playerID = body.TrackingId;
                     AssignSpaceship(body.TrackingId, mBodies[body.TrackingId]);
                 }
-                // Update positions
+                // Update position of spaceship cursor
                 UpdateBodyObject(body, mBodies[body.TrackingId]);
 
             }
@@ -230,18 +238,21 @@ public class GamePlay : MonoBehaviour
        
     }
 
+    //Creates a body for each body in the frame
     private GameObject CreateBodyObject(ulong id)
     {
         //Create body parent
         GameObject body = new GameObject("Body:" + id);
 
-         //Creates joints if a player does not exist
+         //Creates joints if a main player does not exist. 
+         //Basically does AssignSpaceship but for the very first player. 
         if(playerID == 999){
+            //Sets the PlayerID as the trackingID the Kinect assigns to each body. 
             playerID = id;
             //Create joints
             foreach (Kinect.JointType joint in _joints)
             {
-                //Create object
+                //Assign object to joint. 
                 spaceship.name = joint.ToString();
 
                 //Parent to body
@@ -252,12 +263,13 @@ public class GamePlay : MonoBehaviour
         return body;
     }
 
+    //Assigns Spaceship cursor to a certain body. 
     private void AssignSpaceship(ulong id, GameObject body){
         playerID = id;
         //Create joints
         foreach (Kinect.JointType joint in _joints)
             {
-                //Create object
+                //Assign object to joint.
                 spaceship.name = joint.ToString();
 
                 //Parent to body
@@ -266,6 +278,7 @@ public class GamePlay : MonoBehaviour
             }
     }
 
+    //Plays the note when clicked and flashes if it was right or not. 
         public IEnumerator PlayForTime(Key[] notes, float[] durations, int start, int stop)
     {
         AudioSource audio1;
@@ -410,7 +423,7 @@ public class GamePlay : MonoBehaviour
         key.GetComponent<SpriteRenderer>().color = startColor;
     }
     
-    
+    //Sets the position of the spaceship object
     private void UpdateBodyObject(Kinect.Body body, GameObject bodyObject)
     {
         //Update joints
@@ -430,7 +443,8 @@ public class GamePlay : MonoBehaviour
             Debug.Log(Vector3.Scale(jointObject.transform.position, new Vector3(2,2,1)));
             Vector3 newp = Vector3.Scale(jointObject.transform.position, new Vector3(2,2,1));
             */
-            jointObject.transform.position = Vector3.Lerp(jointObject.transform.position, targetPosition*2, 3*Time.deltaTime);
+            //Adjust the second paramter of Vector3.Lerp to adjust how much one needs to move their arm/body. 
+            jointObject.transform.position = Vector3.Lerp(jointObject.transform.position, targetPosition*3, 3*Time.deltaTime);
         }
     }
     

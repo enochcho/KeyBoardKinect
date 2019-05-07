@@ -69,7 +69,6 @@ public class ChangeScene : MonoBehaviour
                     SceneManager.LoadScene("PickTutorial");
                 } else if (hit.transform.gameObject.name.Contains("Quit"))
                 {
-                    
                     Application.Quit();
                 }
             }
